@@ -107,5 +107,53 @@
   <ItemGroup>
     <None Include="Resources\images1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\755_food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\755_food-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-window %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round-table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\steward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos-terminal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
