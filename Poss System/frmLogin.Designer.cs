@@ -99,7 +99,7 @@
             this.btnLogin.Location = new System.Drawing.Point(52, 393);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(102, 45);
-            this.btnLogin.TabIndex = 5;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -144,20 +144,24 @@
             this.txtPassword.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(52, 335);
+            this.txtPassword.Location = new System.Drawing.Point(52, 342);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(215, 22);
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(52, 248);
+            this.txtUsername.Location = new System.Drawing.Point(52, 255);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(215, 22);
-            this.txtUsername.TabIndex = 7;
+            this.txtUsername.TabIndex = 0;
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             // 
             // btnExit
             // 
@@ -168,7 +172,7 @@
             this.btnExit.Location = new System.Drawing.Point(165, 393);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(102, 45);
-            this.btnExit.TabIndex = 5;
+            this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -191,7 +195,7 @@
             this.lblAlert.Size = new System.Drawing.Size(0, 16);
             this.lblAlert.TabIndex = 8;
             // 
-            // frmLogin
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -209,7 +213,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmLogin";
+            this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.panel1.ResumeLayout(false);

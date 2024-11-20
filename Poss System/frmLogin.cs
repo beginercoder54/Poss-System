@@ -31,8 +31,26 @@ namespace Poss_System
             }
             else
             {
-                lblAlert = ShowDialog("Username or Password is wrong");
+                lblAlert.ForeColor = Color.Red;
+                    lblAlert.Text = "Username or Password is wrong";
             }
+        }
+
+        private void txtUsername_Enter(object sender, EventArgs e)
+        {
+            if(txtUsername.Text!="" )
+            {
+                lblAlert.Text = "";
+            }
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != "")
+            {
+                lblAlert.Text = "";
+            }
+           
         }
     }
 }
