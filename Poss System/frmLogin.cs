@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace Poss_System
 {
-    public partial class frmLogin : Form
+    public partial class FrmLogin : Form
     {
-        public frmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -30,7 +25,13 @@ namespace Poss_System
         {
             if(txtUsername.Text=="admin" && txtPassword.Text == "123")
             {
-                frmMain frmMain
+                FrmMain frmMain= new FrmMain();
+                this.Hide();
+                frmMain.Show();
+            }
+            else
+            {
+                lblAlert = ShowDialog("Username or Password is wrong");
             }
         }
     }
