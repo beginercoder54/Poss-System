@@ -28,9 +28,10 @@ namespace Poss_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
-            this.Hide();
-           frm2.Show();
+            if(txtUsername.Text=="admin" && txtPassword.Text == "123")
+            {
+                frmMain frmMain
+            }
         }
     }
 }

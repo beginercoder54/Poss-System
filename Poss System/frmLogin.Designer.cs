@@ -43,6 +43,7 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.lblAlert = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -182,12 +183,21 @@
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Username";
             // 
+            // lblAlert
+            // 
+            this.lblAlert.AutoSize = true;
+            this.lblAlert.Location = new System.Drawing.Point(49, 374);
+            this.lblAlert.Name = "lblAlert";
+            this.lblAlert.Size = new System.Drawing.Size(0, 16);
+            this.lblAlert.TabIndex = 8;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(324, 489);
+            this.Controls.Add(this.lblAlert);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnExit);
@@ -226,6 +236,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblAlert;
     }
 }
 
