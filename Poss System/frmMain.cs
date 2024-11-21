@@ -17,19 +17,5 @@ namespace Poss_System
             InitializeComponent();
         }
 
-        private void BtnMax_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
