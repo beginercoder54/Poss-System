@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Poss_System.Component
 {
-    public partial class table2 : UserControl
+    public partial class Table : UserControl
     {
-        public table2()
+        public Table()
         {
             InitializeComponent();
         }
