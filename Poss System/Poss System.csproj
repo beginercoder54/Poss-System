@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component\Table2.cs">
+    <Compile Include="Component\Table.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\Table2.Designer.cs">
-      <DependentUpon>Table2.cs</DependentUpon>
+    <Compile Include="Component\Table.Designer.cs">
+      <DependentUpon>Table.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -66,8 +66,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Component\Table2.resx">
-      <DependentUpon>Table2.cs</DependentUpon>
+    <EmbeddedResource Include="Component\Table.resx">
+      <DependentUpon>Table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -167,6 +167,14 @@
   <ItemGroup>
     <None Include="Resources\Bàn.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\burger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
