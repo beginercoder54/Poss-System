@@ -28,6 +28,7 @@ namespace Poss_System
                 FrmMain frmMain= new FrmMain();
                 this.Hide();
                 frmMain.Show();
+                frmMain.WindowState = FormWindowState.Maximized;
             }
             else
             {
