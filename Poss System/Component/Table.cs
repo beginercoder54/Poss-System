@@ -16,5 +16,6 @@ namespace Poss_System.Component
         {
             InitializeComponent();
         }
+
     }
 }
