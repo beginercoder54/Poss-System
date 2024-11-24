@@ -52,6 +52,18 @@
     <Compile Include="Component\Table.Designer.cs">
       <DependentUpon>Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\Widget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\Widget.Designer.cs">
+      <DependentUpon>Widget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOder.Designer.cs">
+      <DependentUpon>FrmOder.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,11 +81,17 @@
     <EmbeddedResource Include="Component\Table.resx">
       <DependentUpon>Table.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Component\Widget.resx">
+      <DependentUpon>Widget.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOder.resx">
+      <DependentUpon>FrmOder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -175,6 +193,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\Burger.png" />
+    <Content Include="Icon\French Fried.png" />
+    <Content Include="Icon\Fried Chicken.png" />
+    <Content Include="Icon\Pizza.png" />
+    <Content Include="Icon\Tea.png" />
+    <Content Include="Icon\Beer.png" />
+    <Content Include="Icon\Soda.png" />
+    <Content Include="Icon\Cupcake.png" />
+    <Content Include="Icon\Wing.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
