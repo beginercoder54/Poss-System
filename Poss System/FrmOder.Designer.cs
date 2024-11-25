@@ -515,7 +515,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1609, 729);
+            this.ClientSize = new System.Drawing.Size(1483, 671);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.Food);
             this.Controls.Add(this.ColdDirnks);
