@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component\Table.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Component\Table.Designer.cs">
-      <DependentUpon>Table.cs</DependentUpon>
-    </Compile>
     <Compile Include="Component\Widget.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,9 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Component\Table.resx">
-      <DependentUpon>Table.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Component\Widget.resx">
       <DependentUpon>Widget.cs</DependentUpon>
     </EmbeddedResource>

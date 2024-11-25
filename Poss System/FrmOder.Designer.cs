@@ -360,58 +360,86 @@
             // widget1
             // 
             this.widget1.BackColor = System.Drawing.Color.White;
+            this.widget1.Category = Poss_System.Component.Widget.categories.Food;
+            this.widget1.Cost = "Title";
+            this.widget1.Icon = null;
             this.widget1.Location = new System.Drawing.Point(3, 3);
             this.widget1.Name = "widget1";
             this.widget1.Size = new System.Drawing.Size(354, 167);
             this.widget1.TabIndex = 0;
+            this.widget1.Title = "Title";
             // 
             // widget2
             // 
             this.widget2.BackColor = System.Drawing.Color.White;
+            this.widget2.Category = Poss_System.Component.Widget.categories.Food;
+            this.widget2.Cost = "Title";
+            this.widget2.Icon = null;
             this.widget2.Location = new System.Drawing.Point(3, 176);
             this.widget2.Name = "widget2";
             this.widget2.Size = new System.Drawing.Size(354, 174);
             this.widget2.TabIndex = 1;
+            this.widget2.Title = "Title";
             // 
             // widget3
             // 
             this.widget3.BackColor = System.Drawing.Color.White;
+            this.widget3.Category = Poss_System.Component.Widget.categories.Food;
+            this.widget3.Cost = "Title";
+            this.widget3.Icon = null;
             this.widget3.Location = new System.Drawing.Point(3, 356);
             this.widget3.Name = "widget3";
             this.widget3.Size = new System.Drawing.Size(354, 174);
             this.widget3.TabIndex = 2;
+            this.widget3.Title = "Title";
             // 
             // widget4
             // 
             this.widget4.BackColor = System.Drawing.Color.White;
+            this.widget4.Category = Poss_System.Component.Widget.categories.Food;
+            this.widget4.Cost = "Title";
+            this.widget4.Icon = null;
             this.widget4.Location = new System.Drawing.Point(3, 536);
             this.widget4.Name = "widget4";
             this.widget4.Size = new System.Drawing.Size(354, 174);
             this.widget4.TabIndex = 3;
+            this.widget4.Title = "Title";
             // 
             // widget5
             // 
             this.widget5.BackColor = System.Drawing.Color.White;
+            this.widget5.Category = Poss_System.Component.Widget.categories.Food;
+            this.widget5.Cost = "Title";
+            this.widget5.Icon = null;
             this.widget5.Location = new System.Drawing.Point(3, 716);
             this.widget5.Name = "widget5";
             this.widget5.Size = new System.Drawing.Size(354, 167);
             this.widget5.TabIndex = 4;
+            this.widget5.Title = "Title";
             // 
             // widget6
             // 
             this.widget6.BackColor = System.Drawing.Color.White;
+            this.widget6.Category = Poss_System.Component.Widget.categories.Food;
+            this.widget6.Cost = "Title";
+            this.widget6.Icon = null;
             this.widget6.Location = new System.Drawing.Point(3, 889);
             this.widget6.Name = "widget6";
             this.widget6.Size = new System.Drawing.Size(354, 167);
             this.widget6.TabIndex = 5;
+            this.widget6.Title = "Title";
             // 
             // widget7
             // 
             this.widget7.BackColor = System.Drawing.Color.White;
+            this.widget7.Category = Poss_System.Component.Widget.categories.Food;
+            this.widget7.Cost = "Title";
+            this.widget7.Icon = null;
             this.widget7.Location = new System.Drawing.Point(3, 1062);
             this.widget7.Name = "widget7";
             this.widget7.Size = new System.Drawing.Size(354, 167);
             this.widget7.TabIndex = 6;
+            this.widget7.Title = "Title";
             // 
             // panel1
             // 
@@ -443,7 +471,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 25F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(456, 26);
+            this.label10.Location = new System.Drawing.Point(459, 29);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(197, 57);
             this.label10.TabIndex = 4;
