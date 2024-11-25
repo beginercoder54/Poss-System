@@ -26,7 +26,8 @@ namespace Poss_System
 
         private void btnTb1_Click_1(object sender, EventArgs e)
         {
-
+            FrmOder frm2 = new FrmOder();
+            frm2.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

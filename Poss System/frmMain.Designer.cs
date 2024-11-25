@@ -32,62 +32,29 @@
             this.pictureIconMenu = new System.Windows.Forms.PictureBox();
             this.lblNameRes = new System.Windows.Forms.Label();
             this.pictureIconBurger = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTb12 = new System.Windows.Forms.Button();
+            this.btnTb10 = new System.Windows.Forms.Button();
+            this.btnTb7 = new System.Windows.Forms.Button();
+            this.btnTb15 = new System.Windows.Forms.Button();
+            this.btnTb5 = new System.Windows.Forms.Button();
+            this.btnTb2 = new System.Windows.Forms.Button();
+            this.btnTb9 = new System.Windows.Forms.Button();
+            this.btnTb11 = new System.Windows.Forms.Button();
+            this.btnTb6 = new System.Windows.Forms.Button();
+            this.btnTb14 = new System.Windows.Forms.Button();
+            this.btnTb4 = new System.Windows.Forms.Button();
+            this.btnTb1 = new System.Windows.Forms.Button();
+            this.btnTb19 = new System.Windows.Forms.Button();
+            this.btnTb16 = new System.Windows.Forms.Button();
+            this.btnTb20 = new System.Windows.Forms.Button();
+            this.btnTb17 = new System.Windows.Forms.Button();
+            this.btnTb3 = new System.Windows.Forms.Button();
+            this.btnTb8 = new System.Windows.Forms.Button();
+            this.btnTb13 = new System.Windows.Forms.Button();
+            this.btnTb18 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -102,7 +69,7 @@
             this.panel2.Location = new System.Drawing.Point(12, 11);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1918, 58);
+            this.panel2.Size = new System.Drawing.Size(1841, 58);
             this.panel2.TabIndex = 1;
             // 
             // pictureIconMenu
@@ -111,7 +78,7 @@
             this.pictureIconMenu.BackColor = System.Drawing.Color.Transparent;
             this.pictureIconMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureIconMenu.Image = global::Poss_System.Properties.Resources.list1;
-            this.pictureIconMenu.Location = new System.Drawing.Point(1842, 14);
+            this.pictureIconMenu.Location = new System.Drawing.Point(1765, 14);
             this.pictureIconMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureIconMenu.Name = "pictureIconMenu";
             this.pictureIconMenu.Size = new System.Drawing.Size(63, 32);
@@ -145,433 +112,335 @@
             this.pictureIconBurger.TabIndex = 2;
             this.pictureIconBurger.TabStop = false;
             // 
-            // pictureBox1
+            // btnTb12
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 22);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.btnTb12.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb12.Location = new System.Drawing.Point(350, 506);
+            this.btnTb12.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb12.Name = "btnTb12";
+            this.btnTb12.Size = new System.Drawing.Size(300, 200);
+            this.btnTb12.TabIndex = 3;
+            this.btnTb12.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // btnTb10
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.pictureBox21);
-            this.panel1.Controls.Add(this.pictureBox22);
-            this.panel1.Controls.Add(this.pictureBox23);
-            this.panel1.Controls.Add(this.pictureBox24);
-            this.panel1.Controls.Add(this.pictureBox25);
-            this.panel1.Controls.Add(this.pictureBox16);
-            this.panel1.Controls.Add(this.pictureBox17);
-            this.panel1.Controls.Add(this.pictureBox18);
-            this.panel1.Controls.Add(this.pictureBox19);
-            this.panel1.Controls.Add(this.pictureBox20);
-            this.panel1.Controls.Add(this.pictureBox11);
-            this.panel1.Controls.Add(this.pictureBox12);
-            this.panel1.Controls.Add(this.pictureBox13);
-            this.panel1.Controls.Add(this.pictureBox14);
-            this.panel1.Controls.Add(this.pictureBox15);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Controls.Add(this.pictureBox10);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(12, 61);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1918, 1001);
-            this.panel1.TabIndex = 3;
+            this.btnTb10.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb10.Location = new System.Drawing.Point(1332, 300);
+            this.btnTb10.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb10.Name = "btnTb10";
+            this.btnTb10.Size = new System.Drawing.Size(300, 200);
+            this.btnTb10.TabIndex = 4;
+            this.btnTb10.UseVisualStyleBackColor = true;
             // 
-            // pictureBox6
+            // btnTb7
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox6.Location = new System.Drawing.Point(339, 22);
-            this.pictureBox6.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
+            this.btnTb7.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb7.Location = new System.Drawing.Point(350, 300);
+            this.btnTb7.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb7.Name = "btnTb7";
+            this.btnTb7.Size = new System.Drawing.Size(300, 200);
+            this.btnTb7.TabIndex = 5;
+            this.btnTb7.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // btnTb15
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox2.Location = new System.Drawing.Point(645, 22);
-            this.pictureBox2.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.btnTb15.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb15.Location = new System.Drawing.Point(1332, 506);
+            this.btnTb15.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb15.Name = "btnTb15";
+            this.btnTb15.Size = new System.Drawing.Size(300, 200);
+            this.btnTb15.TabIndex = 6;
+            this.btnTb15.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
+            // btnTb5
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox3.Location = new System.Drawing.Point(963, 22);
-            this.pictureBox3.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
+            this.btnTb5.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb5.Location = new System.Drawing.Point(1332, 94);
+            this.btnTb5.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb5.Name = "btnTb5";
+            this.btnTb5.Size = new System.Drawing.Size(300, 200);
+            this.btnTb5.TabIndex = 7;
+            this.btnTb5.UseVisualStyleBackColor = true;
             // 
-            // pictureBox4
+            // btnTb2
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox4.Location = new System.Drawing.Point(1273, 22);
-            this.pictureBox4.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
+            this.btnTb2.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb2.Location = new System.Drawing.Point(350, 94);
+            this.btnTb2.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb2.Name = "btnTb2";
+            this.btnTb2.Size = new System.Drawing.Size(300, 200);
+            this.btnTb2.TabIndex = 8;
+            this.btnTb2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox5
+            // btnTb9
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox5.Location = new System.Drawing.Point(1273, 218);
-            this.pictureBox5.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 15;
-            this.pictureBox5.TabStop = false;
+            this.btnTb9.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb9.Location = new System.Drawing.Point(1010, 300);
+            this.btnTb9.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb9.Name = "btnTb9";
+            this.btnTb9.Size = new System.Drawing.Size(300, 200);
+            this.btnTb9.TabIndex = 9;
+            this.btnTb9.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
+            // btnTb11
             // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox7.Location = new System.Drawing.Point(963, 218);
-            this.pictureBox7.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 14;
-            this.pictureBox7.TabStop = false;
+            this.btnTb11.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb11.Location = new System.Drawing.Point(22, 506);
+            this.btnTb11.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb11.Name = "btnTb11";
+            this.btnTb11.Size = new System.Drawing.Size(300, 200);
+            this.btnTb11.TabIndex = 10;
+            this.btnTb11.UseVisualStyleBackColor = true;
             // 
-            // pictureBox8
+            // btnTb6
             // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox8.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox8.Location = new System.Drawing.Point(645, 218);
-            this.pictureBox8.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 13;
-            this.pictureBox8.TabStop = false;
+            this.btnTb6.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb6.Location = new System.Drawing.Point(22, 300);
+            this.btnTb6.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb6.Name = "btnTb6";
+            this.btnTb6.Size = new System.Drawing.Size(300, 200);
+            this.btnTb6.TabIndex = 11;
+            this.btnTb6.UseVisualStyleBackColor = true;
             // 
-            // pictureBox9
+            // btnTb14
             // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox9.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox9.Location = new System.Drawing.Point(339, 218);
-            this.pictureBox9.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
+            this.btnTb14.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb14.Location = new System.Drawing.Point(1010, 506);
+            this.btnTb14.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb14.Name = "btnTb14";
+            this.btnTb14.Size = new System.Drawing.Size(300, 200);
+            this.btnTb14.TabIndex = 12;
+            this.btnTb14.UseVisualStyleBackColor = true;
             // 
-            // pictureBox10
+            // btnTb4
             // 
-            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox10.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox10.Location = new System.Drawing.Point(39, 218);
-            this.pictureBox10.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 11;
-            this.pictureBox10.TabStop = false;
+            this.btnTb4.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb4.Location = new System.Drawing.Point(1010, 94);
+            this.btnTb4.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb4.Name = "btnTb4";
+            this.btnTb4.Size = new System.Drawing.Size(300, 200);
+            this.btnTb4.TabIndex = 13;
+            this.btnTb4.UseVisualStyleBackColor = true;
+            this.btnTb4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // pictureBox11
+            // btnTb1
             // 
-            this.pictureBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox11.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox11.Location = new System.Drawing.Point(1273, 414);
-            this.pictureBox11.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 20;
-            this.pictureBox11.TabStop = false;
+            this.btnTb1.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb1.Location = new System.Drawing.Point(22, 94);
+            this.btnTb1.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb1.Name = "btnTb1";
+            this.btnTb1.Size = new System.Drawing.Size(300, 200);
+            this.btnTb1.TabIndex = 14;
+            this.btnTb1.UseVisualStyleBackColor = true;
+            this.btnTb1.Click += new System.EventHandler(this.btnTb1_Click_1);
             // 
-            // pictureBox12
+            // btnTb19
             // 
-            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox12.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox12.Location = new System.Drawing.Point(963, 414);
-            this.pictureBox12.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 19;
-            this.pictureBox12.TabStop = false;
+            this.btnTb19.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb19.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb19.Location = new System.Drawing.Point(1010, 712);
+            this.btnTb19.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb19.Name = "btnTb19";
+            this.btnTb19.Size = new System.Drawing.Size(300, 200);
+            this.btnTb19.TabIndex = 12;
+            this.btnTb19.UseVisualStyleBackColor = true;
             // 
-            // pictureBox13
+            // btnTb16
             // 
-            this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox13.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox13.Location = new System.Drawing.Point(645, 414);
-            this.pictureBox13.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 18;
-            this.pictureBox13.TabStop = false;
+            this.btnTb16.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb16.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb16.Location = new System.Drawing.Point(22, 712);
+            this.btnTb16.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb16.Name = "btnTb16";
+            this.btnTb16.Size = new System.Drawing.Size(300, 200);
+            this.btnTb16.TabIndex = 10;
+            this.btnTb16.UseVisualStyleBackColor = true;
             // 
-            // pictureBox14
+            // btnTb20
             // 
-            this.pictureBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox14.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox14.Location = new System.Drawing.Point(339, 414);
-            this.pictureBox14.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 17;
-            this.pictureBox14.TabStop = false;
+            this.btnTb20.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb20.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb20.Location = new System.Drawing.Point(1332, 712);
+            this.btnTb20.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb20.Name = "btnTb20";
+            this.btnTb20.Size = new System.Drawing.Size(300, 200);
+            this.btnTb20.TabIndex = 6;
+            this.btnTb20.UseVisualStyleBackColor = true;
             // 
-            // pictureBox15
+            // btnTb17
             // 
-            this.pictureBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox15.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox15.Location = new System.Drawing.Point(39, 414);
-            this.pictureBox15.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 16;
-            this.pictureBox15.TabStop = false;
+            this.btnTb17.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb17.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb17.Location = new System.Drawing.Point(350, 712);
+            this.btnTb17.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb17.Name = "btnTb17";
+            this.btnTb17.Size = new System.Drawing.Size(300, 200);
+            this.btnTb17.TabIndex = 3;
+            this.btnTb17.UseVisualStyleBackColor = true;
             // 
-            // pictureBox16
+            // btnTb3
             // 
-            this.pictureBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox16.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox16.Location = new System.Drawing.Point(1273, 611);
-            this.pictureBox16.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 25;
-            this.pictureBox16.TabStop = false;
+            this.btnTb3.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb3.Location = new System.Drawing.Point(682, 94);
+            this.btnTb3.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb3.Name = "btnTb3";
+            this.btnTb3.Size = new System.Drawing.Size(300, 200);
+            this.btnTb3.TabIndex = 8;
+            this.btnTb3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox17
+            // btnTb8
             // 
-            this.pictureBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox17.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox17.Location = new System.Drawing.Point(963, 611);
-            this.pictureBox17.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 24;
-            this.pictureBox17.TabStop = false;
+            this.btnTb8.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb8.Location = new System.Drawing.Point(682, 300);
+            this.btnTb8.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb8.Name = "btnTb8";
+            this.btnTb8.Size = new System.Drawing.Size(300, 200);
+            this.btnTb8.TabIndex = 5;
+            this.btnTb8.UseVisualStyleBackColor = true;
             // 
-            // pictureBox18
+            // btnTb13
             // 
-            this.pictureBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox18.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox18.Location = new System.Drawing.Point(645, 611);
-            this.pictureBox18.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 23;
-            this.pictureBox18.TabStop = false;
+            this.btnTb13.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb13.Location = new System.Drawing.Point(682, 506);
+            this.btnTb13.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb13.Name = "btnTb13";
+            this.btnTb13.Size = new System.Drawing.Size(300, 200);
+            this.btnTb13.TabIndex = 3;
+            this.btnTb13.UseVisualStyleBackColor = true;
             // 
-            // pictureBox19
+            // btnTb18
             // 
-            this.pictureBox19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnTb18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox19.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox19.Location = new System.Drawing.Point(339, 611);
-            this.pictureBox19.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 22;
-            this.pictureBox19.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox20.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox20.Location = new System.Drawing.Point(39, 611);
-            this.pictureBox20.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 21;
-            this.pictureBox20.TabStop = false;
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox21.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox21.Location = new System.Drawing.Point(1273, 808);
-            this.pictureBox21.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox21.TabIndex = 30;
-            this.pictureBox21.TabStop = false;
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox22.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox22.Location = new System.Drawing.Point(963, 808);
-            this.pictureBox22.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 29;
-            this.pictureBox22.TabStop = false;
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox23.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox23.Location = new System.Drawing.Point(645, 808);
-            this.pictureBox23.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox23.TabIndex = 28;
-            this.pictureBox23.TabStop = false;
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox24.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox24.Location = new System.Drawing.Point(339, 808);
-            this.pictureBox24.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox24.TabIndex = 27;
-            this.pictureBox24.TabStop = false;
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox25.Image = global::Poss_System.Properties.Resources.Bàn;
-            this.pictureBox25.Location = new System.Drawing.Point(39, 808);
-            this.pictureBox25.MaximumSize = new System.Drawing.Size(280, 169);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(233, 169);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 26;
-            this.pictureBox25.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(1571, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(12, 1014);
-            this.panel3.TabIndex = 31;
+            this.btnTb18.BackgroundImage = global::Poss_System.Properties.Resources.Bàn;
+            this.btnTb18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTb18.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTb18.Location = new System.Drawing.Point(682, 712);
+            this.btnTb18.MaximumSize = new System.Drawing.Size(300, 200);
+            this.btnTb18.Name = "btnTb18";
+            this.btnTb18.Size = new System.Drawing.Size(300, 200);
+            this.btnTb18.TabIndex = 3;
+            this.btnTb18.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1942, 1061);
+            this.ClientSize = new System.Drawing.Size(1865, 987);
+            this.Controls.Add(this.btnTb18);
+            this.Controls.Add(this.btnTb17);
+            this.Controls.Add(this.btnTb13);
+            this.Controls.Add(this.btnTb12);
+            this.Controls.Add(this.btnTb10);
+            this.Controls.Add(this.btnTb8);
+            this.Controls.Add(this.btnTb7);
+            this.Controls.Add(this.btnTb20);
+            this.Controls.Add(this.btnTb15);
+            this.Controls.Add(this.btnTb3);
+            this.Controls.Add(this.btnTb5);
+            this.Controls.Add(this.btnTb2);
+            this.Controls.Add(this.btnTb9);
+            this.Controls.Add(this.btnTb16);
+            this.Controls.Add(this.btnTb11);
+            this.Controls.Add(this.btnTb6);
+            this.Controls.Add(this.btnTb19);
+            this.Controls.Add(this.btnTb14);
+            this.Controls.Add(this.btnTb4);
+            this.Controls.Add(this.btnTb1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmMain";
@@ -582,32 +451,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -617,32 +460,25 @@
         private System.Windows.Forms.PictureBox pictureIconBurger;
         private System.Windows.Forms.Label lblNameRes;
         private System.Windows.Forms.PictureBox pictureIconMenu;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.PictureBox pictureBox24;
-        private System.Windows.Forms.PictureBox pictureBox25;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnTb12;
+        private System.Windows.Forms.Button btnTb10;
+        private System.Windows.Forms.Button btnTb7;
+        private System.Windows.Forms.Button btnTb15;
+        private System.Windows.Forms.Button btnTb5;
+        private System.Windows.Forms.Button btnTb2;
+        private System.Windows.Forms.Button btnTb9;
+        private System.Windows.Forms.Button btnTb11;
+        private System.Windows.Forms.Button btnTb6;
+        private System.Windows.Forms.Button btnTb14;
+        private System.Windows.Forms.Button btnTb4;
+        private System.Windows.Forms.Button btnTb1;
+        private System.Windows.Forms.Button btnTb19;
+        private System.Windows.Forms.Button btnTb16;
+        private System.Windows.Forms.Button btnTb20;
+        private System.Windows.Forms.Button btnTb17;
+        private System.Windows.Forms.Button btnTb3;
+        private System.Windows.Forms.Button btnTb8;
+        private System.Windows.Forms.Button btnTb13;
+        private System.Windows.Forms.Button btnTb18;
     }
 }
