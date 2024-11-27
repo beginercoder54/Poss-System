@@ -53,7 +53,6 @@
             this.ColdDirnks = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.widget7 = new Poss_System.Component.Widget();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Pay = new System.Windows.Forms.Button();
@@ -75,8 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.ColdDirnks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // titlebar
@@ -362,22 +359,13 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Cold Drinks";
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(393, 193);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Size = new System.Drawing.Size(196, 157);
-            this.splitContainer1.SplitterDistance = 132;
-            this.splitContainer1.TabIndex = 7;
-            // 
             // widget7
             // 
             this.widget7.BackColor = System.Drawing.Color.White;
             this.widget7.Category = Poss_System.Component.Widget.categories.Food;
             this.widget7.Cost = "Title";
             this.widget7.Icon = null;
-            this.widget7.Location = new System.Drawing.Point(644, 121);
+            this.widget7.Location = new System.Drawing.Point(416, 137);
             this.widget7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.widget7.Name = "widget7";
             this.widget7.Size = new System.Drawing.Size(355, 167);
@@ -431,7 +419,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 730);
             this.Controls.Add(this.widget7);
-            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.Food);
             this.Controls.Add(this.ColdDirnks);
             this.Controls.Add(this.panel2);
@@ -442,6 +429,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            
             this.titlebar.ResumeLayout(false);
             this.titlebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -465,8 +453,6 @@
             this.ColdDirnks.ResumeLayout(false);
             this.ColdDirnks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -495,7 +481,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
