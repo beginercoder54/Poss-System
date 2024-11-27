@@ -29,5 +29,10 @@ namespace Poss_System
             FrmOder frm2 = new FrmOder();
             frm2.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
