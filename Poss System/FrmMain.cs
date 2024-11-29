@@ -16,6 +16,7 @@ namespace Poss_System
         {
             InitializeComponent();
         }
+      
 
         private void btnTb1_Click(object sender, EventArgs e)
         {
@@ -30,9 +31,17 @@ namespace Poss_System
             frm2.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void pictureIconMenu_Click(object sender, EventArgs e)
         {
-
+          
+            if(pnlMenu.Visible == false)
+            {
+                pnlMenu.Visible = true;
+            }
+            else
+            {
+                pnlMenu.Visible = false;
+            }
         }
     }
 }
