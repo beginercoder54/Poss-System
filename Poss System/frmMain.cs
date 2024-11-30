@@ -16,23 +16,60 @@ namespace Poss_System
         {
             InitializeComponent();
         }
+      
 
-        private void btnTb1_Click(object sender, EventArgs e)
+        private void pictureIconMenu_Click(object sender, EventArgs e)
         {
-            FrmOder frm = new FrmOder();
-            frm.Show();
-
+          
+            if(pnlMenu.Visible == false)
+            {
+                pnlMenu.Visible = true;
+            }
+            else
+            {
+                pnlMenu.Visible = false;
+            }
         }
 
-        private void btnTb1_Click_1(object sender, EventArgs e)
+        private void btnTable1_Click(object sender, EventArgs e)
         {
-            FrmOder frm2 = new FrmOder();
-            frm2.Show();
+            FrmOder frmOder = new FrmOder();
+            this.Hide();
+            frmOder.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void pnlTableMenu_Click(object sender, EventArgs e)
         {
+            if (Application.OpenForms["FrmMain"] == Application.OpenForms[Application.OpenForms.Count - 1])
+            {
+                pnlMenu.Visible = false;
+            }else
+            {
+                FrmMain frmMain = new FrmMain();
+                this.Hide();
+                frmMain.ShowDialog();
+            }
+        }
 
+        private void pnlOrdersMenu_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FrmOder"] == Application.OpenForms[Application.OpenForms.Count - 1])
+            {
+                pnlMenu.Visible = false;
+            }
+            else
+            {
+                FrmOder frmOder = new FrmOder();
+                this.Hide();
+                frmOder.Show();
+            }
+        }
+
+        private void pnlExit_Click(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+            this.Hide();
+            frmLogin.Show();
         }
     }
 }
