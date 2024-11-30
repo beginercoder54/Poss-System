@@ -18,19 +18,6 @@ namespace Poss_System
         }
       
 
-        private void btnTb1_Click(object sender, EventArgs e)
-        {
-            FrmOder frm = new FrmOder();
-            frm.Show();
-
-        }
-
-        private void btnTb1_Click_1(object sender, EventArgs e)
-        {
-            FrmOder frm2 = new FrmOder();
-            frm2.Show();
-        }
-
         private void pictureIconMenu_Click(object sender, EventArgs e)
         {
           
@@ -42,6 +29,47 @@ namespace Poss_System
             {
                 pnlMenu.Visible = false;
             }
+        }
+
+        private void btnTable1_Click(object sender, EventArgs e)
+        {
+            FrmOder frmOder = new FrmOder();
+            this.Hide();
+            frmOder.Show();
+        }
+
+        private void pnlTableMenu_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FrmMain"] == Application.OpenForms[Application.OpenForms.Count - 1])
+            {
+                pnlMenu.Visible = false;
+            }else
+            {
+                FrmMain frmMain = new FrmMain();
+                this.Hide();
+                frmMain.ShowDialog();
+            }
+        }
+
+        private void pnlOrdersMenu_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FrmOder"] == Application.OpenForms[Application.OpenForms.Count - 1])
+            {
+                pnlMenu.Visible = false;
+            }
+            else
+            {
+                FrmOder frmOder = new FrmOder();
+                this.Hide();
+                frmOder.Show();
+            }
+        }
+
+        private void pnlExit_Click(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+            this.Hide();
+            frmLogin.Show();
         }
     }
 }

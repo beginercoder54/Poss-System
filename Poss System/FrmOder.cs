@@ -18,7 +18,51 @@ namespace Poss_System
             InitializeComponent();
         }
 
-        
+        private void pictureIconMenu_Click(object sender, EventArgs e)
+        {
+            if (pnlMenu.Visible == false)
+            {
+                pnlMenu.Visible = true;
+            }
+            else
+            {
+                pnlMenu.Visible = false;
+            }
+        }
+        private void pnlTableMenu_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FrmMain"] == Application.OpenForms[Application.OpenForms.Count - 1])
+            {
+                pnlMenu.Visible = false;
+            }
+            else
+            {
+                FrmMain frmMain = new FrmMain();
+                this.Hide();
+                frmMain.ShowDialog();
+            }
+        }
+
+        private void pnlOrdersMenu_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FrmOder"] == Application.OpenForms[Application.OpenForms.Count - 1])
+            {
+                pnlMenu.Visible = false;
+            }
+            else
+            {
+                FrmOder frmOder = new FrmOder();
+                this.Hide();
+                frmOder.Show();
+            }
+        }
+
+        private void pnlExit_Click(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+            this.Hide();
+            frmLogin.Show();
+        }
     }
 }
    

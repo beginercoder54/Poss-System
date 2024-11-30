@@ -13,7 +13,7 @@ namespace Poss_System
 {
     public partial class FrmLogin : Form
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-GI961I9;Initial Catalog=""POS System"";Integrated Security=True");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
         public FrmLogin()
         {
             InitializeComponent();

@@ -34,71 +34,88 @@
             this.lblNameRes = new System.Windows.Forms.Label();
             this.pictureIconBurger = new System.Windows.Forms.PictureBox();
             this.fpnlTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTable1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTable2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnTable3 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnTable4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnTable5 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btnTable1 = new System.Windows.Forms.Button();
-            this.btnTable4 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btnTable6 = new System.Windows.Forms.Button();
-            this.btnTable3 = new System.Windows.Forms.Button();
-            this.btnTable9 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.btnTable7 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.btnTable8 = new System.Windows.Forms.Button();
-            this.btnTable11 = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnTable9 = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.btnTable10 = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnTable11 = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnTable12 = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.btnTable14 = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.btnTable13 = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.btnTable20 = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.btnTable14 = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.btnTable15 = new System.Windows.Forms.Button();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.btnTable16 = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btnTable17 = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
             this.btnTable18 = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.btnTable19 = new System.Windows.Forms.Button();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.btnTable16 = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.btnTable20 = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlExit = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pnlSettingMenu = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pnlStatisticsMenu = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlOrdersMenu = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlTableMenu = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.fpnlTable.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.panel21.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
-            this.panel21.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
+            this.pnlExit.SuspendLayout();
+            this.pnlSettingMenu.SuspendLayout();
+            this.pnlStatisticsMenu.SuspendLayout();
+            this.pnlOrdersMenu.SuspendLayout();
+            this.pnlTableMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -106,6 +123,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureIconMenu);
             this.panel2.Controls.Add(this.lblNameRes);
             this.panel2.Controls.Add(this.pictureIconBurger);
@@ -187,6 +205,25 @@
             this.fpnlTable.Size = new System.Drawing.Size(1362, 684);
             this.fpnlTable.TabIndex = 2;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnTable1);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(330, 180);
+            this.panel3.TabIndex = 1;
+            // 
+            // btnTable1
+            // 
+            this.btnTable1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable1.BackgroundImage")));
+            this.btnTable1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable1.Location = new System.Drawing.Point(0, 0);
+            this.btnTable1.Name = "btnTable1";
+            this.btnTable1.Size = new System.Drawing.Size(330, 180);
+            this.btnTable1.TabIndex = 0;
+            this.btnTable1.UseVisualStyleBackColor = true;
+            this.btnTable1.Click += new System.EventHandler(this.btnTable1_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnTable2);
@@ -204,22 +241,46 @@
             this.btnTable2.Size = new System.Drawing.Size(330, 180);
             this.btnTable2.TabIndex = 0;
             this.btnTable2.UseVisualStyleBackColor = true;
+            this.btnTable2.Click += new System.EventHandler(this.btnTable1_Click);
             // 
-            // panel3
+            // panel7
             // 
-            this.panel3.Controls.Add(this.btnTable1);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(330, 180);
-            this.panel3.TabIndex = 1;
+            this.panel7.Controls.Add(this.btnTable3);
+            this.panel7.Location = new System.Drawing.Point(675, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(330, 180);
+            this.panel7.TabIndex = 3;
             // 
-            // panel4
+            // btnTable3
             // 
-            this.panel4.Controls.Add(this.btnTable6);
-            this.panel4.Location = new System.Drawing.Point(339, 189);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(330, 180);
-            this.panel4.TabIndex = 2;
+            this.btnTable3.BackColor = System.Drawing.Color.Transparent;
+            this.btnTable3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable3.BackgroundImage")));
+            this.btnTable3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable3.Location = new System.Drawing.Point(0, 0);
+            this.btnTable3.Name = "btnTable3";
+            this.btnTable3.Size = new System.Drawing.Size(330, 180);
+            this.btnTable3.TabIndex = 2;
+            this.btnTable3.UseVisualStyleBackColor = false;
+            this.btnTable3.Click += new System.EventHandler(this.btnTable1_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnTable4);
+            this.panel6.Location = new System.Drawing.Point(1011, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(330, 180);
+            this.panel6.TabIndex = 4;
+            // 
+            // btnTable4
+            // 
+            this.btnTable4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable4.BackgroundImage")));
+            this.btnTable4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable4.Location = new System.Drawing.Point(0, 0);
+            this.btnTable4.Name = "btnTable4";
+            this.btnTable4.Size = new System.Drawing.Size(330, 180);
+            this.btnTable4.TabIndex = 1;
+            this.btnTable4.UseVisualStyleBackColor = true;
+            this.btnTable4.Click += new System.EventHandler(this.btnTable1_Click);
             // 
             // panel5
             // 
@@ -238,82 +299,15 @@
             this.btnTable5.Size = new System.Drawing.Size(330, 180);
             this.btnTable5.TabIndex = 0;
             this.btnTable5.UseVisualStyleBackColor = true;
+            this.btnTable5.Click += new System.EventHandler(this.btnTable1_Click);
             // 
-            // panel6
+            // panel4
             // 
-            this.panel6.Controls.Add(this.btnTable4);
-            this.panel6.Location = new System.Drawing.Point(1011, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(330, 180);
-            this.panel6.TabIndex = 4;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.btnTable3);
-            this.panel7.Location = new System.Drawing.Point(675, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(330, 180);
-            this.panel7.TabIndex = 3;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.btnTable7);
-            this.panel8.Location = new System.Drawing.Point(675, 189);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(330, 180);
-            this.panel8.TabIndex = 5;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.btnTable8);
-            this.panel9.Location = new System.Drawing.Point(1011, 189);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(330, 180);
-            this.panel9.TabIndex = 4;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.btnTable9);
-            this.panel10.Location = new System.Drawing.Point(3, 375);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(330, 180);
-            this.panel10.TabIndex = 5;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.btnTable10);
-            this.panel11.Location = new System.Drawing.Point(339, 375);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(330, 180);
-            this.panel11.TabIndex = 4;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.btnTable11);
-            this.panel12.Location = new System.Drawing.Point(675, 375);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(330, 180);
-            this.panel12.TabIndex = 5;
-            // 
-            // btnTable1
-            // 
-            this.btnTable1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable1.BackgroundImage")));
-            this.btnTable1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable1.Location = new System.Drawing.Point(0, 0);
-            this.btnTable1.Name = "btnTable1";
-            this.btnTable1.Size = new System.Drawing.Size(330, 180);
-            this.btnTable1.TabIndex = 0;
-            this.btnTable1.UseVisualStyleBackColor = true;
-            // 
-            // btnTable4
-            // 
-            this.btnTable4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable4.BackgroundImage")));
-            this.btnTable4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable4.Location = new System.Drawing.Point(0, 0);
-            this.btnTable4.Name = "btnTable4";
-            this.btnTable4.Size = new System.Drawing.Size(330, 180);
-            this.btnTable4.TabIndex = 1;
-            this.btnTable4.UseVisualStyleBackColor = true;
+            this.panel4.Controls.Add(this.btnTable6);
+            this.panel4.Location = new System.Drawing.Point(339, 189);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(330, 180);
+            this.panel4.TabIndex = 2;
             // 
             // btnTable6
             // 
@@ -324,27 +318,15 @@
             this.btnTable6.Size = new System.Drawing.Size(330, 180);
             this.btnTable6.TabIndex = 2;
             this.btnTable6.UseVisualStyleBackColor = true;
+            this.btnTable6.Click += new System.EventHandler(this.btnTable1_Click);
             // 
-            // btnTable3
+            // panel8
             // 
-            this.btnTable3.BackColor = System.Drawing.Color.Transparent;
-            this.btnTable3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable3.BackgroundImage")));
-            this.btnTable3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable3.Location = new System.Drawing.Point(0, 0);
-            this.btnTable3.Name = "btnTable3";
-            this.btnTable3.Size = new System.Drawing.Size(330, 180);
-            this.btnTable3.TabIndex = 2;
-            this.btnTable3.UseVisualStyleBackColor = false;
-            // 
-            // btnTable9
-            // 
-            this.btnTable9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable9.BackgroundImage")));
-            this.btnTable9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable9.Location = new System.Drawing.Point(0, 0);
-            this.btnTable9.Name = "btnTable9";
-            this.btnTable9.Size = new System.Drawing.Size(330, 180);
-            this.btnTable9.TabIndex = 2;
-            this.btnTable9.UseVisualStyleBackColor = true;
+            this.panel8.Controls.Add(this.btnTable7);
+            this.panel8.Location = new System.Drawing.Point(675, 189);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(330, 180);
+            this.panel8.TabIndex = 5;
             // 
             // btnTable7
             // 
@@ -355,6 +337,15 @@
             this.btnTable7.Size = new System.Drawing.Size(330, 180);
             this.btnTable7.TabIndex = 1;
             this.btnTable7.UseVisualStyleBackColor = true;
+            this.btnTable7.Click += new System.EventHandler(this.btnTable1_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.btnTable8);
+            this.panel9.Location = new System.Drawing.Point(1011, 189);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(330, 180);
+            this.panel9.TabIndex = 4;
             // 
             // btnTable8
             // 
@@ -365,16 +356,34 @@
             this.btnTable8.Size = new System.Drawing.Size(330, 180);
             this.btnTable8.TabIndex = 1;
             this.btnTable8.UseVisualStyleBackColor = true;
+            this.btnTable8.Click += new System.EventHandler(this.btnTable1_Click);
             // 
-            // btnTable11
+            // panel10
             // 
-            this.btnTable11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable11.BackgroundImage")));
-            this.btnTable11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable11.Location = new System.Drawing.Point(0, 0);
-            this.btnTable11.Name = "btnTable11";
-            this.btnTable11.Size = new System.Drawing.Size(330, 180);
-            this.btnTable11.TabIndex = 1;
-            this.btnTable11.UseVisualStyleBackColor = true;
+            this.panel10.Controls.Add(this.btnTable9);
+            this.panel10.Location = new System.Drawing.Point(3, 375);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(330, 180);
+            this.panel10.TabIndex = 5;
+            // 
+            // btnTable9
+            // 
+            this.btnTable9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable9.BackgroundImage")));
+            this.btnTable9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable9.Location = new System.Drawing.Point(0, 0);
+            this.btnTable9.Name = "btnTable9";
+            this.btnTable9.Size = new System.Drawing.Size(330, 180);
+            this.btnTable9.TabIndex = 2;
+            this.btnTable9.UseVisualStyleBackColor = true;
+            this.btnTable9.Click += new System.EventHandler(this.btnTable1_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.btnTable10);
+            this.panel11.Location = new System.Drawing.Point(339, 375);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(330, 180);
+            this.panel11.TabIndex = 4;
             // 
             // btnTable10
             // 
@@ -385,6 +394,26 @@
             this.btnTable10.Size = new System.Drawing.Size(330, 180);
             this.btnTable10.TabIndex = 1;
             this.btnTable10.UseVisualStyleBackColor = true;
+            this.btnTable10.Click += new System.EventHandler(this.btnTable1_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btnTable11);
+            this.panel12.Location = new System.Drawing.Point(675, 375);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(330, 180);
+            this.panel12.TabIndex = 5;
+            // 
+            // btnTable11
+            // 
+            this.btnTable11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable11.BackgroundImage")));
+            this.btnTable11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable11.Location = new System.Drawing.Point(0, 0);
+            this.btnTable11.Name = "btnTable11";
+            this.btnTable11.Size = new System.Drawing.Size(330, 180);
+            this.btnTable11.TabIndex = 1;
+            this.btnTable11.UseVisualStyleBackColor = true;
+            this.btnTable11.Click += new System.EventHandler(this.btnTable1_Click);
             // 
             // panel13
             // 
@@ -403,24 +432,7 @@
             this.btnTable12.Size = new System.Drawing.Size(330, 180);
             this.btnTable12.TabIndex = 0;
             this.btnTable12.UseVisualStyleBackColor = true;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.btnTable14);
-            this.panel15.Location = new System.Drawing.Point(339, 561);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(330, 180);
-            this.panel15.TabIndex = 8;
-            // 
-            // btnTable14
-            // 
-            this.btnTable14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable14.BackgroundImage")));
-            this.btnTable14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable14.Location = new System.Drawing.Point(0, 0);
-            this.btnTable14.Name = "btnTable14";
-            this.btnTable14.Size = new System.Drawing.Size(330, 180);
-            this.btnTable14.TabIndex = 1;
-            this.btnTable14.UseVisualStyleBackColor = true;
+            this.btnTable12.Click += new System.EventHandler(this.btnTable1_Click);
             // 
             // panel16
             // 
@@ -439,24 +451,26 @@
             this.btnTable13.Size = new System.Drawing.Size(330, 180);
             this.btnTable13.TabIndex = 2;
             this.btnTable13.UseVisualStyleBackColor = true;
+            this.btnTable13.Click += new System.EventHandler(this.btnTable1_Click);
             // 
-            // panel14
+            // panel15
             // 
-            this.panel14.Controls.Add(this.btnTable20);
-            this.panel14.Location = new System.Drawing.Point(1011, 747);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(330, 180);
-            this.panel14.TabIndex = 10;
+            this.panel15.Controls.Add(this.btnTable14);
+            this.panel15.Location = new System.Drawing.Point(339, 561);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(330, 180);
+            this.panel15.TabIndex = 8;
             // 
-            // btnTable20
+            // btnTable14
             // 
-            this.btnTable20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable20.BackgroundImage")));
-            this.btnTable20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable20.Location = new System.Drawing.Point(0, 0);
-            this.btnTable20.Name = "btnTable20";
-            this.btnTable20.Size = new System.Drawing.Size(330, 180);
-            this.btnTable20.TabIndex = 0;
-            this.btnTable20.UseVisualStyleBackColor = true;
+            this.btnTable14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable14.BackgroundImage")));
+            this.btnTable14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable14.Location = new System.Drawing.Point(0, 0);
+            this.btnTable14.Name = "btnTable14";
+            this.btnTable14.Size = new System.Drawing.Size(330, 180);
+            this.btnTable14.TabIndex = 1;
+            this.btnTable14.UseVisualStyleBackColor = true;
+            this.btnTable14.Click += new System.EventHandler(this.btnTable1_Click);
             // 
             // panel17
             // 
@@ -475,60 +489,7 @@
             this.btnTable15.Size = new System.Drawing.Size(330, 180);
             this.btnTable15.TabIndex = 1;
             this.btnTable15.UseVisualStyleBackColor = true;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.btnTable17);
-            this.panel18.Location = new System.Drawing.Point(3, 747);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(330, 180);
-            this.panel18.TabIndex = 12;
-            // 
-            // btnTable17
-            // 
-            this.btnTable17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable17.BackgroundImage")));
-            this.btnTable17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable17.Location = new System.Drawing.Point(0, 0);
-            this.btnTable17.Name = "btnTable17";
-            this.btnTable17.Size = new System.Drawing.Size(330, 180);
-            this.btnTable17.TabIndex = 1;
-            this.btnTable17.UseVisualStyleBackColor = true;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.btnTable18);
-            this.panel19.Location = new System.Drawing.Point(339, 747);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(330, 180);
-            this.panel19.TabIndex = 13;
-            // 
-            // btnTable18
-            // 
-            this.btnTable18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable18.BackgroundImage")));
-            this.btnTable18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable18.Location = new System.Drawing.Point(0, 0);
-            this.btnTable18.Name = "btnTable18";
-            this.btnTable18.Size = new System.Drawing.Size(330, 180);
-            this.btnTable18.TabIndex = 0;
-            this.btnTable18.UseVisualStyleBackColor = true;
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.btnTable19);
-            this.panel20.Location = new System.Drawing.Point(675, 747);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(330, 180);
-            this.panel20.TabIndex = 15;
-            // 
-            // btnTable19
-            // 
-            this.btnTable19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable19.BackgroundImage")));
-            this.btnTable19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTable19.Location = new System.Drawing.Point(0, 0);
-            this.btnTable19.Name = "btnTable19";
-            this.btnTable19.Size = new System.Drawing.Size(330, 180);
-            this.btnTable19.TabIndex = 2;
-            this.btnTable19.UseVisualStyleBackColor = true;
+            this.btnTable15.Click += new System.EventHandler(this.btnTable1_Click);
             // 
             // panel21
             // 
@@ -547,16 +508,221 @@
             this.btnTable16.Size = new System.Drawing.Size(330, 180);
             this.btnTable16.TabIndex = 1;
             this.btnTable16.UseVisualStyleBackColor = true;
+            this.btnTable16.Click += new System.EventHandler(this.btnTable1_Click);
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.btnTable17);
+            this.panel18.Location = new System.Drawing.Point(3, 747);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(330, 180);
+            this.panel18.TabIndex = 12;
+            // 
+            // btnTable17
+            // 
+            this.btnTable17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable17.BackgroundImage")));
+            this.btnTable17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable17.Location = new System.Drawing.Point(0, 0);
+            this.btnTable17.Name = "btnTable17";
+            this.btnTable17.Size = new System.Drawing.Size(330, 180);
+            this.btnTable17.TabIndex = 1;
+            this.btnTable17.UseVisualStyleBackColor = true;
+            this.btnTable17.Click += new System.EventHandler(this.btnTable1_Click);
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.btnTable18);
+            this.panel19.Location = new System.Drawing.Point(339, 747);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(330, 180);
+            this.panel19.TabIndex = 13;
+            // 
+            // btnTable18
+            // 
+            this.btnTable18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable18.BackgroundImage")));
+            this.btnTable18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable18.Location = new System.Drawing.Point(0, 0);
+            this.btnTable18.Name = "btnTable18";
+            this.btnTable18.Size = new System.Drawing.Size(330, 180);
+            this.btnTable18.TabIndex = 0;
+            this.btnTable18.UseVisualStyleBackColor = true;
+            this.btnTable18.Click += new System.EventHandler(this.btnTable1_Click);
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.btnTable19);
+            this.panel20.Location = new System.Drawing.Point(675, 747);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(330, 180);
+            this.panel20.TabIndex = 15;
+            // 
+            // btnTable19
+            // 
+            this.btnTable19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable19.BackgroundImage")));
+            this.btnTable19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable19.Location = new System.Drawing.Point(0, 0);
+            this.btnTable19.Name = "btnTable19";
+            this.btnTable19.Size = new System.Drawing.Size(330, 180);
+            this.btnTable19.TabIndex = 2;
+            this.btnTable19.UseVisualStyleBackColor = true;
+            this.btnTable19.Click += new System.EventHandler(this.btnTable1_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.btnTable20);
+            this.panel14.Location = new System.Drawing.Point(1011, 747);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(330, 180);
+            this.panel14.TabIndex = 10;
+            // 
+            // btnTable20
+            // 
+            this.btnTable20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTable20.BackgroundImage")));
+            this.btnTable20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTable20.Location = new System.Drawing.Point(0, 0);
+            this.btnTable20.Name = "btnTable20";
+            this.btnTable20.Size = new System.Drawing.Size(330, 180);
+            this.btnTable20.TabIndex = 0;
+            this.btnTable20.UseVisualStyleBackColor = true;
+            this.btnTable20.Click += new System.EventHandler(this.btnTable1_Click);
             // 
             // pnlMenu
             // 
             this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
+            this.pnlMenu.Controls.Add(this.pnlExit);
+            this.pnlMenu.Controls.Add(this.pnlSettingMenu);
+            this.pnlMenu.Controls.Add(this.pnlStatisticsMenu);
+            this.pnlMenu.Controls.Add(this.pnlOrdersMenu);
+            this.pnlMenu.Controls.Add(this.pnlTableMenu);
             this.pnlMenu.Location = new System.Drawing.Point(1104, 69);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(273, 588);
+            this.pnlMenu.Size = new System.Drawing.Size(273, 498);
             this.pnlMenu.TabIndex = 3;
             this.pnlMenu.Visible = false;
+            // 
+            // pnlExit
+            // 
+            this.pnlExit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlExit.Controls.Add(this.label5);
+            this.pnlExit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlExit.Location = new System.Drawing.Point(0, 395);
+            this.pnlExit.Name = "pnlExit";
+            this.pnlExit.Size = new System.Drawing.Size(273, 100);
+            this.pnlExit.TabIndex = 4;
+            this.pnlExit.Click += new System.EventHandler(this.pnlExit_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(111, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 29);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Exit";
+            this.label5.Click += new System.EventHandler(this.pnlExit_Click);
+            // 
+            // pnlSettingMenu
+            // 
+            this.pnlSettingMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSettingMenu.Controls.Add(this.label4);
+            this.pnlSettingMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSettingMenu.Location = new System.Drawing.Point(0, 295);
+            this.pnlSettingMenu.Name = "pnlSettingMenu";
+            this.pnlSettingMenu.Size = new System.Drawing.Size(273, 100);
+            this.pnlSettingMenu.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(92, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Setting";
+            // 
+            // pnlStatisticsMenu
+            // 
+            this.pnlStatisticsMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlStatisticsMenu.Controls.Add(this.label3);
+            this.pnlStatisticsMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlStatisticsMenu.Location = new System.Drawing.Point(0, 195);
+            this.pnlStatisticsMenu.Name = "pnlStatisticsMenu";
+            this.pnlStatisticsMenu.Size = new System.Drawing.Size(273, 100);
+            this.pnlStatisticsMenu.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(79, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 29);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Statistics";
+            // 
+            // pnlOrdersMenu
+            // 
+            this.pnlOrdersMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOrdersMenu.Controls.Add(this.label2);
+            this.pnlOrdersMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlOrdersMenu.Location = new System.Drawing.Point(0, 95);
+            this.pnlOrdersMenu.Name = "pnlOrdersMenu";
+            this.pnlOrdersMenu.Size = new System.Drawing.Size(273, 100);
+            this.pnlOrdersMenu.TabIndex = 1;
+            this.pnlOrdersMenu.Click += new System.EventHandler(this.pnlOrdersMenu_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(93, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Orders";
+            this.label2.Click += new System.EventHandler(this.pnlOrdersMenu_Click);
+            // 
+            // pnlTableMenu
+            // 
+            this.pnlTableMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTableMenu.Controls.Add(this.label1);
+            this.pnlTableMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTableMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlTableMenu.Name = "pnlTableMenu";
+            this.pnlTableMenu.Size = new System.Drawing.Size(273, 95);
+            this.pnlTableMenu.TabIndex = 0;
+            this.pnlTableMenu.Click += new System.EventHandler(this.pnlTableMenu_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(98, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Table";
+            this.label1.Click += new System.EventHandler(this.pnlTableMenu_Click);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(1191, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 29);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Table";
             // 
             // FrmMain
             // 
@@ -578,26 +744,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
             this.fpnlTable.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
-            this.panel21.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlExit.ResumeLayout(false);
+            this.pnlExit.PerformLayout();
+            this.pnlSettingMenu.ResumeLayout(false);
+            this.pnlSettingMenu.PerformLayout();
+            this.pnlStatisticsMenu.ResumeLayout(false);
+            this.pnlStatisticsMenu.PerformLayout();
+            this.pnlOrdersMenu.ResumeLayout(false);
+            this.pnlOrdersMenu.PerformLayout();
+            this.pnlTableMenu.ResumeLayout(false);
+            this.pnlTableMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -649,5 +826,16 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button btnTable20;
         private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Panel pnlSettingMenu;
+        private System.Windows.Forms.Panel pnlStatisticsMenu;
+        private System.Windows.Forms.Panel pnlOrdersMenu;
+        private System.Windows.Forms.Panel pnlTableMenu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlExit;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
