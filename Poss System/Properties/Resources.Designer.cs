@@ -83,6 +83,16 @@ namespace Poss_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arow_down {
+            get {
+                object obj = ResourceManager.GetObject("arow down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bàn {
             get {
                 object obj = ResourceManager.GetObject("Bàn", resourceCulture);
@@ -256,6 +266,16 @@ namespace Poss_System.Properties {
         internal static System.Drawing.Bitmap OIG3 {
             get {
                 object obj = ResourceManager.GetObject("OIG3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_symbol_button {
+            get {
+                object obj = ResourceManager.GetObject("plus-symbol-button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

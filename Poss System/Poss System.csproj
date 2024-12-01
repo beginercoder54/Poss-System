@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetting.Designer.cs">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Component\Widget.resx">
       <DependentUpon>Widget.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOder.resx">
       <DependentUpon>FrmOder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetting.resx">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -195,6 +204,8 @@
     <Content Include="Icon\Soda.png" />
     <Content Include="Icon\Cupcake.png" />
     <Content Include="Icon\Wing.png" />
+    <None Include="Resources\arow down.png" />
+    <None Include="Resources\plus-symbol-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
