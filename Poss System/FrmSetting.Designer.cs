@@ -29,319 +29,238 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblNameRes = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureIconMenu = new System.Windows.Forms.PictureBox();
-            this.pictureIconBurger = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.clID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1387, 544);
+            this.panel1.Size = new System.Drawing.Size(1512, 456);
             this.panel1.TabIndex = 2;
             // 
-            // label4
+            // dataGridView1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 31);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Desert";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 191);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 31);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Drink";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 31);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Alcohol";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Food";
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clID,
+            this.clName,
+            this.clType,
+            this.clPrice,
+            this.clQuantity});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1512, 456);
+            this.dataGridView1.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
-            this.panel2.Controls.Add(this.pictureIconMenu);
-            this.panel2.Controls.Add(this.lblNameRes);
-            this.panel2.Controls.Add(this.pictureIconBurger);
-            this.panel2.Location = new System.Drawing.Point(3, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.lblName);
+            this.panel2.Controls.Add(this.lblType);
+            this.panel2.Controls.Add(this.lblID);
+            this.panel2.Controls.Add(this.btnSearch);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1381, 63);
-            this.panel2.TabIndex = 2;
+            this.panel2.Size = new System.Drawing.Size(1512, 68);
+            this.panel2.TabIndex = 3;
             // 
-            // lblNameRes
+            // textBox3
             // 
-            this.lblNameRes.AutoSize = true;
-            this.lblNameRes.BackColor = System.Drawing.Color.Transparent;
-            this.lblNameRes.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameRes.ForeColor = System.Drawing.Color.White;
-            this.lblNameRes.Location = new System.Drawing.Point(85, 12);
-            this.lblNameRes.Name = "lblNameRes";
-            this.lblNameRes.Size = new System.Drawing.Size(282, 34);
-            this.lblNameRes.TabIndex = 3;
-            this.lblNameRes.Text = "Tam Thai Tu Restaurant";
+            this.textBox3.Location = new System.Drawing.Point(864, 24);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(295, 22);
+            this.textBox3.TabIndex = 6;
             // 
-            // panel3
+            // textBox2
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(19, 131);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1331, 1);
-            this.panel3.TabIndex = 4;
+            this.textBox2.Location = new System.Drawing.Point(439, 21);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(295, 22);
+            this.textBox2.TabIndex = 6;
             // 
-            // panel4
+            // textBox1
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(20, 178);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1331, 1);
-            this.panel4.TabIndex = 4;
+            this.textBox1.Location = new System.Drawing.Point(41, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(295, 22);
+            this.textBox1.TabIndex = 6;
             // 
-            // panel5
+            // lblName
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(19, 225);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1331, 1);
-            this.panel5.TabIndex = 4;
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(811, 27);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(47, 16);
+            this.lblName.TabIndex = 5;
+            this.lblName.Text = "Name:";
             // 
-            // panel6
+            // lblType
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(19, 272);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1331, 1);
-            this.panel6.TabIndex = 4;
+            this.lblType.AutoSize = true;
+            this.lblType.Location = new System.Drawing.Point(391, 24);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(42, 16);
+            this.lblType.TabIndex = 5;
+            this.lblType.Text = "Type:";
             // 
-            // pictureBox4
+            // lblID
             // 
-            this.pictureBox4.Image = global::Poss_System.Properties.Resources.plus_symbol_button;
-            this.pictureBox4.Location = new System.Drawing.Point(1274, 236);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(12, 24);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(23, 16);
+            this.lblID.TabIndex = 5;
+            this.lblID.Text = "ID:";
             // 
-            // pictureBox3
+            // btnSearch
             // 
-            this.pictureBox3.Image = global::Poss_System.Properties.Resources.plus_symbol_button;
-            this.pictureBox3.Location = new System.Drawing.Point(1274, 189);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.btnSearch.Location = new System.Drawing.Point(1367, 12);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(116, 41);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // btnAdd
             // 
-            this.pictureBox2.Image = global::Poss_System.Properties.Resources.plus_symbol_button;
-            this.pictureBox2.Location = new System.Drawing.Point(1274, 142);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(12, 530);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(104, 59);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // pictureBox5
+            // btnDel
             // 
-            this.pictureBox5.Image = global::Poss_System.Properties.Resources.arow_down;
-            this.pictureBox5.Location = new System.Drawing.Point(1320, 95);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
+            this.btnDel.Location = new System.Drawing.Point(122, 530);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(104, 59);
+            this.btnDel.TabIndex = 4;
+            this.btnDel.Text = "Del";
+            this.btnDel.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // btnModify
             // 
-            this.pictureBox1.Image = global::Poss_System.Properties.Resources.plus_symbol_button;
-            this.pictureBox1.Location = new System.Drawing.Point(1274, 95);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.btnModify.Location = new System.Drawing.Point(232, 530);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(104, 59);
+            this.btnModify.TabIndex = 4;
+            this.btnModify.Text = "Modify";
+            this.btnModify.UseVisualStyleBackColor = true;
             // 
-            // pictureIconMenu
+            // button1
             // 
-            this.pictureIconMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureIconMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pictureIconMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureIconMenu.Image = global::Poss_System.Properties.Resources.list1;
-            this.pictureIconMenu.Location = new System.Drawing.Point(1307, 17);
-            this.pictureIconMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureIconMenu.Name = "pictureIconMenu";
-            this.pictureIconMenu.Size = new System.Drawing.Size(63, 32);
-            this.pictureIconMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureIconMenu.TabIndex = 4;
-            this.pictureIconMenu.TabStop = false;
+            this.button1.Location = new System.Drawing.Point(1396, 530);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 59);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureIconBurger
+            // clID
             // 
-            this.pictureIconBurger.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureIconBurger.BackColor = System.Drawing.Color.Transparent;
-            this.pictureIconBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureIconBurger.Image = global::Poss_System.Properties.Resources.burger;
-            this.pictureIconBurger.Location = new System.Drawing.Point(16, 14);
-            this.pictureIconBurger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureIconBurger.Name = "pictureIconBurger";
-            this.pictureIconBurger.Size = new System.Drawing.Size(63, 32);
-            this.pictureIconBurger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureIconBurger.TabIndex = 2;
-            this.pictureIconBurger.TabStop = false;
+            this.clID.HeaderText = "ID";
+            this.clID.MinimumWidth = 6;
+            this.clID.Name = "clID";
             // 
-            // pictureBox6
+            // clName
             // 
-            this.pictureBox6.Image = global::Poss_System.Properties.Resources.arow_down;
-            this.pictureBox6.Location = new System.Drawing.Point(1320, 142);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
+            this.clName.HeaderText = "Name";
+            this.clName.MinimumWidth = 6;
+            this.clName.Name = "clName";
             // 
-            // pictureBox7
+            // clType
             // 
-            this.pictureBox7.Image = global::Poss_System.Properties.Resources.arow_down;
-            this.pictureBox7.Location = new System.Drawing.Point(1320, 189);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 5;
-            this.pictureBox7.TabStop = false;
+            this.clType.HeaderText = "Type";
+            this.clType.MinimumWidth = 6;
+            this.clType.Name = "clType";
             // 
-            // pictureBox8
+            // clPrice
             // 
-            this.pictureBox8.Image = global::Poss_System.Properties.Resources.arow_down;
-            this.pictureBox8.Location = new System.Drawing.Point(1320, 236);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 5;
-            this.pictureBox8.TabStop = false;
+            this.clPrice.HeaderText = "Price";
+            this.clPrice.MinimumWidth = 6;
+            this.clPrice.Name = "clPrice";
+            // 
+            // clQuantity
+            // 
+            this.clQuantity.HeaderText = "Quantity";
+            this.clQuantity.MinimumWidth = 6;
+            this.clQuantity.Name = "clQuantity";
             // 
             // FrmSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1411, 568);
+            this.ClientSize = new System.Drawing.Size(1512, 601);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnModify);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSetting";
             this.Text = "Setting";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureIconMenu;
-        private System.Windows.Forms.Label lblNameRes;
-        private System.Windows.Forms.PictureBox pictureIconBurger;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clQuantity;
     }
 }

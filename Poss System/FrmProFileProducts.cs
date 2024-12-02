@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace Poss_System
 {
-    public partial class FrmSetting : Form
+    public partial class FrmProFileProducts : Form
     {
-        public FrmSetting()
+        public FrmProFileProducts()
         {
             InitializeComponent();
         }
-
-
-       
     }
-    }
-
+}

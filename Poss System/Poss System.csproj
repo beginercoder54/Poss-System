@@ -70,6 +70,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProFileProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProFileProducts.Designer.cs">
+      <DependentUpon>FrmProFileProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FrmSetting.cs">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOder.resx">
       <DependentUpon>FrmOder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProFileProducts.resx">
+      <DependentUpon>FrmProFileProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>
