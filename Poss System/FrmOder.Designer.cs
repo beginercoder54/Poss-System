@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOder));
             this.titlebar = new System.Windows.Forms.Panel();
+            this.pictureIconMenu = new System.Windows.Forms.PictureBox();
             this.lblNameRes = new System.Windows.Forms.Label();
             this.pictureIconBurger = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,32 +58,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.widget1 = new Poss_System.Component.Widget();
-            this.widget2 = new Poss_System.Component.Widget();
-            this.widget3 = new Poss_System.Component.Widget();
-            this.widget4 = new Poss_System.Component.Widget();
-            this.widget5 = new Poss_System.Component.Widget();
-            this.widget6 = new Poss_System.Component.Widget();
-            this.widget7 = new Poss_System.Component.Widget();
-            this.widget8 = new Poss_System.Component.Widget();
-            this.widget9 = new Poss_System.Component.Widget();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlTotal = new System.Windows.Forms.Panel();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnADD = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.btnClearAll = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.pnlTotal = new System.Windows.Forms.Panel();
-            this.btnADD = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblTotalPrice = new System.Windows.Forms.Label();
-            this.widget10 = new Poss_System.Component.Widget();
-            this.widget11 = new Poss_System.Component.Widget();
-            this.widget12 = new Poss_System.Component.Widget();
-            this.widget13 = new Poss_System.Component.Widget();
-            this.widget14 = new Poss_System.Component.Widget();
-            this.widget15 = new Poss_System.Component.Widget();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlExit = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -94,8 +80,23 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pnlTableMenu = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureIconMenu = new System.Windows.Forms.PictureBox();
+            this.widget1 = new Poss_System.Component.Widget();
+            this.widget2 = new Poss_System.Component.Widget();
+            this.widget3 = new Poss_System.Component.Widget();
+            this.widget4 = new Poss_System.Component.Widget();
+            this.widget5 = new Poss_System.Component.Widget();
+            this.widget6 = new Poss_System.Component.Widget();
+            this.widget7 = new Poss_System.Component.Widget();
+            this.widget8 = new Poss_System.Component.Widget();
+            this.widget9 = new Poss_System.Component.Widget();
+            this.widget10 = new Poss_System.Component.Widget();
+            this.widget11 = new Poss_System.Component.Widget();
+            this.widget12 = new Poss_System.Component.Widget();
+            this.widget13 = new Poss_System.Component.Widget();
+            this.widget14 = new Poss_System.Component.Widget();
+            this.widget15 = new Poss_System.Component.Widget();
             this.titlebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.panel2.SuspendLayout();
             this.HotDrinks.SuspendLayout();
@@ -119,14 +120,13 @@
             this.pnlStatisticsMenu.SuspendLayout();
             this.pnlOrdersMenu.SuspendLayout();
             this.pnlTableMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // titlebar
             // 
             this.titlebar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.titlebar.BackColor = System.Drawing.Color.Coral;
+            this.titlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.titlebar.Controls.Add(this.pictureIconMenu);
             this.titlebar.Controls.Add(this.lblNameRes);
             this.titlebar.Controls.Add(this.pictureIconBurger);
@@ -134,8 +134,23 @@
             this.titlebar.Location = new System.Drawing.Point(12, 12);
             this.titlebar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.titlebar.Name = "titlebar";
-            this.titlebar.Size = new System.Drawing.Size(1491, 47);
+            this.titlebar.Size = new System.Drawing.Size(1491, 58);
             this.titlebar.TabIndex = 0;
+            // 
+            // pictureIconMenu
+            // 
+            this.pictureIconMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureIconMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIconMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureIconMenu.Image = global::Poss_System.Properties.Resources.list1;
+            this.pictureIconMenu.Location = new System.Drawing.Point(1420, 16);
+            this.pictureIconMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureIconMenu.Name = "pictureIconMenu";
+            this.pictureIconMenu.Size = new System.Drawing.Size(63, 32);
+            this.pictureIconMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIconMenu.TabIndex = 6;
+            this.pictureIconMenu.TabStop = false;
+            this.pictureIconMenu.Click += new System.EventHandler(this.pictureIconMenu_Click);
             // 
             // lblNameRes
             // 
@@ -143,7 +158,7 @@
             this.lblNameRes.BackColor = System.Drawing.Color.Transparent;
             this.lblNameRes.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameRes.ForeColor = System.Drawing.Color.White;
-            this.lblNameRes.Location = new System.Drawing.Point(72, 7);
+            this.lblNameRes.Location = new System.Drawing.Point(72, 13);
             this.lblNameRes.Name = "lblNameRes";
             this.lblNameRes.Size = new System.Drawing.Size(282, 34);
             this.lblNameRes.TabIndex = 5;
@@ -155,10 +170,10 @@
             this.pictureIconBurger.BackColor = System.Drawing.Color.Transparent;
             this.pictureIconBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureIconBurger.Image = global::Poss_System.Properties.Resources.burger;
-            this.pictureIconBurger.Location = new System.Drawing.Point(3, 7);
+            this.pictureIconBurger.Location = new System.Drawing.Point(3, 13);
             this.pictureIconBurger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureIconBurger.Name = "pictureIconBurger";
-            this.pictureIconBurger.Size = new System.Drawing.Size(63, 32);
+            this.pictureIconBurger.Size = new System.Drawing.Size(63, 35);
             this.pictureIconBurger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureIconBurger.TabIndex = 4;
             this.pictureIconBurger.TabStop = false;
@@ -193,7 +208,7 @@
             // 
             // HotDrinks
             // 
-            this.HotDrinks.BackColor = System.Drawing.Color.Coral;
+            this.HotDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.HotDrinks.Controls.Add(this.pictureBox6);
             this.HotDrinks.Controls.Add(this.label6);
             this.HotDrinks.Dock = System.Windows.Forms.DockStyle.Top;
@@ -228,7 +243,7 @@
             // 
             // ColdDirnks
             // 
-            this.ColdDirnks.BackColor = System.Drawing.Color.Coral;
+            this.ColdDirnks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.ColdDirnks.Controls.Add(this.pictureBox5);
             this.ColdDirnks.Controls.Add(this.label5);
             this.ColdDirnks.Dock = System.Windows.Forms.DockStyle.Top;
@@ -263,7 +278,7 @@
             // 
             // Food
             // 
-            this.Food.BackColor = System.Drawing.Color.Coral;
+            this.Food.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.Food.Controls.Add(this.pictureBox3);
             this.Food.Controls.Add(this.label3);
             this.Food.Dock = System.Windows.Forms.DockStyle.Top;
@@ -298,7 +313,7 @@
             // 
             // Alcohol
             // 
-            this.Alcohol.BackColor = System.Drawing.Color.Coral;
+            this.Alcohol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.Alcohol.Controls.Add(this.pictureBox4);
             this.Alcohol.Controls.Add(this.label4);
             this.Alcohol.Dock = System.Windows.Forms.DockStyle.Top;
@@ -333,7 +348,7 @@
             // 
             // Desserts
             // 
-            this.Desserts.BackColor = System.Drawing.Color.Coral;
+            this.Desserts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.Desserts.Controls.Add(this.pictureBox7);
             this.Desserts.Controls.Add(this.label8);
             this.Desserts.Dock = System.Windows.Forms.DockStyle.Top;
@@ -368,7 +383,7 @@
             // 
             // AllItems
             // 
-            this.AllItems.BackColor = System.Drawing.Color.Coral;
+            this.AllItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.AllItems.Controls.Add(this.pictureBox2);
             this.AllItems.Controls.Add(this.label2);
             this.AllItems.Dock = System.Windows.Forms.DockStyle.Top;
@@ -467,6 +482,269 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 695);
             this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.pnlTotal);
+            this.panel3.Controls.Add(this.lblPrice);
+            this.panel3.Controls.Add(this.lblQuantity);
+            this.panel3.Controls.Add(this.lblName);
+            this.panel3.Controls.Add(this.btnClearAll);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Location = new System.Drawing.Point(1089, 88);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(414, 717);
+            this.panel3.TabIndex = 3;
+            // 
+            // pnlTotal
+            // 
+            this.pnlTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTotal.Controls.Add(this.lblTotalPrice);
+            this.pnlTotal.Controls.Add(this.button1);
+            this.pnlTotal.Controls.Add(this.btnADD);
+            this.pnlTotal.Controls.Add(this.lblTotal);
+            this.pnlTotal.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlTotal.Location = new System.Drawing.Point(0, 530);
+            this.pnlTotal.Name = "pnlTotal";
+            this.pnlTotal.Size = new System.Drawing.Size(412, 185);
+            this.pnlTotal.TabIndex = 3;
+            // 
+            // lblTotalPrice
+            // 
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.Location = new System.Drawing.Point(300, 47);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(91, 32);
+            this.lblTotalPrice.TabIndex = 2;
+            this.lblTotalPrice.Text = "$0.00";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(238, 108);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 63);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "PAY";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnADD
+            // 
+            this.btnADD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
+            this.btnADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADD.ForeColor = System.Drawing.Color.White;
+            this.btnADD.Location = new System.Drawing.Point(46, 108);
+            this.btnADD.Name = "btnADD";
+            this.btnADD.Size = new System.Drawing.Size(146, 63);
+            this.btnADD.TabIndex = 1;
+            this.btnADD.Text = "ADD";
+            this.btnADD.UseVisualStyleBackColor = false;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(3, 9);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(86, 36);
+            this.lblTotal.TabIndex = 0;
+            this.lblTotal.Text = "Total";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(335, 61);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(56, 22);
+            this.lblPrice.TabIndex = 2;
+            this.lblPrice.Text = "Price";
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(167, 61);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(85, 22);
+            this.lblQuantity.TabIndex = 2;
+            this.lblQuantity.Text = "Quantity";
+            // 
+            // lblName
+            // 
+            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(19, 61);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(61, 22);
+            this.lblName.TabIndex = 2;
+            this.lblName.Text = "Name";
+            // 
+            // btnClearAll
+            // 
+            this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearAll.ForeColor = System.Drawing.Color.Red;
+            this.btnClearAll.Location = new System.Drawing.Point(287, 5);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(118, 38);
+            this.btnClearAll.TabIndex = 1;
+            this.btnClearAll.Text = "Clear all";
+            this.btnClearAll.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 5);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(226, 36);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Current Orders";
+            // 
+            // pnlMenu
+            // 
+            this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
+            this.pnlMenu.Controls.Add(this.pnlExit);
+            this.pnlMenu.Controls.Add(this.pnlSettingMenu);
+            this.pnlMenu.Controls.Add(this.pnlStatisticsMenu);
+            this.pnlMenu.Controls.Add(this.pnlOrdersMenu);
+            this.pnlMenu.Controls.Add(this.pnlTableMenu);
+            this.pnlMenu.Location = new System.Drawing.Point(1230, 69);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(273, 498);
+            this.pnlMenu.TabIndex = 4;
+            this.pnlMenu.Visible = false;
+            // 
+            // pnlExit
+            // 
+            this.pnlExit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlExit.Controls.Add(this.label11);
+            this.pnlExit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlExit.Location = new System.Drawing.Point(0, 395);
+            this.pnlExit.Name = "pnlExit";
+            this.pnlExit.Size = new System.Drawing.Size(273, 100);
+            this.pnlExit.TabIndex = 4;
+            this.pnlExit.Click += new System.EventHandler(this.pnlExit_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(111, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 29);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Exit";
+            this.label11.Click += new System.EventHandler(this.pnlExit_Click);
+            // 
+            // pnlSettingMenu
+            // 
+            this.pnlSettingMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSettingMenu.Controls.Add(this.label12);
+            this.pnlSettingMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSettingMenu.Location = new System.Drawing.Point(0, 295);
+            this.pnlSettingMenu.Name = "pnlSettingMenu";
+            this.pnlSettingMenu.Size = new System.Drawing.Size(273, 100);
+            this.pnlSettingMenu.TabIndex = 3;
+            this.pnlSettingMenu.Click += new System.EventHandler(this.pnlSettingMenu_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(92, 37);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 29);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Setting";
+            this.label12.Click += new System.EventHandler(this.pnlSettingMenu_Click);
+            // 
+            // pnlStatisticsMenu
+            // 
+            this.pnlStatisticsMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlStatisticsMenu.Controls.Add(this.label13);
+            this.pnlStatisticsMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlStatisticsMenu.Location = new System.Drawing.Point(0, 195);
+            this.pnlStatisticsMenu.Name = "pnlStatisticsMenu";
+            this.pnlStatisticsMenu.Size = new System.Drawing.Size(273, 100);
+            this.pnlStatisticsMenu.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(79, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(118, 29);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Statistics";
+            // 
+            // pnlOrdersMenu
+            // 
+            this.pnlOrdersMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOrdersMenu.Controls.Add(this.label14);
+            this.pnlOrdersMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlOrdersMenu.Location = new System.Drawing.Point(0, 95);
+            this.pnlOrdersMenu.Name = "pnlOrdersMenu";
+            this.pnlOrdersMenu.Size = new System.Drawing.Size(273, 100);
+            this.pnlOrdersMenu.TabIndex = 1;
+            this.pnlOrdersMenu.Click += new System.EventHandler(this.pnlOrdersMenu_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(93, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(94, 29);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Orders";
+            this.label14.Click += new System.EventHandler(this.pnlOrdersMenu_Click);
+            // 
+            // pnlTableMenu
+            // 
+            this.pnlTableMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTableMenu.Controls.Add(this.label15);
+            this.pnlTableMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTableMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlTableMenu.Name = "pnlTableMenu";
+            this.pnlTableMenu.Size = new System.Drawing.Size(273, 95);
+            this.pnlTableMenu.TabIndex = 0;
+            this.pnlTableMenu.Click += new System.EventHandler(this.pnlTableMenu_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(98, 36);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(81, 29);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Table";
+            this.label15.Click += new System.EventHandler(this.pnlTableMenu_Click);
             // 
             // widget1
             // 
@@ -576,141 +854,6 @@
             this.widget9.TabIndex = 8;
             this.widget9.Title = "Title";
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.pnlTotal);
-            this.panel3.Controls.Add(this.lblPrice);
-            this.panel3.Controls.Add(this.lblQuantity);
-            this.panel3.Controls.Add(this.lblName);
-            this.panel3.Controls.Add(this.btnClearAll);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(1089, 88);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(414, 717);
-            this.panel3.TabIndex = 3;
-            // 
-            // lblName
-            // 
-            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(19, 61);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(61, 22);
-            this.lblName.TabIndex = 2;
-            this.lblName.Text = "Name";
-            // 
-            // btnClearAll
-            // 
-            this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClearAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearAll.ForeColor = System.Drawing.Color.Red;
-            this.btnClearAll.Location = new System.Drawing.Point(287, 5);
-            this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(118, 38);
-            this.btnClearAll.TabIndex = 1;
-            this.btnClearAll.Text = "Clear all";
-            this.btnClearAll.UseVisualStyleBackColor = false;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 5);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(226, 36);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Current Orders";
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(167, 61);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(85, 22);
-            this.lblQuantity.TabIndex = 2;
-            this.lblQuantity.Text = "Quantity";
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(335, 61);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(56, 22);
-            this.lblPrice.TabIndex = 2;
-            this.lblPrice.Text = "Price";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(3, 9);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(86, 36);
-            this.lblTotal.TabIndex = 0;
-            this.lblTotal.Text = "Total";
-            // 
-            // pnlTotal
-            // 
-            this.pnlTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTotal.Controls.Add(this.lblTotalPrice);
-            this.pnlTotal.Controls.Add(this.button1);
-            this.pnlTotal.Controls.Add(this.btnADD);
-            this.pnlTotal.Controls.Add(this.lblTotal);
-            this.pnlTotal.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTotal.Location = new System.Drawing.Point(0, 530);
-            this.pnlTotal.Name = "pnlTotal";
-            this.pnlTotal.Size = new System.Drawing.Size(412, 185);
-            this.pnlTotal.TabIndex = 3;
-            // 
-            // btnADD
-            // 
-            this.btnADD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
-            this.btnADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnADD.ForeColor = System.Drawing.Color.White;
-            this.btnADD.Location = new System.Drawing.Point(46, 108);
-            this.btnADD.Name = "btnADD";
-            this.btnADD.Size = new System.Drawing.Size(146, 63);
-            this.btnADD.TabIndex = 1;
-            this.btnADD.Text = "ADD";
-            this.btnADD.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(238, 108);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 63);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "PAY";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // lblTotalPrice
-            // 
-            this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(300, 47);
-            this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(91, 32);
-            this.lblTotalPrice.TabIndex = 2;
-            this.lblTotalPrice.Text = "$0.00";
-            // 
             // widget10
             // 
             this.widget10.BackColor = System.Drawing.Color.White;
@@ -783,147 +926,6 @@
             this.widget15.TabIndex = 14;
             this.widget15.Title = "Title";
             // 
-            // pnlMenu
-            // 
-            this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
-            this.pnlMenu.Controls.Add(this.pnlExit);
-            this.pnlMenu.Controls.Add(this.pnlSettingMenu);
-            this.pnlMenu.Controls.Add(this.pnlStatisticsMenu);
-            this.pnlMenu.Controls.Add(this.pnlOrdersMenu);
-            this.pnlMenu.Controls.Add(this.pnlTableMenu);
-            this.pnlMenu.Location = new System.Drawing.Point(1230, 59);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(273, 498);
-            this.pnlMenu.TabIndex = 4;
-            this.pnlMenu.Visible = false;
-            // 
-            // pnlExit
-            // 
-            this.pnlExit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlExit.Controls.Add(this.label11);
-            this.pnlExit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlExit.Location = new System.Drawing.Point(0, 395);
-            this.pnlExit.Name = "pnlExit";
-            this.pnlExit.Size = new System.Drawing.Size(273, 100);
-            this.pnlExit.TabIndex = 4;
-            this.pnlExit.Click += new System.EventHandler(this.pnlExit_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(111, 35);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 29);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Exit";
-            this.label11.Click += new System.EventHandler(this.pnlExit_Click);
-            // 
-            // pnlSettingMenu
-            // 
-            this.pnlSettingMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSettingMenu.Controls.Add(this.label12);
-            this.pnlSettingMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSettingMenu.Location = new System.Drawing.Point(0, 295);
-            this.pnlSettingMenu.Name = "pnlSettingMenu";
-            this.pnlSettingMenu.Size = new System.Drawing.Size(273, 100);
-            this.pnlSettingMenu.TabIndex = 3;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(92, 37);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 29);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Setting";
-            // 
-            // pnlStatisticsMenu
-            // 
-            this.pnlStatisticsMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlStatisticsMenu.Controls.Add(this.label13);
-            this.pnlStatisticsMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlStatisticsMenu.Location = new System.Drawing.Point(0, 195);
-            this.pnlStatisticsMenu.Name = "pnlStatisticsMenu";
-            this.pnlStatisticsMenu.Size = new System.Drawing.Size(273, 100);
-            this.pnlStatisticsMenu.TabIndex = 2;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(79, 33);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 29);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Statistics";
-            // 
-            // pnlOrdersMenu
-            // 
-            this.pnlOrdersMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlOrdersMenu.Controls.Add(this.label14);
-            this.pnlOrdersMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlOrdersMenu.Location = new System.Drawing.Point(0, 95);
-            this.pnlOrdersMenu.Name = "pnlOrdersMenu";
-            this.pnlOrdersMenu.Size = new System.Drawing.Size(273, 100);
-            this.pnlOrdersMenu.TabIndex = 1;
-            this.pnlOrdersMenu.Click += new System.EventHandler(this.pnlOrdersMenu_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(93, 36);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 29);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Orders";
-            this.label14.Click += new System.EventHandler(this.pnlOrdersMenu_Click);
-            // 
-            // pnlTableMenu
-            // 
-            this.pnlTableMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTableMenu.Controls.Add(this.label15);
-            this.pnlTableMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTableMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnlTableMenu.Name = "pnlTableMenu";
-            this.pnlTableMenu.Size = new System.Drawing.Size(273, 95);
-            this.pnlTableMenu.TabIndex = 0;
-            this.pnlTableMenu.Click += new System.EventHandler(this.pnlTableMenu_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(98, 36);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(81, 29);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Table";
-            this.label15.Click += new System.EventHandler(this.pnlTableMenu_Click);
-            // 
-            // pictureIconMenu
-            // 
-            this.pictureIconMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureIconMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pictureIconMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureIconMenu.Image = global::Poss_System.Properties.Resources.list1;
-            this.pictureIconMenu.Location = new System.Drawing.Point(1420, 10);
-            this.pictureIconMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureIconMenu.Name = "pictureIconMenu";
-            this.pictureIconMenu.Size = new System.Drawing.Size(63, 32);
-            this.pictureIconMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureIconMenu.TabIndex = 6;
-            this.pictureIconMenu.TabStop = false;
-            this.pictureIconMenu.Click += new System.EventHandler(this.pictureIconMenu_Click);
-            // 
             // FrmOder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -942,6 +944,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.titlebar.ResumeLayout(false);
             this.titlebar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
             this.panel2.ResumeLayout(false);
             this.HotDrinks.ResumeLayout(false);
@@ -978,7 +981,6 @@
             this.pnlOrdersMenu.PerformLayout();
             this.pnlTableMenu.ResumeLayout(false);
             this.pnlTableMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
