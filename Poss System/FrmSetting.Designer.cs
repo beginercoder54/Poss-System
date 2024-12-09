@@ -47,17 +47,24 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.titlebar = new System.Windows.Forms.Panel();
+            this.pictureIconMenu = new System.Windows.Forms.PictureBox();
+            this.lblNameRes = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.titlebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.titlebar);
             this.panel1.Controls.Add(this.listView1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 68);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1512, 456);
+            this.panel1.Size = new System.Drawing.Size(1550, 616);
             this.panel1.TabIndex = 2;
             // 
             // listView1
@@ -69,11 +76,10 @@
             this.clType,
             this.clSellPrice,
             this.clPurchasePrice});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Location = new System.Drawing.Point(3, 142);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1512, 456);
+            this.listView1.Size = new System.Drawing.Size(1544, 382);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -116,10 +122,9 @@
             this.panel2.Controls.Add(this.lblType);
             this.panel2.Controls.Add(this.lblID);
             this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(3, 63);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1512, 68);
+            this.panel2.Size = new System.Drawing.Size(1544, 73);
             this.panel2.TabIndex = 3;
             // 
             // txtFindName
@@ -181,7 +186,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAdd.BackColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(12, 530);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(104, 59);
@@ -216,18 +221,56 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
+            // titlebar
+            // 
+            this.titlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
+            this.titlebar.Controls.Add(this.pictureIconMenu);
+            this.titlebar.Controls.Add(this.lblNameRes);
+            this.titlebar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlebar.Location = new System.Drawing.Point(0, 0);
+            this.titlebar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.titlebar.Name = "titlebar";
+            this.titlebar.Size = new System.Drawing.Size(1550, 58);
+            this.titlebar.TabIndex = 4;
+            // 
+            // pictureIconMenu
+            // 
+            this.pictureIconMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureIconMenu.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIconMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureIconMenu.Image = global::Poss_System.Properties.Resources.list1;
+            this.pictureIconMenu.Location = new System.Drawing.Point(1479, 16);
+            this.pictureIconMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureIconMenu.Name = "pictureIconMenu";
+            this.pictureIconMenu.Size = new System.Drawing.Size(63, 32);
+            this.pictureIconMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIconMenu.TabIndex = 6;
+            this.pictureIconMenu.TabStop = false;
+            // 
+            // lblNameRes
+            // 
+            this.lblNameRes.AutoSize = true;
+            this.lblNameRes.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNameRes.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameRes.ForeColor = System.Drawing.Color.White;
+            this.lblNameRes.Location = new System.Drawing.Point(12, 14);
+            this.lblNameRes.Name = "lblNameRes";
+            this.lblNameRes.Size = new System.Drawing.Size(119, 34);
+            this.lblNameRes.TabIndex = 5;
+            this.lblNameRes.Text = "Statistics";
+            // 
             // FrmSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1512, 601);
+            this.ClientSize = new System.Drawing.Size(1550, 616);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSetting";
             this.Text = "Setting";
@@ -235,6 +278,9 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.titlebar.ResumeLayout(false);
+            this.titlebar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,5 +305,8 @@
         private System.Windows.Forms.ColumnHeader clType;
         private System.Windows.Forms.ColumnHeader clSellPrice;
         private System.Windows.Forms.ColumnHeader clPurchasePrice;
+        private System.Windows.Forms.Panel titlebar;
+        private System.Windows.Forms.PictureBox pictureIconMenu;
+        private System.Windows.Forms.Label lblNameRes;
     }
 }
