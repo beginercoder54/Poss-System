@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureIconMenu = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblBill = new System.Windows.Forms.Label();
-            this.txtBill = new System.Windows.Forms.TextBox();
-            this.lblAccount = new System.Windows.Forms.Label();
-            this.txtAccount = new System.Windows.Forms.TextBox();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.txtAccount = new System.Windows.Forms.TextBox();
+            this.txtBill = new System.Windows.Forms.TextBox();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblAccount = new System.Windows.Forms.Label();
+            this.lblBill = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dtBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +48,7 @@
             this.dtTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,17 +66,6 @@
             this.panel1.Size = new System.Drawing.Size(1240, 66);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(36, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 34);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Statistics";
-            // 
             // pictureIconMenu
             // 
             this.pictureIconMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -90,8 +80,20 @@
             this.pictureIconMenu.TabIndex = 8;
             this.pictureIconMenu.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(36, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 34);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Statistics";
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnRefresh);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txtDate);
             this.panel2.Controls.Add(this.txtAccount);
@@ -104,30 +106,21 @@
             this.panel2.Size = new System.Drawing.Size(1240, 54);
             this.panel2.TabIndex = 1;
             // 
-            // lblBill
+            // btnSearch
             // 
-            this.lblBill.AutoSize = true;
-            this.lblBill.Location = new System.Drawing.Point(28, 18);
-            this.lblBill.Name = "lblBill";
-            this.lblBill.Size = new System.Drawing.Size(44, 16);
-            this.lblBill.TabIndex = 0;
-            this.lblBill.Text = "Bill ID:";
+            this.btnSearch.Location = new System.Drawing.Point(1118, 8);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(96, 36);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // txtBill
+            // txtDate
             // 
-            this.txtBill.Location = new System.Drawing.Point(78, 15);
-            this.txtBill.Name = "txtBill";
-            this.txtBill.Size = new System.Drawing.Size(157, 22);
-            this.txtBill.TabIndex = 1;
-            // 
-            // lblAccount
-            // 
-            this.lblAccount.AutoSize = true;
-            this.lblAccount.Location = new System.Drawing.Point(309, 18);
-            this.lblAccount.Name = "lblAccount";
-            this.lblAccount.Size = new System.Drawing.Size(58, 16);
-            this.lblAccount.TabIndex = 0;
-            this.lblAccount.Text = "Account:";
+            this.txtDate.Location = new System.Drawing.Point(718, 15);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(157, 22);
+            this.txtDate.TabIndex = 1;
             // 
             // txtAccount
             // 
@@ -135,6 +128,13 @@
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(215, 22);
             this.txtAccount.TabIndex = 1;
+            // 
+            // txtBill
+            // 
+            this.txtBill.Location = new System.Drawing.Point(78, 15);
+            this.txtBill.Name = "txtBill";
+            this.txtBill.Size = new System.Drawing.Size(157, 22);
+            this.txtBill.TabIndex = 1;
             // 
             // lblDate
             // 
@@ -145,21 +145,23 @@
             this.lblDate.TabIndex = 0;
             this.lblDate.Text = "Date:";
             // 
-            // txtDate
+            // lblAccount
             // 
-            this.txtDate.Location = new System.Drawing.Point(718, 15);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(157, 22);
-            this.txtDate.TabIndex = 1;
+            this.lblAccount.AutoSize = true;
+            this.lblAccount.Location = new System.Drawing.Point(309, 18);
+            this.lblAccount.Name = "lblAccount";
+            this.lblAccount.Size = new System.Drawing.Size(58, 16);
+            this.lblAccount.TabIndex = 0;
+            this.lblAccount.Text = "Account:";
             // 
-            // btnSearch
+            // lblBill
             // 
-            this.btnSearch.Location = new System.Drawing.Point(1099, 8);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(96, 36);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.lblBill.AutoSize = true;
+            this.lblBill.Location = new System.Drawing.Point(28, 18);
+            this.lblBill.Name = "lblBill";
+            this.lblBill.Size = new System.Drawing.Size(44, 16);
+            this.lblBill.TabIndex = 0;
+            this.lblBill.Text = "Bill ID:";
             // 
             // dataGridView1
             // 
@@ -235,6 +237,15 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(1008, 8);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(96, 36);
+            this.btnRefresh.TabIndex = 4;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
             // FrmStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -280,5 +291,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtTotal;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

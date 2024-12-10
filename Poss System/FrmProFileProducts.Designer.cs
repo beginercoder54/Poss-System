@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -44,7 +45,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -54,6 +55,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -72,13 +74,24 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(548, 406);
+            this.panel1.Size = new System.Drawing.Size(890, 542);
             this.panel1.TabIndex = 0;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Location = new System.Drawing.Point(757, 461);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(104, 59);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Poss_System.Properties.Resources.minus;
-            this.pictureBox4.Location = new System.Drawing.Point(408, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(757, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(41, 38);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,7 +101,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Poss_System.Properties.Resources.maximize;
-            this.pictureBox3.Location = new System.Drawing.Point(454, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(803, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(41, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,7 +112,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::Poss_System.Properties.Resources.close;
             this.pictureBox2.Image = global::Poss_System.Properties.Resources.close_window__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(500, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(849, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -108,9 +121,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(417, 326);
+            this.btnAdd.Location = new System.Drawing.Point(44, 461);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(88, 46);
+            this.btnAdd.Size = new System.Drawing.Size(102, 59);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -118,35 +131,35 @@
             // 
             // txtPurchase
             // 
-            this.txtPurchase.Location = new System.Drawing.Point(338, 233);
+            this.txtPurchase.Location = new System.Drawing.Point(428, 289);
             this.txtPurchase.Name = "txtPurchase";
             this.txtPurchase.Size = new System.Drawing.Size(111, 22);
             this.txtPurchase.TabIndex = 2;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(336, 186);
+            this.txtPrice.Location = new System.Drawing.Point(426, 242);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(113, 22);
             this.txtPrice.TabIndex = 2;
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(336, 141);
+            this.txtCategory.Location = new System.Drawing.Point(426, 197);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(112, 22);
             this.txtCategory.TabIndex = 2;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(336, 90);
+            this.txtName.Location = new System.Drawing.Point(426, 146);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(107, 22);
             this.txtName.TabIndex = 2;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(335, 53);
+            this.txtID.Location = new System.Drawing.Point(425, 109);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(42, 22);
             this.txtID.TabIndex = 2;
@@ -154,7 +167,7 @@
             // lblModify
             // 
             this.lblModify.AutoSize = true;
-            this.lblModify.Location = new System.Drawing.Point(235, 236);
+            this.lblModify.Location = new System.Drawing.Point(325, 292);
             this.lblModify.Name = "lblModify";
             this.lblModify.Size = new System.Drawing.Size(97, 16);
             this.lblModify.TabIndex = 1;
@@ -163,7 +176,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(235, 192);
+            this.lblPrice.Location = new System.Drawing.Point(325, 248);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(41, 16);
             this.lblPrice.TabIndex = 1;
@@ -172,7 +185,7 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(235, 144);
+            this.lblType.Location = new System.Drawing.Point(325, 200);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(65, 16);
             this.lblType.TabIndex = 1;
@@ -181,7 +194,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(235, 93);
+            this.lblName.Location = new System.Drawing.Point(325, 149);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(47, 16);
             this.lblName.TabIndex = 1;
@@ -190,7 +203,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(235, 53);
+            this.lblID.Location = new System.Drawing.Point(325, 109);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(23, 16);
             this.lblID.TabIndex = 1;
@@ -199,7 +212,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 102);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(188, 195);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,22 +220,21 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnExit
+            // label1
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(74, 313);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(104, 59);
-            this.btnExit.TabIndex = 5;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(312, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(226, 69);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "ProFile";
             // 
             // FrmProFileProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 430);
+            this.ClientSize = new System.Drawing.Size(914, 566);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProFileProducts";
@@ -256,5 +268,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblModify;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label1;
     }
 }

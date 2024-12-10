@@ -44,6 +44,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             this.panel2.SuspendLayout();
@@ -53,7 +54,7 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAdd.BackColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(14, 619);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(104, 59);
@@ -131,6 +132,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnRefresh);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txtType);
             this.panel2.Controls.Add(this.txtName);
@@ -146,7 +148,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(1196, 9);
+            this.btnSearch.Location = new System.Drawing.Point(1386, 9);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(96, 36);
             this.btnSearch.TabIndex = 3;
@@ -219,6 +221,15 @@
             this.dgvProducts.Size = new System.Drawing.Size(1494, 489);
             this.dgvProducts.TabIndex = 7;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(1284, 9);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(96, 36);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
             // FrmSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -264,5 +275,6 @@
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
