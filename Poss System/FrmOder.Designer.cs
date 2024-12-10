@@ -80,21 +80,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pnlTableMenu = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.widget1 = new Poss_System.Component.Widget();
-            this.widget2 = new Poss_System.Component.Widget();
-            this.widget3 = new Poss_System.Component.Widget();
-            this.widget4 = new Poss_System.Component.Widget();
-            this.widget5 = new Poss_System.Component.Widget();
-            this.widget6 = new Poss_System.Component.Widget();
-            this.widget7 = new Poss_System.Component.Widget();
-            this.widget8 = new Poss_System.Component.Widget();
-            this.widget9 = new Poss_System.Component.Widget();
-            this.widget10 = new Poss_System.Component.Widget();
-            this.widget11 = new Poss_System.Component.Widget();
-            this.widget12 = new Poss_System.Component.Widget();
-            this.widget13 = new Poss_System.Component.Widget();
-            this.widget14 = new Poss_System.Component.Widget();
-            this.widget15 = new Poss_System.Component.Widget();
             this.titlebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
@@ -111,7 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.AllItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlTotal.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -463,21 +447,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.widget1);
-            this.flowLayoutPanel1.Controls.Add(this.widget2);
-            this.flowLayoutPanel1.Controls.Add(this.widget3);
-            this.flowLayoutPanel1.Controls.Add(this.widget4);
-            this.flowLayoutPanel1.Controls.Add(this.widget5);
-            this.flowLayoutPanel1.Controls.Add(this.widget6);
-            this.flowLayoutPanel1.Controls.Add(this.widget7);
-            this.flowLayoutPanel1.Controls.Add(this.widget8);
-            this.flowLayoutPanel1.Controls.Add(this.widget9);
-            this.flowLayoutPanel1.Controls.Add(this.widget10);
-            this.flowLayoutPanel1.Controls.Add(this.widget11);
-            this.flowLayoutPanel1.Controls.Add(this.widget12);
-            this.flowLayoutPanel1.Controls.Add(this.widget13);
-            this.flowLayoutPanel1.Controls.Add(this.widget14);
-            this.flowLayoutPanel1.Controls.Add(this.widget15);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(274, 110);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 695);
@@ -746,186 +715,6 @@
             this.label15.Text = "Table";
             this.label15.Click += new System.EventHandler(this.pnlTableMenu_Click);
             // 
-            // widget1
-            // 
-            this.widget1.BackColor = System.Drawing.Color.White;
-            this.widget1.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget1.Cost = "Title";
-            this.widget1.Icon = null;
-            this.widget1.Location = new System.Drawing.Point(3, 3);
-            this.widget1.Name = "widget1";
-            this.widget1.Size = new System.Drawing.Size(366, 174);
-            this.widget1.TabIndex = 0;
-            this.widget1.Title = "Title";
-            // 
-            // widget2
-            // 
-            this.widget2.BackColor = System.Drawing.Color.White;
-            this.widget2.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget2.Cost = "Title";
-            this.widget2.Icon = null;
-            this.widget2.Location = new System.Drawing.Point(375, 3);
-            this.widget2.Name = "widget2";
-            this.widget2.Size = new System.Drawing.Size(366, 174);
-            this.widget2.TabIndex = 1;
-            this.widget2.Title = "Title";
-            // 
-            // widget3
-            // 
-            this.widget3.BackColor = System.Drawing.Color.White;
-            this.widget3.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget3.Cost = "Title";
-            this.widget3.Icon = null;
-            this.widget3.Location = new System.Drawing.Point(3, 183);
-            this.widget3.Name = "widget3";
-            this.widget3.Size = new System.Drawing.Size(366, 174);
-            this.widget3.TabIndex = 2;
-            this.widget3.Title = "Title";
-            // 
-            // widget4
-            // 
-            this.widget4.BackColor = System.Drawing.Color.White;
-            this.widget4.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget4.Cost = "Title";
-            this.widget4.Icon = null;
-            this.widget4.Location = new System.Drawing.Point(375, 183);
-            this.widget4.Name = "widget4";
-            this.widget4.Size = new System.Drawing.Size(366, 174);
-            this.widget4.TabIndex = 3;
-            this.widget4.Title = "Title";
-            // 
-            // widget5
-            // 
-            this.widget5.BackColor = System.Drawing.Color.White;
-            this.widget5.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget5.Cost = "Title";
-            this.widget5.Icon = null;
-            this.widget5.Location = new System.Drawing.Point(3, 363);
-            this.widget5.Name = "widget5";
-            this.widget5.Size = new System.Drawing.Size(366, 174);
-            this.widget5.TabIndex = 4;
-            this.widget5.Title = "Title";
-            // 
-            // widget6
-            // 
-            this.widget6.BackColor = System.Drawing.Color.White;
-            this.widget6.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget6.Cost = "Title";
-            this.widget6.Icon = null;
-            this.widget6.Location = new System.Drawing.Point(375, 363);
-            this.widget6.Name = "widget6";
-            this.widget6.Size = new System.Drawing.Size(366, 174);
-            this.widget6.TabIndex = 5;
-            this.widget6.Title = "Title";
-            // 
-            // widget7
-            // 
-            this.widget7.BackColor = System.Drawing.Color.White;
-            this.widget7.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget7.Cost = "Title";
-            this.widget7.Icon = null;
-            this.widget7.Location = new System.Drawing.Point(3, 543);
-            this.widget7.Name = "widget7";
-            this.widget7.Size = new System.Drawing.Size(366, 174);
-            this.widget7.TabIndex = 6;
-            this.widget7.Title = "Title";
-            // 
-            // widget8
-            // 
-            this.widget8.BackColor = System.Drawing.Color.White;
-            this.widget8.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget8.Cost = "Title";
-            this.widget8.Icon = null;
-            this.widget8.Location = new System.Drawing.Point(375, 543);
-            this.widget8.Name = "widget8";
-            this.widget8.Size = new System.Drawing.Size(366, 174);
-            this.widget8.TabIndex = 7;
-            this.widget8.Title = "Title";
-            // 
-            // widget9
-            // 
-            this.widget9.BackColor = System.Drawing.Color.White;
-            this.widget9.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget9.Cost = "Title";
-            this.widget9.Icon = null;
-            this.widget9.Location = new System.Drawing.Point(3, 723);
-            this.widget9.Name = "widget9";
-            this.widget9.Size = new System.Drawing.Size(366, 174);
-            this.widget9.TabIndex = 8;
-            this.widget9.Title = "Title";
-            // 
-            // widget10
-            // 
-            this.widget10.BackColor = System.Drawing.Color.White;
-            this.widget10.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget10.Cost = "Title";
-            this.widget10.Icon = null;
-            this.widget10.Location = new System.Drawing.Point(375, 723);
-            this.widget10.Name = "widget10";
-            this.widget10.Size = new System.Drawing.Size(366, 174);
-            this.widget10.TabIndex = 9;
-            this.widget10.Title = "Title";
-            // 
-            // widget11
-            // 
-            this.widget11.BackColor = System.Drawing.Color.White;
-            this.widget11.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget11.Cost = "Title";
-            this.widget11.Icon = null;
-            this.widget11.Location = new System.Drawing.Point(3, 903);
-            this.widget11.Name = "widget11";
-            this.widget11.Size = new System.Drawing.Size(366, 174);
-            this.widget11.TabIndex = 10;
-            this.widget11.Title = "Title";
-            // 
-            // widget12
-            // 
-            this.widget12.BackColor = System.Drawing.Color.White;
-            this.widget12.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget12.Cost = "Title";
-            this.widget12.Icon = null;
-            this.widget12.Location = new System.Drawing.Point(375, 903);
-            this.widget12.Name = "widget12";
-            this.widget12.Size = new System.Drawing.Size(366, 174);
-            this.widget12.TabIndex = 11;
-            this.widget12.Title = "Title";
-            // 
-            // widget13
-            // 
-            this.widget13.BackColor = System.Drawing.Color.White;
-            this.widget13.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget13.Cost = "Title";
-            this.widget13.Icon = null;
-            this.widget13.Location = new System.Drawing.Point(3, 1083);
-            this.widget13.Name = "widget13";
-            this.widget13.Size = new System.Drawing.Size(366, 174);
-            this.widget13.TabIndex = 12;
-            this.widget13.Title = "Title";
-            // 
-            // widget14
-            // 
-            this.widget14.BackColor = System.Drawing.Color.White;
-            this.widget14.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget14.Cost = "Title";
-            this.widget14.Icon = null;
-            this.widget14.Location = new System.Drawing.Point(375, 1083);
-            this.widget14.Name = "widget14";
-            this.widget14.Size = new System.Drawing.Size(366, 174);
-            this.widget14.TabIndex = 13;
-            this.widget14.Title = "Title";
-            // 
-            // widget15
-            // 
-            this.widget15.BackColor = System.Drawing.Color.White;
-            this.widget15.Category = Poss_System.Component.Widget.categories.Food;
-            this.widget15.Cost = "Title";
-            this.widget15.Icon = null;
-            this.widget15.Location = new System.Drawing.Point(3, 1263);
-            this.widget15.Name = "widget15";
-            this.widget15.Size = new System.Drawing.Size(366, 174);
-            this.widget15.TabIndex = 14;
-            this.widget15.Title = "Title";
-            // 
             // FrmOder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -942,6 +731,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.FrmOder_Shown);
             this.titlebar.ResumeLayout(false);
             this.titlebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
@@ -965,7 +755,6 @@
             this.AllItems.ResumeLayout(false);
             this.AllItems.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlTotal.ResumeLayout(false);
@@ -1015,15 +804,6 @@
         private System.Windows.Forms.Label lblNameRes;
         private System.Windows.Forms.PictureBox pictureIconBurger;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Component.Widget widget1;
-        private Component.Widget widget2;
-        private Component.Widget widget3;
-        private Component.Widget widget4;
-        private Component.Widget widget5;
-        private Component.Widget widget6;
-        private Component.Widget widget7;
-        private Component.Widget widget8;
-        private Component.Widget widget9;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.Label label9;
@@ -1035,12 +815,6 @@
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnADD;
-        private Component.Widget widget10;
-        private Component.Widget widget11;
-        private Component.Widget widget12;
-        private Component.Widget widget13;
-        private Component.Widget widget14;
-        private Component.Widget widget15;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlExit;
         private System.Windows.Forms.Label label11;
