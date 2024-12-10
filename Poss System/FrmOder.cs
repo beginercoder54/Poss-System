@@ -72,7 +72,6 @@ namespace Poss_System
             else
             {
                 FrmSetting frmSetting = new FrmSetting();
-                this.Hide();
                 frmSetting.Show();
             }
         }

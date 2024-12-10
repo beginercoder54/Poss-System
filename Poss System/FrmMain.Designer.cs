@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureIconMenu = new System.Windows.Forms.PictureBox();
             this.lblNameRes = new System.Windows.Forms.Label();
             this.pictureIconBurger = new System.Windows.Forms.PictureBox();
@@ -85,7 +86,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pnlTableMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
@@ -132,6 +132,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1366, 58);
             this.panel2.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(1191, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 29);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Table";
             // 
             // pictureIconMenu
             // 
@@ -633,6 +645,7 @@
             this.pnlSettingMenu.Name = "pnlSettingMenu";
             this.pnlSettingMenu.Size = new System.Drawing.Size(273, 100);
             this.pnlSettingMenu.TabIndex = 3;
+            this.pnlSettingMenu.Click += new System.EventHandler(this.pnlSettingMenu_Click);
             // 
             // label4
             // 
@@ -644,6 +657,7 @@
             this.label4.Size = new System.Drawing.Size(95, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Setting";
+            this.label4.Click += new System.EventHandler(this.pnlSettingMenu_Click);
             // 
             // pnlStatisticsMenu
             // 
@@ -711,18 +725,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Table";
             this.label1.Click += new System.EventHandler(this.pnlTableMenu_Click);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(1191, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 29);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Table";
             // 
             // FrmMain
             // 

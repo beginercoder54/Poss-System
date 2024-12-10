@@ -71,5 +71,17 @@ namespace Poss_System
             this.Hide();
             frmLogin.Show();
         }
+        private void pnlSettingMenu_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FrmSetting"] == Application.OpenForms[Application.OpenForms.Count - 1])
+            {
+                pnlMenu.Visible = false;
+            }
+            else
+            {
+                FrmSetting frmSetting = new FrmSetting();
+                frmSetting.Show();
+            }
+        }
     }
 }

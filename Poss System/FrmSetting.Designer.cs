@@ -36,38 +36,36 @@
             this.pictureIconMenu = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.txtType = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dtID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtQuanlity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(31, 478);
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAdd.Location = new System.Drawing.Point(14, 619);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(104, 59);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(160, 478);
+            this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDel.Location = new System.Drawing.Point(143, 619);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(104, 59);
             this.btnDel.TabIndex = 4;
@@ -76,7 +74,8 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(292, 478);
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnUpdate.Location = new System.Drawing.Point(275, 619);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(104, 59);
             this.btnUpdate.TabIndex = 4;
@@ -85,12 +84,14 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(1177, 478);
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Location = new System.Drawing.Point(1378, 619);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(104, 59);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel1
             // 
@@ -100,7 +101,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1357, 65);
+            this.panel1.Size = new System.Drawing.Size(1494, 65);
             this.panel1.TabIndex = 5;
             // 
             // pictureIconMenu
@@ -109,7 +110,7 @@
             this.pictureIconMenu.BackColor = System.Drawing.Color.Transparent;
             this.pictureIconMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureIconMenu.Image = global::Poss_System.Properties.Resources.list1;
-            this.pictureIconMenu.Location = new System.Drawing.Point(1282, 20);
+            this.pictureIconMenu.Location = new System.Drawing.Point(1419, 20);
             this.pictureIconMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureIconMenu.Name = "pictureIconMenu";
             this.pictureIconMenu.Size = new System.Drawing.Size(63, 32);
@@ -137,10 +138,20 @@
             this.panel2.Controls.Add(this.lblType);
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.lblID);
-            this.panel2.Location = new System.Drawing.Point(0, 71);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 65);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1357, 59);
+            this.panel2.Size = new System.Drawing.Size(1494, 59);
             this.panel2.TabIndex = 6;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(1196, 9);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(96, 36);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // txtType
             // 
@@ -190,70 +201,31 @@
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID:";
             // 
-            // btnSearch
+            // dgvProducts
             // 
-            this.btnSearch.Location = new System.Drawing.Point(1196, 9);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(96, 36);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtID,
-            this.dtName,
-            this.dtType,
-            this.dtPrice,
-            this.dtQuanlity});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 136);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1357, 319);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // dtID
-            // 
-            this.dtID.HeaderText = "ID";
-            this.dtID.MinimumWidth = 6;
-            this.dtID.Name = "dtID";
-            // 
-            // dtName
-            // 
-            this.dtName.HeaderText = "Name";
-            this.dtName.MinimumWidth = 6;
-            this.dtName.Name = "dtName";
-            // 
-            // dtType
-            // 
-            this.dtType.HeaderText = "Type";
-            this.dtType.MinimumWidth = 6;
-            this.dtType.Name = "dtType";
-            // 
-            // dtPrice
-            // 
-            this.dtPrice.HeaderText = "Price";
-            this.dtPrice.MinimumWidth = 6;
-            this.dtPrice.Name = "dtPrice";
-            // 
-            // dtQuanlity
-            // 
-            this.dtQuanlity.HeaderText = "Quanlity";
-            this.dtQuanlity.MinimumWidth = 6;
-            this.dtQuanlity.Name = "dtQuanlity";
+            this.dgvProducts.AllowUserToAddRows = false;
+            this.dgvProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.EnableHeadersVisualStyles = false;
+            this.dgvProducts.Location = new System.Drawing.Point(0, 124);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.RowHeadersVisible = false;
+            this.dgvProducts.RowHeadersWidth = 51;
+            this.dgvProducts.RowTemplate.Height = 24;
+            this.dgvProducts.Size = new System.Drawing.Size(1494, 489);
+            this.dgvProducts.TabIndex = 7;
             // 
             // FrmSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1357, 568);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1494, 690);
+            this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
@@ -264,12 +236,13 @@
             this.Name = "FrmSetting";
             this.Text = "Setting";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmSetting_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,11 +263,6 @@
         private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtQuanlity;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProducts;
     }
 }
