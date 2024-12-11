@@ -222,6 +222,7 @@
     <Content Include="Icon\Soda.png" />
     <Content Include="Icon\Cupcake.png" />
     <Content Include="Icon\Wing.png" />
+    <None Include="Resources\search-interface-symbol.png" />
     <None Include="Resources\arow down.png" />
     <None Include="Resources\plus-symbol-button.png" />
   </ItemGroup>

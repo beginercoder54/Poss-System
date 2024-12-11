@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Poss_System
     public partial class FrmSetting : Form
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
+
         public FrmSetting()
         {
             InitializeComponent();
@@ -41,7 +43,22 @@ namespace Poss_System
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FrmProFileProducts frmProFileProducts = new FrmProFileProducts();
-            frmProFileProducts.ShowDialog();
+            frmProFileProducts.Show();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

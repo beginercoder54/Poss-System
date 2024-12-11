@@ -36,6 +36,7 @@
             this.pictureIconMenu = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtType = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             this.panel2.SuspendLayout();
@@ -54,7 +54,7 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.BackColor = System.Drawing.Color.Gainsboro;
             this.btnAdd.Location = new System.Drawing.Point(14, 619);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(104, 59);
@@ -72,6 +72,7 @@
             this.btnDel.TabIndex = 4;
             this.btnDel.Text = "Del";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnUpdate
             // 
@@ -82,6 +83,7 @@
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -146,9 +148,21 @@
             this.panel2.Size = new System.Drawing.Size(1494, 59);
             this.panel2.TabIndex = 6;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.Location = new System.Drawing.Point(1284, 11);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(96, 36);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(1386, 9);
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Location = new System.Drawing.Point(1386, 11);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(96, 36);
             this.btnSearch.TabIndex = 3;
@@ -157,21 +171,21 @@
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(393, 23);
+            this.txtType.Location = new System.Drawing.Point(385, 21);
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(194, 22);
             this.txtType.TabIndex = 1;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(761, 23);
+            this.txtName.Location = new System.Drawing.Point(733, 21);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(244, 22);
             this.txtName.TabIndex = 1;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(41, 23);
+            this.txtID.Location = new System.Drawing.Point(41, 21);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(194, 22);
             this.txtID.TabIndex = 1;
@@ -179,16 +193,16 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(345, 26);
+            this.lblType.Location = new System.Drawing.Point(314, 24);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(42, 16);
+            this.lblType.Size = new System.Drawing.Size(65, 16);
             this.lblType.TabIndex = 0;
-            this.lblType.Text = "Type:";
+            this.lblType.Text = "Category:";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(708, 26);
+            this.lblName.Location = new System.Drawing.Point(646, 24);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(47, 16);
             this.lblName.TabIndex = 0;
@@ -197,7 +211,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(12, 26);
+            this.lblID.Location = new System.Drawing.Point(12, 24);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(23, 16);
             this.lblID.TabIndex = 0;
@@ -220,15 +234,6 @@
             this.dgvProducts.RowTemplate.Height = 24;
             this.dgvProducts.Size = new System.Drawing.Size(1494, 489);
             this.dgvProducts.TabIndex = 7;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(1284, 9);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(96, 36);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
             // 
             // FrmSetting
             // 

@@ -35,24 +35,21 @@
             this.pictureIconBurger = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.HotDrinks = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.ColdDirnks = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblDrink = new System.Windows.Forms.Label();
             this.Food = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblFood = new System.Windows.Forms.Label();
             this.Alcohol = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblAlcohol = new System.Windows.Forms.Label();
             this.Desserts = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblDessert = new System.Windows.Forms.Label();
             this.AllItems = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblAllItems = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Pay = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -80,12 +77,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pnlTableMenu = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.titlebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.panel2.SuspendLayout();
-            this.HotDrinks.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.ColdDirnks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.Food.SuspendLayout();
@@ -104,6 +102,7 @@
             this.pnlStatisticsMenu.SuspendLayout();
             this.pnlOrdersMenu.SuspendLayout();
             this.pnlTableMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // titlebar
@@ -178,58 +177,22 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel2.Controls.Add(this.HotDrinks);
             this.panel2.Controls.Add(this.ColdDirnks);
             this.panel2.Controls.Add(this.Food);
             this.panel2.Controls.Add(this.Alcohol);
             this.panel2.Controls.Add(this.Desserts);
             this.panel2.Controls.Add(this.AllItems);
-            this.panel2.Location = new System.Drawing.Point(12, 72);
+            this.panel2.Location = new System.Drawing.Point(12, 88);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(213, 411);
             this.panel2.TabIndex = 1;
             // 
-            // HotDrinks
-            // 
-            this.HotDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
-            this.HotDrinks.Controls.Add(this.pictureBox6);
-            this.HotDrinks.Controls.Add(this.label6);
-            this.HotDrinks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HotDrinks.Font = new System.Drawing.Font("Ebrima", 8.25F);
-            this.HotDrinks.Location = new System.Drawing.Point(0, 250);
-            this.HotDrinks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.HotDrinks.Name = "HotDrinks";
-            this.HotDrinks.Size = new System.Drawing.Size(213, 50);
-            this.HotDrinks.TabIndex = 1;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 31);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(53, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 21);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Hot Drinks";
-            // 
             // ColdDirnks
             // 
             this.ColdDirnks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.ColdDirnks.Controls.Add(this.pictureBox5);
-            this.ColdDirnks.Controls.Add(this.label5);
+            this.ColdDirnks.Controls.Add(this.lblDrink);
             this.ColdDirnks.Dock = System.Windows.Forms.DockStyle.Top;
             this.ColdDirnks.Font = new System.Drawing.Font("Ebrima", 8.25F);
             this.ColdDirnks.Location = new System.Drawing.Point(0, 200);
@@ -237,6 +200,7 @@
             this.ColdDirnks.Name = "ColdDirnks";
             this.ColdDirnks.Size = new System.Drawing.Size(213, 50);
             this.ColdDirnks.TabIndex = 1;
+            this.ColdDirnks.Click += new System.EventHandler(this.ColdDirnks_Click);
             // 
             // pictureBox5
             // 
@@ -249,22 +213,22 @@
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             // 
-            // label5
+            // lblDrink
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(53, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 21);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Cold Drinks";
+            this.lblDrink.AutoSize = true;
+            this.lblDrink.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDrink.ForeColor = System.Drawing.Color.White;
+            this.lblDrink.Location = new System.Drawing.Point(53, 16);
+            this.lblDrink.Name = "lblDrink";
+            this.lblDrink.Size = new System.Drawing.Size(55, 21);
+            this.lblDrink.TabIndex = 0;
+            this.lblDrink.Text = "Drinks";
             // 
             // Food
             // 
             this.Food.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.Food.Controls.Add(this.pictureBox3);
-            this.Food.Controls.Add(this.label3);
+            this.Food.Controls.Add(this.lblFood);
             this.Food.Dock = System.Windows.Forms.DockStyle.Top;
             this.Food.Font = new System.Drawing.Font("Ebrima", 8.25F);
             this.Food.Location = new System.Drawing.Point(0, 150);
@@ -272,6 +236,7 @@
             this.Food.Name = "Food";
             this.Food.Size = new System.Drawing.Size(213, 50);
             this.Food.TabIndex = 1;
+            this.Food.Click += new System.EventHandler(this.Food_Click);
             // 
             // pictureBox3
             // 
@@ -284,22 +249,22 @@
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
-            // label3
+            // lblFood
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(53, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Food";
+            this.lblFood.AutoSize = true;
+            this.lblFood.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.lblFood.ForeColor = System.Drawing.Color.White;
+            this.lblFood.Location = new System.Drawing.Point(53, 16);
+            this.lblFood.Name = "lblFood";
+            this.lblFood.Size = new System.Drawing.Size(45, 21);
+            this.lblFood.TabIndex = 0;
+            this.lblFood.Text = "Food";
             // 
             // Alcohol
             // 
             this.Alcohol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.Alcohol.Controls.Add(this.pictureBox4);
-            this.Alcohol.Controls.Add(this.label4);
+            this.Alcohol.Controls.Add(this.lblAlcohol);
             this.Alcohol.Dock = System.Windows.Forms.DockStyle.Top;
             this.Alcohol.Font = new System.Drawing.Font("Ebrima", 8.25F);
             this.Alcohol.Location = new System.Drawing.Point(0, 100);
@@ -307,6 +272,7 @@
             this.Alcohol.Name = "Alcohol";
             this.Alcohol.Size = new System.Drawing.Size(213, 50);
             this.Alcohol.TabIndex = 1;
+            this.Alcohol.Click += new System.EventHandler(this.Alcohol_Click);
             // 
             // pictureBox4
             // 
@@ -319,22 +285,22 @@
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
-            // label4
+            // lblAlcohol
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(53, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 21);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Alcohol";
+            this.lblAlcohol.AutoSize = true;
+            this.lblAlcohol.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAlcohol.ForeColor = System.Drawing.Color.White;
+            this.lblAlcohol.Location = new System.Drawing.Point(53, 16);
+            this.lblAlcohol.Name = "lblAlcohol";
+            this.lblAlcohol.Size = new System.Drawing.Size(62, 21);
+            this.lblAlcohol.TabIndex = 0;
+            this.lblAlcohol.Text = "Alcohol";
             // 
             // Desserts
             // 
             this.Desserts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.Desserts.Controls.Add(this.pictureBox7);
-            this.Desserts.Controls.Add(this.label8);
+            this.Desserts.Controls.Add(this.lblDessert);
             this.Desserts.Dock = System.Windows.Forms.DockStyle.Top;
             this.Desserts.Font = new System.Drawing.Font("Ebrima", 8.25F);
             this.Desserts.Location = new System.Drawing.Point(0, 50);
@@ -342,6 +308,7 @@
             this.Desserts.Name = "Desserts";
             this.Desserts.Size = new System.Drawing.Size(213, 50);
             this.Desserts.TabIndex = 1;
+            this.Desserts.Click += new System.EventHandler(this.Desserts_Click);
             // 
             // pictureBox7
             // 
@@ -354,22 +321,22 @@
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
-            // label8
+            // lblDessert
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(53, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 21);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Desserts";
+            this.lblDessert.AutoSize = true;
+            this.lblDessert.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDessert.ForeColor = System.Drawing.Color.White;
+            this.lblDessert.Location = new System.Drawing.Point(53, 17);
+            this.lblDessert.Name = "lblDessert";
+            this.lblDessert.Size = new System.Drawing.Size(72, 21);
+            this.lblDessert.TabIndex = 0;
+            this.lblDessert.Text = "Desserts";
             // 
             // AllItems
             // 
             this.AllItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
             this.AllItems.Controls.Add(this.pictureBox2);
-            this.AllItems.Controls.Add(this.label2);
+            this.AllItems.Controls.Add(this.lblAllItems);
             this.AllItems.Dock = System.Windows.Forms.DockStyle.Top;
             this.AllItems.Font = new System.Drawing.Font("Ebrima", 8.25F);
             this.AllItems.Location = new System.Drawing.Point(0, 0);
@@ -377,6 +344,7 @@
             this.AllItems.Name = "AllItems";
             this.AllItems.Size = new System.Drawing.Size(213, 50);
             this.AllItems.TabIndex = 0;
+            this.AllItems.Click += new System.EventHandler(this.AllItems_Click);
             // 
             // pictureBox2
             // 
@@ -389,16 +357,16 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // label2
+            // lblAllItems
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(53, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "All Items";
+            this.lblAllItems.AutoSize = true;
+            this.lblAllItems.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAllItems.ForeColor = System.Drawing.Color.White;
+            this.lblAllItems.Location = new System.Drawing.Point(53, 16);
+            this.lblAllItems.Name = "lblAllItems";
+            this.lblAllItems.Size = new System.Drawing.Size(73, 21);
+            this.lblAllItems.TabIndex = 0;
+            this.lblAllItems.Text = "All Items";
             // 
             // panel1
             // 
@@ -447,9 +415,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(274, 110);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(274, 138);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 695);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 667);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // panel3
@@ -715,11 +683,51 @@
             this.label15.Text = "Table";
             this.label15.Click += new System.EventHandler(this.pnlTableMenu_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(275, 124);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(775, 1);
+            this.panel4.TabIndex = 5;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Silver;
+            this.txtSearch.Location = new System.Drawing.Point(278, 99);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(745, 20);
+            this.txtSearch.TabIndex = 6;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Poss_System.Properties.Resources.search_interface_symbol;
+            this.pictureBox1.Location = new System.Drawing.Point(1026, 99);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmOder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1515, 817);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -737,9 +745,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.HotDrinks.ResumeLayout(false);
-            this.HotDrinks.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ColdDirnks.ResumeLayout(false);
             this.ColdDirnks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -770,7 +775,9 @@
             this.pnlOrdersMenu.PerformLayout();
             this.pnlTableMenu.ResumeLayout(false);
             this.pnlTableMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -780,19 +787,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel AllItems;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel HotDrinks;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblAllItems;
         private System.Windows.Forms.Panel Alcohol;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblAlcohol;
         private System.Windows.Forms.Panel Desserts;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblDessert;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel Food;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblFood;
         private System.Windows.Forms.Panel ColdDirnks;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label lblDrink;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -827,5 +831,8 @@
         private System.Windows.Forms.Panel pnlTableMenu;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureIconMenu;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

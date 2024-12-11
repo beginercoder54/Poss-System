@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Widget));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.imgImage = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblCost = new System.Windows.Forms.Label();
+            this.imgImage = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgImage)).BeginInit();
@@ -39,13 +40,34 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.imgImage);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblCost);
+            this.panel1.Controls.Add(this.imgImage);
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Location = new System.Drawing.Point(4, 7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(359, 161);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Chocolate;
+            this.label2.Location = new System.Drawing.Point(15, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 46);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "$";
+            // 
+            // lblCost
+            // 
+            this.lblCost.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
+            this.lblCost.ForeColor = System.Drawing.Color.Chocolate;
+            this.lblCost.Location = new System.Drawing.Point(42, 101);
+            this.lblCost.Name = "lblCost";
+            this.lblCost.Size = new System.Drawing.Size(94, 46);
+            this.lblCost.TabIndex = 1;
+            this.lblCost.Text = "4.00";
             // 
             // imgImage
             // 
@@ -58,17 +80,6 @@
             this.imgImage.TabIndex = 2;
             this.imgImage.TabStop = false;
             this.imgImage.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Chocolate;
-            this.label2.Location = new System.Drawing.Point(15, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 46);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "39.000Đ";
             // 
             // lblTitle
             // 
@@ -99,7 +110,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.PictureBox imgImage;
+        public System.Windows.Forms.Label lblCost;
+        public System.Windows.Forms.Label lblTitle;
+        public System.Windows.Forms.PictureBox imgImage;
     }
 }

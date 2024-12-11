@@ -82,7 +82,7 @@ namespace Poss_System
         }
 
 
-        public void AddItem(String name,decimal cost, string categories,Image image )
+        public void AddItem(String name,double cost, string categories,Image image )
         {
             flowLayoutPanel1.Controls.Add(new Widget()
             {
@@ -90,6 +90,7 @@ namespace Poss_System
                 Cost = cost,
                 Category = categories,
                 Icon = image,
+                Tag = categories
             });
         }
 
@@ -104,7 +105,7 @@ namespace Poss_System
             for (int i = 0; i < n; i++)
             {
                 string productName = dt.Rows[i]["productname"].ToString();
-                decimal sellPrice = Convert.ToDecimal(dt.Rows[i]["sellPrice"]);
+                double sellPrice = Convert.ToDouble((dt.Rows[i]["sellPrice"]));
                 string category = dt.Rows[i]["category"].ToString();
                 byte[] imgData = dt.Rows[i]["imgProduct"] as byte[];
                 Image imgProduct = null;
@@ -116,6 +117,75 @@ namespace Poss_System
                     }
                 }
                 AddItem(productName, sellPrice, category, imgProduct);
+            }
+            connect.Close();
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || txtSearch.Text.Trim().Length == 0)
+            {
+                foreach (var item in flowLayoutPanel1.Controls)
+                {
+                    var wdg = (Widget)item;
+                    wdg.Visible = wdg.lblTitle.Text.ToLower().Contains(txtSearch.Text.Trim().ToLower());
+                }
+            }
+               
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AllItems_Click(object sender, EventArgs e)
+        {
+            foreach (var item in flowLayoutPanel1.Controls)
+            {
+                var wdg = (Widget)item;
+                wdg.Visible = wdg.Tag.ToString() != lblAllItems.Text.Trim();
+            }
+        }
+
+        private void Desserts_Click(object sender, EventArgs e)
+        {
+            foreach (var item in flowLayoutPanel1.Controls)
+            {
+                var wdg = (Widget)item;
+                wdg.Visible = wdg.Tag.ToString().ToUpper().Contains(lblDessert.Text.Trim().ToUpper  ());
+            }
+        }
+
+        private void Alcohol_Click(object sender, EventArgs e)
+        {
+            foreach (var item in flowLayoutPanel1.Controls)
+            {
+                var wdg = (Widget)item;
+                wdg.Visible = wdg.Tag.ToString().ToUpper().Contains(lblAlcohol.Text.Trim().ToUpper());
+            }
+        }
+
+        private void Food_Click(object sender, EventArgs e)
+        {
+            foreach (var item in flowLayoutPanel1.Controls)
+            {
+                var wdg = (Widget)item;
+                wdg.Visible = wdg.Tag.ToString().ToUpper().Contains(lblFood.Text.Trim().ToUpper());
+            }
+        }
+
+        private void ColdDirnks_Click(object sender, EventArgs e)
+        {
+            foreach (var item in flowLayoutPanel1.Controls)
+            {
+                var wdg = (Widget)item;
+                wdg.Visible = wdg.Tag.ToString().ToUpper().Contains(lblDrink.Text.Trim().ToUpper());
             }
         }
     }
