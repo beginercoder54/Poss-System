@@ -103,7 +103,7 @@ namespace Poss_System
                         if (item.Cells[0].Value.ToString() == wdg.lblTitle.Text)
                         {
                             item.Cells[1].Value = int.Parse(item.Cells[1].Value.ToString()) + 1;
-                            item.Cells[2].Value = (int.Parse(item.Cells[1].Value.ToString()) * double.Parse(item.Cells[2].Value.ToString().Replace(".","")));
+                            item.Cells[2].Value = (int.Parse(item.Cells[1].Value.ToString()) * double.Parse(wdg.lblCost.Text));
                         CalculateTotal();
                             return;
                         }
@@ -226,7 +226,10 @@ namespace Poss_System
             }
         }
 
-
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+        }
     }
 }
    
