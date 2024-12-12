@@ -15,7 +15,7 @@ namespace Poss_System
     public partial class FrmSetting : Form
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
-
+        int indexRow;
         public FrmSetting()
         {
             InitializeComponent();
@@ -58,8 +58,37 @@ namespace Poss_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            //if (indexRow > 0)
+            //{
+            //    Product p = new Product();
+            //    p.Id = dgvProducts.Rows[indexRow].Cells[1].Value.ToString();
+            //    p.Name = dgvProducts.Rows[indexRow].Cells[1].Value.ToString();
+            //    p.Category = dgvProducts.Rows[indexRow].Cells[2].Value.ToString();
+            //    p.SellPrice = Convert.ToDouble(dgvProducts.Rows[indexRow].Cells[3].Value);
+            //    p.Purchase = Convert.ToDouble(dgvProducts.Rows[indexRow].Cells[4].Value);
+            //    FrmProFileProducts frmProFileProducts = new FrmProFileProducts(p);
+            //    frmProFileProducts.Show();
 
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Select product to update.", "Notiffication", MessageBoxButtons.OK);
+            //}
         }
+
+        private void dgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            indexRow= e.RowIndex;
+        }
+
+        byte[] ImageToByteArray(Image img)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            img.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
+            return memoryStream.ToArray();
+        }
+
+
     }
 }
 

@@ -40,6 +40,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblCost);
             this.panel1.Controls.Add(this.imgImage);
@@ -48,6 +49,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(359, 161);
             this.panel1.TabIndex = 0;
+            this.panel1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -61,6 +63,7 @@
             // 
             // lblCost
             // 
+            this.lblCost.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCost.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
             this.lblCost.ForeColor = System.Drawing.Color.Chocolate;
             this.lblCost.Location = new System.Drawing.Point(42, 101);
@@ -68,6 +71,7 @@
             this.lblCost.Size = new System.Drawing.Size(94, 46);
             this.lblCost.TabIndex = 1;
             this.lblCost.Text = "4.00";
+            this.lblCost.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // imgImage
             // 
@@ -84,12 +88,14 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(17, 21);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(154, 31);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Ranch Burger";
+            this.lblTitle.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Widget
             // 
@@ -97,6 +103,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "Widget";
             this.Size = new System.Drawing.Size(366, 174);
             this.panel1.ResumeLayout(false);

@@ -21,7 +21,16 @@ namespace Poss_System
             InitializeComponent();
         }
 
-        
+        //public FrmProFileProducts(Product p)
+        //{
+            
+        //    txtID.Text = p.Id;
+        //    txtName.Text = p.Name;
+        //    txtCategory.Text = p.Category;
+        //    txtPrice.Text= p.SellPrice.ToString();
+        //    txtPurchase.Text=p.Purchase.ToString();
+        //    pictureBox1.Image=p.Img;
+        //}
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();

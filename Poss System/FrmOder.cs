@@ -84,14 +84,51 @@ namespace Poss_System
 
         public void AddItem(String name,double cost, string categories,Image image )
         {
-            flowLayoutPanel1.Controls.Add(new Widget()
+            var w =new Widget()
             {
                 Title = name,
                 Cost = cost,
                 Category = categories,
                 Icon = image,
                 Tag = categories
-            });
+            };
+            flowLayoutPanel1.Controls.Add(w);
+            w.OnSelect += (ss, ee) =>
+            {
+                var wdg = (Widget)ss;
+                foreach (DataGridViewRow item in dataGridView1.Rows)
+                {
+                   
+                    
+                        if (item.Cells[0].Value.ToString() == wdg.lblTitle.Text)
+                        {
+                            item.Cells[1].Value = int.Parse(item.Cells[1].Value.ToString()) + 1;
+                            item.Cells[2].Value = (int.Parse(item.Cells[1].Value.ToString()) * double.Parse(item.Cells[2].Value.ToString().Replace(".","")));
+                        CalculateTotal();
+                            return;
+                        }
+
+
+                    
+
+                }
+                dataGridView1.Rows.Add(new object[] { wdg.lblTitle.Text, 1, wdg.Cost});
+                CalculateTotal();
+            };
+        }
+
+        public void CalculateTotal()
+        {
+            double total = 0;
+            foreach(DataGridViewRow item in dataGridView1.Rows)
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    total += double.Parse(item.Cells[2].Value.ToString());
+                }
+                    
+            }
+            lblTotalPrice.Text = "$ "+ total.ToString();
         }
 
         private void FrmOder_Shown(object sender, EventArgs e)
@@ -188,6 +225,8 @@ namespace Poss_System
                 wdg.Visible = wdg.Tag.ToString().ToUpper().Contains(lblDrink.Text.Trim().ToUpper());
             }
         }
+
+
     }
 }
    
