@@ -47,33 +47,24 @@ namespace Poss_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == "" || txtName.Text == "" || txtPrice.Text == "" || txtPurchase.Text == "" || txtCategory.Text == "" || pictureBox1.Image == null)
-            {
-                MessageBox.Show("Please enter the information.", "Notification", MessageBoxButtons.OK);
-            }
-            else
-            {
                 byte[] data = ImageToByteArray(pictureBox1.Image);
                 connect.Open();
                 decimal sellPrice = decimal.Parse(txtPrice.Text);
                 decimal purchasePrice = decimal.Parse(txtPurchase.Text);
-                SqlCommand cmd = new SqlCommand("insert into Product values (@productID,@productname,@Category,@sellPricce,@purchasePrice,@imgProduct)", connect);
-                cmd.Parameters.AddWithValue("@productID", txtID.Text);
-                cmd.Parameters.AddWithValue("@productname", txtName.Text);
-                cmd.Parameters.AddWithValue("@Category", txtCategory.Text);
-                cmd.Parameters.AddWithValue("@sellPricce", sellPrice);
-                cmd.Parameters.AddWithValue("@purchasePrice", purchasePrice);
-                cmd.Parameters.AddWithValue("@imgProduct", data);
+                SqlCommand cmd = new SqlCommand("update  Product set  productID = @productID , productname = @productname ,category = @Category,sellPrice = @sellPricce,purchasePrice =@purchasePrice,imgProduct = @imgProduct where productID=@productID or productname= @productname", connect);
+                cmd.Parameters.AddWithValue("productID", txtID.Text);
+                cmd.Parameters.AddWithValue("productname", txtName.Text);
+                cmd.Parameters.AddWithValue("Category", txtCategory.Text);
+                cmd.Parameters.AddWithValue("sellPricce", sellPrice);
+                cmd.Parameters.AddWithValue("purchasePrice", purchasePrice);
+                cmd.Parameters.AddWithValue("imgProduct", data);
                 cmd.ExecuteNonQuery();
                 connect.Close();
-                MessageBox.Show("Add new product success.", "Notification", MessageBoxButtons.OK);
-                txtID.Text = "";
-                txtName.Text = "";
-                txtPrice.Text = "";
-                txtPurchase.Text = "";
-                txtCategory.Text = "";
-                pictureBox1.Image = null;
-            }
+                this.Hide();
+                MessageBox.Show("Update new product success.", "Notification", MessageBoxButtons.OK);
+            
         }
+
+        
     }
 }

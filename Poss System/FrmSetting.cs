@@ -37,7 +37,7 @@ namespace Poss_System
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -51,31 +51,25 @@ namespace Poss_System
             LoadData();
         }
 
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //if (indexRow > 0)
-            //{
-            //    Product p = new Product();
-            //    p.Id = dgvProducts.Rows[indexRow].Cells[1].Value.ToString();
-            //    p.Name = dgvProducts.Rows[indexRow].Cells[1].Value.ToString();
-            //    p.Category = dgvProducts.Rows[indexRow].Cells[2].Value.ToString();
-            //    p.SellPrice = Convert.ToDouble(dgvProducts.Rows[indexRow].Cells[3].Value);
-            //    p.Purchase = Convert.ToDouble(dgvProducts.Rows[indexRow].Cells[4].Value);
-            //    FrmProFileProducts frmProFileProducts = new FrmProFileProducts(p);
-            //    frmProFileProducts.Show();
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Select product to update.", "Notiffication", MessageBoxButtons.OK);
-            //}
+            if (indexRow > 0)
+            {
+                FrmUpdateProFile frmUpdateProFile = new FrmUpdateProFile();
+                frmUpdateProFile.Show();
+                frmUpdateProFile.txtID.Text = dgvProducts.Rows[indexRow].Cells[0].Value.ToString();
+                frmUpdateProFile.txtName.Text = dgvProducts.Rows[indexRow].Cells[1].Value.ToString();
+                frmUpdateProFile.txtCategory.Text = dgvProducts.Rows[indexRow].Cells[2].Value.ToString();
+                frmUpdateProFile.txtPrice.Text = dgvProducts.Rows[indexRow].Cells[3].Value.ToString();
+                frmUpdateProFile.txtPurchase.Text = dgvProducts.Rows[indexRow].Cells[4].Value.ToString();
+                MemoryStream ms = new MemoryStream((byte[])dgvProducts.Rows[indexRow].Cells[5].Value);
+                frmUpdateProFile.pictureBox1.Image = Image.FromStream(ms);
+            }
+            else
+            {
+                MessageBox.Show("Select product for update","Notiffication",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
-
         private void dgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             indexRow= e.RowIndex;
@@ -88,7 +82,27 @@ namespace Poss_System
             return memoryStream.ToArray();
         }
 
-
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (indexRow > 0)
+            {
+                DialogResult result = MessageBox.Show("Do you want to delete the product ?", "Alarm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    string id = dgvProducts.Rows[indexRow].Cells[0].Value.ToString();
+                    connect.Open();
+                    SqlCommand cmd = new SqlCommand("delete Product where productID = @productID", connect);
+                    cmd.Parameters.AddWithValue("productID", id);
+                    cmd.ExecuteNonQuery();
+                    connect.Close();
+                    MessageBox.Show("Delete success.", "Notiffication", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select product for delete", "Notiffication", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

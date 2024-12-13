@@ -214,15 +214,15 @@
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtPurchase;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtCategory;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblModify;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnOpenFile;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox txtPurchase;
+        public System.Windows.Forms.TextBox txtPrice;
+        public System.Windows.Forms.TextBox txtCategory;
+        public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtID;
     }
 }

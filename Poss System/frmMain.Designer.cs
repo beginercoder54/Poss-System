@@ -690,17 +690,18 @@
             this.pnlOrdersMenu.Size = new System.Drawing.Size(273, 100);
             this.pnlOrdersMenu.TabIndex = 1;
             this.pnlOrdersMenu.Click += new System.EventHandler(this.pnlOrdersMenu_Click);
+
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(93, 36);
+            this.label2.Location = new System.Drawing.Point(69, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 29);
+            this.label2.Size = new System.Drawing.Size(140, 29);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Orders";
+            this.label2.Text = "Take Away";
             this.label2.Click += new System.EventHandler(this.pnlOrdersMenu_Click);
             // 
             // pnlTableMenu

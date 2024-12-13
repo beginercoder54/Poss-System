@@ -20,17 +20,6 @@ namespace Poss_System
         {
             InitializeComponent();
         }
-
-        //public FrmProFileProducts(Product p)
-        //{
-            
-        //    txtID.Text = p.Id;
-        //    txtName.Text = p.Name;
-        //    txtCategory.Text = p.Category;
-        //    txtPrice.Text= p.SellPrice.ToString();
-        //    txtPurchase.Text=p.Purchase.ToString();
-        //    pictureBox1.Image=p.Img;
-        //}
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -46,30 +35,37 @@ namespace Poss_System
         {
             if (txtID.Text == ""|| txtName.Text == ""||txtPrice.Text == ""||txtPurchase.Text == ""||txtCategory.Text == ""||pictureBox1.Image == null)
             {
-                MessageBox.Show("Please enter the information.", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Please enter the information.", "Notification", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                byte[] data = ImageToByteArray(pictureBox1.Image);
-                connect.Open();
-                decimal sellPrice = decimal.Parse(txtPrice.Text);
-                decimal purchasePrice = decimal.Parse(txtPurchase.Text);
-                SqlCommand cmd = new SqlCommand("insert into Product values (@productID,@productname,@Category,@sellPricce,@purchasePrice,@imgProduct)", connect);
-                cmd.Parameters.AddWithValue("@productID", txtID.Text);
-                cmd.Parameters.AddWithValue("@productname", txtName.Text);
-                cmd.Parameters.AddWithValue("@Category", txtCategory.Text);
-                cmd.Parameters.AddWithValue("@sellPricce", sellPrice);
-                cmd.Parameters.AddWithValue("@purchasePrice", purchasePrice);
-                cmd.Parameters.AddWithValue("@imgProduct", data);
-                cmd.ExecuteNonQuery();
-                connect.Close();
-                MessageBox.Show("Add new product success.", "Notification", MessageBoxButtons.OK);
-                txtID.Text = "";
-                txtName.Text = "";
-                txtPrice.Text = "";
-                txtPurchase.Text = "";
-                txtCategory.Text = "";
-                pictureBox1.Image = null;
+                if (Checkitem() == 0)
+                {
+                    //byte[] data = ImageToByteArray(pictureBox1.Image);
+                    //connect.Open();
+                    //decimal sellPrice = decimal.Parse(txtPrice.Text);
+                    //decimal purchasePrice = decimal.Parse(txtPurchase.Text);
+                    //SqlCommand cmd = new SqlCommand("insert into Product values (@productID,@productname,@Category,@sellPricce,@purchasePrice,@imgProduct)", connect);
+                    //cmd.Parameters.AddWithValue("@productID", txtID.Text);
+                    //cmd.Parameters.AddWithValue("@productname", txtName.Text);
+                    //cmd.Parameters.AddWithValue("@Category", txtCategory.Text);
+                    //cmd.Parameters.AddWithValue("@sellPricce", sellPrice);
+                    //cmd.Parameters.AddWithValue("@purchasePrice", purchasePrice);
+                    //cmd.Parameters.AddWithValue("@imgProduct", data);
+                    //cmd.ExecuteNonQuery();
+                    //connect.Close();
+                    //MessageBox.Show("Add new product success.", "Notification", MessageBoxButtons.OK);
+                    //txtID.Text = "";
+                    //txtName.Text = "";
+                    //txtPrice.Text = "";
+                    //txtPurchase.Text = "";
+                    //txtCategory.Text = "";
+                    //pictureBox1.Image = null;
+                    MessageBox.Show("0", "Notiffication", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                    MessageBox.Show("Product is available","Notiffication",MessageBoxButtons.OK,MessageBoxIcon.Error);
+               
             }
      
         }
@@ -85,5 +81,27 @@ namespace Poss_System
         {
             this.Close();
         }
+
+
+
+        public int Checkitem()
+        {
+            // Khởi tạo FrmSetting (nếu chưa khởi tạo từ trước)
+            FrmSetting frmSetting = new FrmSetting();
+
+            // Duyệt qua các dòng trong dgvProducts
+            foreach (DataGridViewRow row in frmSetting.dgvProducts.Rows)
+            {
+                // Kiểm tra xem giá trị của ô cột 0 có phải null không
+                if (row.Cells[0].Value.ToString().Trim() == null || row.Cells[0].Value.ToString().Trim() == txtID.Text)
+                {
+                    return 1; // Nếu tìm thấy ID thì trả về 1
+                }
+            }
+
+            return 0; // Nếu không tìm thấy ID thì trả về 0
+        }
     }
+
+
 }

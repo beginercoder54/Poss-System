@@ -280,7 +280,7 @@
         private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Button btnRefresh;
+        public System.Windows.Forms.DataGridView dgvProducts;
     }
 }

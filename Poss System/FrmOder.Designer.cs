@@ -219,6 +219,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.ColdDirnks_Click);
             // 
             // lblDrink
             // 
@@ -227,9 +228,10 @@
             this.lblDrink.ForeColor = System.Drawing.Color.White;
             this.lblDrink.Location = new System.Drawing.Point(53, 16);
             this.lblDrink.Name = "lblDrink";
-            this.lblDrink.Size = new System.Drawing.Size(55, 21);
+            this.lblDrink.Size = new System.Drawing.Size(48, 21);
             this.lblDrink.TabIndex = 0;
-            this.lblDrink.Text = "Drinks";
+            this.lblDrink.Text = "Drink";
+            this.lblDrink.Click += new System.EventHandler(this.ColdDirnks_Click);
             // 
             // Food
             // 
@@ -255,6 +257,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.Food_Click);
             // 
             // lblFood
             // 
@@ -266,6 +269,7 @@
             this.lblFood.Size = new System.Drawing.Size(45, 21);
             this.lblFood.TabIndex = 0;
             this.lblFood.Text = "Food";
+            this.lblFood.Click += new System.EventHandler(this.Food_Click);
             // 
             // Alcohol
             // 
@@ -291,6 +295,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.Alcohol_Click);
             // 
             // lblAlcohol
             // 
@@ -302,6 +307,7 @@
             this.lblAlcohol.Size = new System.Drawing.Size(62, 21);
             this.lblAlcohol.TabIndex = 0;
             this.lblAlcohol.Text = "Alcohol";
+            this.lblAlcohol.Click += new System.EventHandler(this.Alcohol_Click);
             // 
             // Desserts
             // 
@@ -327,6 +333,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.Desserts_Click);
             // 
             // lblDessert
             // 
@@ -335,9 +342,10 @@
             this.lblDessert.ForeColor = System.Drawing.Color.White;
             this.lblDessert.Location = new System.Drawing.Point(53, 17);
             this.lblDessert.Name = "lblDessert";
-            this.lblDessert.Size = new System.Drawing.Size(72, 21);
+            this.lblDessert.Size = new System.Drawing.Size(65, 21);
             this.lblDessert.TabIndex = 0;
-            this.lblDessert.Text = "Desserts";
+            this.lblDessert.Text = "Dessert";
+            this.lblDessert.Click += new System.EventHandler(this.Desserts_Click);
             // 
             // AllItems
             // 
@@ -363,6 +371,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.AllItems_Click);
             // 
             // lblAllItems
             // 
@@ -374,6 +383,7 @@
             this.lblAllItems.Size = new System.Drawing.Size(73, 21);
             this.lblAllItems.TabIndex = 0;
             this.lblAllItems.Text = "All Items";
+            this.lblAllItems.Click += new System.EventHandler(this.AllItems_Click);
             // 
             // panel1
             // 
