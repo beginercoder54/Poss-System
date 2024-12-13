@@ -41,27 +41,26 @@ namespace Poss_System
             {
                 if (Checkitem() == 0)
                 {
-                    //byte[] data = ImageToByteArray(pictureBox1.Image);
-                    //connect.Open();
-                    //decimal sellPrice = decimal.Parse(txtPrice.Text);
-                    //decimal purchasePrice = decimal.Parse(txtPurchase.Text);
-                    //SqlCommand cmd = new SqlCommand("insert into Product values (@productID,@productname,@Category,@sellPricce,@purchasePrice,@imgProduct)", connect);
-                    //cmd.Parameters.AddWithValue("@productID", txtID.Text);
-                    //cmd.Parameters.AddWithValue("@productname", txtName.Text);
-                    //cmd.Parameters.AddWithValue("@Category", txtCategory.Text);
-                    //cmd.Parameters.AddWithValue("@sellPricce", sellPrice);
-                    //cmd.Parameters.AddWithValue("@purchasePrice", purchasePrice);
-                    //cmd.Parameters.AddWithValue("@imgProduct", data);
-                    //cmd.ExecuteNonQuery();
-                    //connect.Close();
-                    //MessageBox.Show("Add new product success.", "Notification", MessageBoxButtons.OK);
-                    //txtID.Text = "";
-                    //txtName.Text = "";
-                    //txtPrice.Text = "";
-                    //txtPurchase.Text = "";
-                    //txtCategory.Text = "";
-                    //pictureBox1.Image = null;
-                    MessageBox.Show("0", "Notiffication", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    byte[] data = ImageToByteArray(pictureBox1.Image);
+                    connect.Open();
+                    decimal sellPrice = decimal.Parse(txtPrice.Text);
+                    decimal purchasePrice = decimal.Parse(txtPurchase.Text);
+                    SqlCommand cmd = new SqlCommand("insert into Product values (@productID,@productname,@Category,@sellPricce,@purchasePrice,@imgProduct)", connect);
+                    cmd.Parameters.AddWithValue("@productID", txtID.Text);
+                    cmd.Parameters.AddWithValue("@productname", txtName.Text);
+                    cmd.Parameters.AddWithValue("@Category", txtCategory.Text);
+                    cmd.Parameters.AddWithValue("@sellPricce", sellPrice);
+                    cmd.Parameters.AddWithValue("@purchasePrice", purchasePrice);
+                    cmd.Parameters.AddWithValue("@imgProduct", data);
+                    cmd.ExecuteNonQuery();
+                    connect.Close();
+                    MessageBox.Show("Add new product success.", "Notification", MessageBoxButtons.OK);
+                    txtID.Text = "";
+                    txtName.Text = "";
+                    txtPrice.Text = "";
+                    txtPurchase.Text = "";
+                    txtCategory.Text = "";
+                    pictureBox1.Image = null;
                 }
                 else
                     MessageBox.Show("Product is available","Notiffication",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -86,20 +85,35 @@ namespace Poss_System
 
         public int Checkitem()
         {
-            // Khởi tạo FrmSetting (nếu chưa khởi tạo từ trước)
-            FrmSetting frmSetting = new FrmSetting();
+            // Assuming FrmSetting is already open and accessible
+            FrmSetting frmSetting = Application.OpenForms.OfType<FrmSetting>().FirstOrDefault();
 
-            // Duyệt qua các dòng trong dgvProducts
+            // Check if the form is null (not open)
+            if (frmSetting == null)
+            {
+                MessageBox.Show("FrmSetting form is not open.");
+                return 0; // No products to check
+            }
+
+            // Iterate through the rows in the DataGridView
             foreach (DataGridViewRow row in frmSetting.dgvProducts.Rows)
             {
-                // Kiểm tra xem giá trị của ô cột 0 có phải null không
-                if (row.Cells[0].Value.ToString().Trim() == null || row.Cells[0].Value.ToString().Trim() == txtID.Text)
+                // Check if the value in the first cell is not null or empty before comparing
+                var cellValue = row.Cells[0].Value?.ToString().Trim(); // Safe null check
+
+                if (string.IsNullOrEmpty(cellValue))
                 {
-                    return 1; // Nếu tìm thấy ID thì trả về 1
+                    continue; // Skip rows with null or empty ID
+                }
+
+                // Compare the value from the text box to the cell value
+                if (cellValue == txtID.Text.Trim())
+                {
+                    return 1; // Product ID exists, return 1 to indicate duplication
                 }
             }
 
-            return 0; // Nếu không tìm thấy ID thì trả về 0
+            return 0; // No matching product ID found
         }
     }
 

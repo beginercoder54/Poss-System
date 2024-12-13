@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureIconMenu = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.txtAccount = new System.Windows.Forms.TextBox();
@@ -48,17 +48,19 @@
             this.dtTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
+            this.lblNameRes = new System.Windows.Forms.Label();
+            this.pictureIconBurger = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(135)))), ((int)(((byte)(43)))));
-            this.panel1.Controls.Add(this.pictureIconMenu);
+            this.panel1.Controls.Add(this.lblNameRes);
+            this.panel1.Controls.Add(this.pictureIconBurger);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -66,26 +68,13 @@
             this.panel1.Size = new System.Drawing.Size(1240, 66);
             this.panel1.TabIndex = 0;
             // 
-            // pictureIconMenu
-            // 
-            this.pictureIconMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureIconMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pictureIconMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureIconMenu.Image = global::Poss_System.Properties.Resources.list1;
-            this.pictureIconMenu.Location = new System.Drawing.Point(1165, 20);
-            this.pictureIconMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureIconMenu.Name = "pictureIconMenu";
-            this.pictureIconMenu.Size = new System.Drawing.Size(63, 32);
-            this.pictureIconMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureIconMenu.TabIndex = 8;
-            this.pictureIconMenu.TabStop = false;
-            // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(36, 20);
+            this.label1.Location = new System.Drawing.Point(1092, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 34);
             this.label1.TabIndex = 1;
@@ -105,6 +94,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1240, 54);
             this.panel2.TabIndex = 1;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(1008, 8);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(96, 36);
+            this.btnRefresh.TabIndex = 4;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
             // 
             // btnSearch
             // 
@@ -237,14 +235,30 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // btnRefresh
+            // lblNameRes
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(1008, 8);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(96, 36);
-            this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.lblNameRes.AutoSize = true;
+            this.lblNameRes.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameRes.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameRes.ForeColor = System.Drawing.Color.White;
+            this.lblNameRes.Location = new System.Drawing.Point(84, 16);
+            this.lblNameRes.Name = "lblNameRes";
+            this.lblNameRes.Size = new System.Drawing.Size(282, 34);
+            this.lblNameRes.TabIndex = 7;
+            this.lblNameRes.Text = "Tam Thai Tu Restaurant";
+            // 
+            // pictureIconBurger
+            // 
+            this.pictureIconBurger.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIconBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureIconBurger.Image = global::Poss_System.Properties.Resources.burger;
+            this.pictureIconBurger.Location = new System.Drawing.Point(15, 16);
+            this.pictureIconBurger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureIconBurger.Name = "pictureIconBurger";
+            this.pictureIconBurger.Size = new System.Drawing.Size(63, 35);
+            this.pictureIconBurger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIconBurger.TabIndex = 6;
+            this.pictureIconBurger.TabStop = false;
             // 
             // FrmStatistics
             // 
@@ -261,10 +275,10 @@
             this.Text = "FrmStatistics";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,7 +287,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureIconMenu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtAccount;
         private System.Windows.Forms.TextBox txtBill;
@@ -292,5 +305,7 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label lblNameRes;
+        private System.Windows.Forms.PictureBox pictureIconBurger;
     }
 }

@@ -48,6 +48,9 @@ namespace Poss_System
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            txtID.Text = "";
+            txtName.Text = "";
+            txtType.Text = "";
             LoadData();
         }
 
@@ -96,6 +99,7 @@ namespace Poss_System
                     cmd.ExecuteNonQuery();
                     connect.Close();
                     MessageBox.Show("Delete success.", "Notiffication", MessageBoxButtons.OK);
+                    LoadData();
                 }
             }
             else
@@ -103,6 +107,90 @@ namespace Poss_System
                 MessageBox.Show("Select product for delete", "Notiffication", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            if(txtID.Text=="" && txtName.Text=="" && txtType.Text==""){
+                MessageBox.Show("Input value to search product", "Notiffication", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (txtID.Text != "" && txtName.Text == "" && txtType.Text == "")
+                {
+                    connect.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Product where productID like '%" + txtID.Text + "%'", connect);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    dgvProducts.DataSource = dt;
+                    connect.Close(); ;
+                }
+                if (txtID.Text == "" && txtName.Text != "" && txtType.Text == "")
+                {
+                    connect.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Product where productname like '%" + txtName.Text + "%'", connect);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    dgvProducts.DataSource = dt;
+                    connect.Close(); ;
+                }
+                if (txtID.Text == "" && txtName.Text == "" && txtType.Text != "")
+                {
+                    connect.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Product where Category like '%" + txtType.Text + "%'", connect);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    dgvProducts.DataSource = dt;
+                    connect.Close(); ;
+                }
+                if (txtID.Text != "" && txtName.Text != "" && txtType.Text == "")
+                {
+                    connect.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Product where productID like '%" + txtID.Text + "%'and productname like '%" + txtName.Text + "%'", connect);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    dgvProducts.DataSource = dt;
+                    connect.Close(); ;
+                }
+                if (txtID.Text != "" && txtName.Text == "" && txtType.Text != "")
+                {
+                    connect.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Product where productID like '%" + txtID.Text + "%'and Category like '%" + txtType.Text + "%'", connect);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    dgvProducts.DataSource = dt;
+                    connect.Close(); ;
+                }
+                if (txtID.Text == "" && txtName.Text != "" && txtType.Text != "")
+                {
+                    connect.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Product where productname like '%" + txtName.Text + "%'and Category like '%" + txtType.Text + "%'", connect);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    dgvProducts.DataSource = dt;
+                    connect.Close(); ;
+                }
+                if (txtID.Text != "" && txtName.Text != "" && txtType.Text != "")
+                {
+                    connect.Open();
+                    SqlCommand cmd = new SqlCommand("select * from Product where productname like '%" + txtName.Text + "%'and Category like '%" + txtType.Text + "%'and productID like '%" + txtID.Text + "%'", connect);
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    dgvProducts.DataSource = dt;
+                    connect.Close(); ;
+                }
+            }
+            
+
+        }
+
     }
 }
 

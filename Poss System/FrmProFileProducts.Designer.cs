@@ -137,7 +137,7 @@
             // lblModify
             // 
             this.lblModify.AutoSize = true;
-            this.lblModify.Location = new System.Drawing.Point(249, 200);
+            this.lblModify.Location = new System.Drawing.Point(241, 200);
             this.lblModify.Name = "lblModify";
             this.lblModify.Size = new System.Drawing.Size(64, 16);
             this.lblModify.TabIndex = 1;
@@ -146,7 +146,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(249, 163);
+            this.lblPrice.Location = new System.Drawing.Point(241, 160);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(67, 16);
             this.lblPrice.TabIndex = 1;
@@ -155,7 +155,7 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(243, 109);
+            this.lblType.Location = new System.Drawing.Point(241, 112);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(65, 16);
             this.lblType.TabIndex = 1;
@@ -164,7 +164,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(243, 63);
+            this.lblName.Location = new System.Drawing.Point(241, 63);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(47, 16);
             this.lblName.TabIndex = 1;
@@ -173,7 +173,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(243, 21);
+            this.lblID.Location = new System.Drawing.Point(241, 21);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(72, 16);
             this.lblID.TabIndex = 1;

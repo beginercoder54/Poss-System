@@ -108,14 +108,14 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(324, 157);
+            this.txtPrice.Location = new System.Drawing.Point(324, 153);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(189, 22);
             this.txtPrice.TabIndex = 2;
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(324, 109);
+            this.txtCategory.Location = new System.Drawing.Point(324, 106);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(189, 22);
             this.txtCategory.TabIndex = 2;
@@ -137,7 +137,7 @@
             // lblModify
             // 
             this.lblModify.AutoSize = true;
-            this.lblModify.Location = new System.Drawing.Point(249, 200);
+            this.lblModify.Location = new System.Drawing.Point(243, 200);
             this.lblModify.Name = "lblModify";
             this.lblModify.Size = new System.Drawing.Size(64, 16);
             this.lblModify.TabIndex = 1;
@@ -146,7 +146,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(249, 163);
+            this.lblPrice.Location = new System.Drawing.Point(243, 157);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(67, 16);
             this.lblPrice.TabIndex = 1;
