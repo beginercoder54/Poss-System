@@ -171,11 +171,11 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1309, 18);
+            this.label1.Location = new System.Drawing.Point(1280, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 28);
+            this.label1.Size = new System.Drawing.Size(137, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Take Away";
             // 
@@ -599,11 +599,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(111, 35);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 29);
+            this.label11.Size = new System.Drawing.Size(64, 34);
             this.label11.TabIndex = 0;
             this.label11.Text = "Exit";
             this.label11.Click += new System.EventHandler(this.pnlExit_Click);
@@ -622,11 +622,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(92, 37);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 29);
+            this.label12.Size = new System.Drawing.Size(94, 34);
             this.label12.TabIndex = 0;
             this.label12.Text = "Setting";
             this.label12.Click += new System.EventHandler(this.pnlSettingMenu_Click);
@@ -644,11 +644,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(79, 33);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 29);
+            this.label13.Size = new System.Drawing.Size(119, 34);
             this.label13.TabIndex = 0;
             this.label13.Text = "Statistics";
             // 
@@ -666,11 +666,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(70, 36);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(140, 29);
+            this.label14.Size = new System.Drawing.Size(137, 34);
             this.label14.TabIndex = 0;
             this.label14.Text = "Take Away";
             this.label14.Click += new System.EventHandler(this.pnlOrdersMenu_Click);
@@ -689,11 +689,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(98, 36);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(81, 29);
+            this.label15.Size = new System.Drawing.Size(75, 34);
             this.label15.TabIndex = 0;
             this.label15.Text = "Table";
             this.label15.Click += new System.EventHandler(this.pnlTableMenu_Click);
