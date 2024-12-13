@@ -53,15 +53,15 @@ namespace Poss_System
 
         private void pnlOrdersMenu_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["FrmOder"] == Application.OpenForms[Application.OpenForms.Count - 1])
+            if (Application.OpenForms["FrmTW"] == Application.OpenForms[Application.OpenForms.Count - 1])
             {
                 pnlMenu.Visible = false;
             }
             else
             {
-                FrmOder frmOder = new FrmOder();
+                FrmTW frmTW = new FrmTW();
                 this.Hide();
-                frmOder.Show();
+                frmTW.Show();
             }
         }
 
@@ -83,5 +83,6 @@ namespace Poss_System
                 frmSetting.Show();
             }
         }
+
     }
 }

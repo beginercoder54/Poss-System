@@ -82,6 +82,18 @@
     <Compile Include="FrmStatistics.Designer.cs">
       <DependentUpon>FrmStatistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTW.Designer.cs">
+      <DependentUpon>FrmTW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdateProFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateProFile.Designer.cs">
+      <DependentUpon>FrmUpdateProFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStatistics.resx">
       <DependentUpon>FrmStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTW.resx">
+      <DependentUpon>FrmTW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateProFile.resx">
+      <DependentUpon>FrmUpdateProFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
