@@ -52,6 +52,12 @@
     <Compile Include="Component\Widget.Designer.cs">
       <DependentUpon>Widget.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRQSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRQSetting.Designer.cs">
+      <DependentUpon>FrmRQSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmOder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="Component\Widget.resx">
       <DependentUpon>Widget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRQSetting.resx">
+      <DependentUpon>FrmRQSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

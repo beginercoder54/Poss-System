@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using hu;
 using Poss_System.Component;
 using static Poss_System.Component.Widget;
 
@@ -70,14 +71,32 @@ namespace Poss_System
         }
         private void pnlSettingMenu_Click(object sender, EventArgs e)
         {
+
             if (Application.OpenForms["FrmSetting"] == Application.OpenForms[Application.OpenForms.Count - 1])
             {
                 pnlMenu.Visible = false;
             }
             else
             {
-                FrmSetting frmSetting = new FrmSetting();
-                frmSetting.Show();
+                FrmRQSetting frmRQSetting = new FrmRQSetting();
+                frmRQSetting.Show();
+                SqlCommand cmd = new SqlCommand("select * from SELECT * FROM Account WHERE upass= '" + frmRQSetting.txtPass.Text + "'", connect);
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    FrmSetting frmSetting = new FrmSetting();
+                    frmRQSetting.Close();
+                    frmSetting.Show();
+                }
+                else
+                {
+                    {
+                        MessageBox.Show("Password is wrong", "Notiffication", MessageBoxButtons.OK);
+                    }
+                }
+
             }
         }
 
