@@ -79,22 +79,6 @@ namespace Poss_System
             {
                 FrmRQSetting frmRQSetting = new FrmRQSetting();
                 frmRQSetting.Show();
-                SqlCommand cmd = new SqlCommand("select * from SELECT * FROM Account WHERE upass= '"+frmRQSetting.txtPass.Text+"'",connect);
-                DataTable dt = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    FrmSetting frmSetting = new FrmSetting();
-                    frmRQSetting.Close();
-                    frmSetting.Show();
-                }
-                else
-                {
-                    {
-                        MessageBox.Show("Password is wrong", "Notiffication", MessageBoxButtons.OK);
-                    }
-                }
                
             }
         }

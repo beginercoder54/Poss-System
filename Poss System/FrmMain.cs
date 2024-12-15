@@ -15,6 +15,7 @@ namespace Poss_System
 {
     public partial class FrmMain : Form
     {
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
         public FrmMain()
         {
             InitializeComponent();
@@ -85,23 +86,6 @@ namespace Poss_System
             {
                 FrmRQSetting frmRQSetting = new FrmRQSetting();
                 frmRQSetting.Show();
-                SqlCommand cmd = new SqlCommand("select * from SELECT * FROM Account WHERE upass= '" + frmRQSetting.txtPass.Text + "'", connect);
-                DataTable dt = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    FrmSetting frmSetting = new FrmSetting();
-                    frmRQSetting.Close();
-                    frmSetting.Show();
-                }
-                else
-                {
-                    {
-                        MessageBox.Show("Password is wrong", "Notiffication", MessageBoxButtons.OK);
-                    }
-                }
-
             }
         }
 

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblPass = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,8 +39,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.btnSubmit);
             this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(this.lblPass);
             this.panel1.Controls.Add(this.label1);
@@ -49,29 +49,31 @@
             this.panel1.Size = new System.Drawing.Size(425, 236);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.Location = new System.Drawing.Point(307, 173);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 42);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancel.Location = new System.Drawing.Point(307, 173);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(88, 42);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnLogin
+            // btnSubmit
             // 
-            this.btnLogin.Location = new System.Drawing.Point(191, 173);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(88, 42);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Submit";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnSubmit.Location = new System.Drawing.Point(191, 173);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(88, 42);
+            this.btnSubmit.TabIndex = 3;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(91, 114);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(317, 22);
             this.txtPass.TabIndex = 2;
             // 
@@ -114,10 +116,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblPass;
-        private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtPass;
     }
 }
 
