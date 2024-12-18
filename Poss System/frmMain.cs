@@ -1,9 +1,14 @@
-﻿using System;
+﻿using hu;
+using Poss_System.Component;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +17,7 @@ namespace Poss_System
 {
     public partial class FrmMain : Form
     {
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
         public FrmMain()
         {
             InitializeComponent();
@@ -73,16 +79,41 @@ namespace Poss_System
         }
         private void pnlSettingMenu_Click(object sender, EventArgs e)
         {
+
             if (Application.OpenForms["FrmSetting"] == Application.OpenForms[Application.OpenForms.Count - 1])
             {
                 pnlMenu.Visible = false;
             }
             else
             {
-                FrmSetting frmSetting = new FrmSetting();
-                frmSetting.Show();
+                FrmRQSetting frmRQSetting = new FrmRQSetting();
+                frmRQSetting.Show();
             }
         }
 
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+           
+            connect.Open();
+            SqlCommand cmd = new SqlCommand("select tableID from MyTable", connect);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            for (int i=0;i<24;i++)
+            {
+                Button btn = new Button()
+                {
+                    Width = 330,
+                    Height = 180,
+                    BackgroundImage = Image.FromFile("C:\\Users\\hoang\\Source\\Repos\\Poss-System\\Poss System\\Resources\\Bàn.png"),
+                    BackgroundImageLayout = ImageLayout.Zoom,
+                    BackColor = Color.Gainsboro,
+                };
+                btn.Click += btnTable1_Click;
+                fpnlTable.Controls.Add(btn);
+            }
+            connect.Close();
+        }
+      
     }
 }
