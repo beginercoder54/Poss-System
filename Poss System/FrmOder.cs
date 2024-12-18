@@ -17,8 +17,11 @@ namespace Poss_System
 {
     public partial class FrmOder : Form
     {
-
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
+
+        public int TableId { get; set; }
+        public string TableName { get ; set; }
+
         public FrmOder()
         {
             InitializeComponent();
@@ -92,10 +95,10 @@ namespace Poss_System
                 Cost = cost,
                 Category = categories,
                 Icon = image,
-                Tag = categories
+                Tag = categories,
             };
             flowLayoutPanel1.Controls.Add(w);
-            w.OnSelect += (ss, ee) =>
+            w.Onselect += (ss, ee) =>
             {
                 var wdg = (Widget)ss;
                 foreach (DataGridViewRow item in dataGridView1.Rows)
@@ -232,6 +235,12 @@ namespace Poss_System
         {
             dataGridView1.Rows.Clear();
         }
+
+        private void btnADD_Click(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }
    

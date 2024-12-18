@@ -1,10 +1,12 @@
 ﻿using hu;
+using Poss_System.Component;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -89,5 +91,29 @@ namespace Poss_System
             }
         }
 
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+           
+            connect.Open();
+            SqlCommand cmd = new SqlCommand("select tableID from MyTable", connect);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            for (int i=0;i<24;i++)
+            {
+                Button btn = new Button()
+                {
+                    Width = 330,
+                    Height = 180,
+                    BackgroundImage = Image.FromFile("C:\\Users\\hoang\\Source\\Repos\\Poss-System\\Poss System\\Resources\\Bàn.png"),
+                    BackgroundImageLayout = ImageLayout.Zoom,
+                    BackColor = Color.Gainsboro,
+                };
+                btn.Click += btnTable1_Click;
+                fpnlTable.Controls.Add(btn);
+            }
+            connect.Close();
+        }
+      
     }
 }

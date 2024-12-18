@@ -12,7 +12,7 @@ namespace Poss_System.Component
 {
     public partial class Widget : UserControl
     {
-        public event EventHandler OnSelect = null;
+        public event EventHandler Onselect = null;
 
 
         public Widget()
@@ -28,7 +28,7 @@ namespace Poss_System.Component
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            OnSelect?.Invoke(this, e);
+            Onselect?.Invoke(this, e);
         }
     }
 }

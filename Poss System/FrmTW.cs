@@ -97,7 +97,7 @@ namespace Poss_System
                 Tag = categories
             };
             flowLayoutPanel1.Controls.Add(w);
-            w.OnSelect += (ss, ee) =>
+            w.Onselect += (ss, ee) =>
             {
                 var wdg = (Widget)ss;
                 foreach (DataGridViewRow item in dataGridView1.Rows)

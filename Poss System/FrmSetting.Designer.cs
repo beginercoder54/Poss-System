@@ -33,6 +33,8 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNameRes = new System.Windows.Forms.Label();
+            this.pictureIconBurger = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -50,12 +52,10 @@
             this.sellPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imgProduct = new System.Windows.Forms.DataGridViewImageColumn();
-            this.lblNameRes = new System.Windows.Forms.Label();
-            this.pictureIconBurger = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -114,6 +114,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1494, 65);
             this.panel1.TabIndex = 5;
+            // 
+            // lblNameRes
+            // 
+            this.lblNameRes.AutoSize = true;
+            this.lblNameRes.BackColor = System.Drawing.Color.Transparent;
+            this.lblNameRes.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameRes.ForeColor = System.Drawing.Color.White;
+            this.lblNameRes.Location = new System.Drawing.Point(82, 15);
+            this.lblNameRes.Name = "lblNameRes";
+            this.lblNameRes.Size = new System.Drawing.Size(282, 34);
+            this.lblNameRes.TabIndex = 7;
+            this.lblNameRes.Text = "Tam Thai Tu Restaurant";
+            // 
+            // pictureIconBurger
+            // 
+            this.pictureIconBurger.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIconBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureIconBurger.Image = global::Poss_System.Properties.Resources.burger;
+            this.pictureIconBurger.Location = new System.Drawing.Point(13, 15);
+            this.pictureIconBurger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureIconBurger.Name = "pictureIconBurger";
+            this.pictureIconBurger.Size = new System.Drawing.Size(63, 35);
+            this.pictureIconBurger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIconBurger.TabIndex = 6;
+            this.pictureIconBurger.TabStop = false;
             // 
             // label1
             // 
@@ -281,31 +306,6 @@
             this.imgProduct.MinimumWidth = 6;
             this.imgProduct.Name = "imgProduct";
             // 
-            // lblNameRes
-            // 
-            this.lblNameRes.AutoSize = true;
-            this.lblNameRes.BackColor = System.Drawing.Color.Transparent;
-            this.lblNameRes.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameRes.ForeColor = System.Drawing.Color.White;
-            this.lblNameRes.Location = new System.Drawing.Point(82, 15);
-            this.lblNameRes.Name = "lblNameRes";
-            this.lblNameRes.Size = new System.Drawing.Size(282, 34);
-            this.lblNameRes.TabIndex = 7;
-            this.lblNameRes.Text = "Tam Thai Tu Restaurant";
-            // 
-            // pictureIconBurger
-            // 
-            this.pictureIconBurger.BackColor = System.Drawing.Color.Transparent;
-            this.pictureIconBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureIconBurger.Image = global::Poss_System.Properties.Resources.burger;
-            this.pictureIconBurger.Location = new System.Drawing.Point(13, 15);
-            this.pictureIconBurger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureIconBurger.Name = "pictureIconBurger";
-            this.pictureIconBurger.Size = new System.Drawing.Size(63, 35);
-            this.pictureIconBurger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureIconBurger.TabIndex = 6;
-            this.pictureIconBurger.TabStop = false;
-            // 
             // FrmSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -326,10 +326,10 @@
             this.Load += new System.EventHandler(this.FrmSetting_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
             this.ResumeLayout(false);
 
         }

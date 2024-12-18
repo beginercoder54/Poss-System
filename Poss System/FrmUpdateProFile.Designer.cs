@@ -84,7 +84,7 @@
             this.btnExit.Location = new System.Drawing.Point(424, 271);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(89, 29);
-            this.btnExit.TabIndex = 5;
+            this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -94,7 +94,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(23, 271);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(89, 29);
-            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -104,21 +104,21 @@
             this.txtPurchase.Location = new System.Drawing.Point(324, 197);
             this.txtPurchase.Name = "txtPurchase";
             this.txtPurchase.Size = new System.Drawing.Size(189, 22);
-            this.txtPurchase.TabIndex = 2;
+            this.txtPurchase.TabIndex = 5;
             // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(324, 153);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(189, 22);
-            this.txtPrice.TabIndex = 2;
+            this.txtPrice.TabIndex = 4;
             // 
             // txtCategory
             // 
             this.txtCategory.Location = new System.Drawing.Point(324, 106);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(189, 22);
-            this.txtCategory.TabIndex = 2;
+            this.txtCategory.TabIndex = 3;
             // 
             // txtName
             // 
@@ -132,7 +132,7 @@
             this.txtID.Location = new System.Drawing.Point(324, 18);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(98, 22);
-            this.txtID.TabIndex = 2;
+            this.txtID.TabIndex = 1;
             // 
             // lblModify
             // 

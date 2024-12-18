@@ -64,7 +64,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(191, 173);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(88, 42);
-            this.btnSubmit.TabIndex = 3;
+            this.btnSubmit.TabIndex = 2;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -75,7 +75,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(317, 22);
-            this.txtPass.TabIndex = 2;
+            this.txtPass.TabIndex = 1;
             // 
             // lblPass
             // 
