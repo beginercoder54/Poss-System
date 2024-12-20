@@ -15,7 +15,7 @@ namespace Poss_System
     public partial class FrmSetting : Form
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
-        int indexRow;
+        int indexRow = -1;
         public FrmSetting()
         {
             InitializeComponent();
@@ -56,7 +56,7 @@ namespace Poss_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (indexRow > 0)
+            if (indexRow >= 0)
             {
                 FrmUpdateProFile frmUpdateProFile = new FrmUpdateProFile();
                 frmUpdateProFile.Show();
@@ -87,7 +87,7 @@ namespace Poss_System
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (indexRow > 0)
+            if (indexRow >= 0)
             {
                 DialogResult result = MessageBox.Show("Do you want to delete the product ?", "Alarm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)

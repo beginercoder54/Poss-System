@@ -39,15 +39,21 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtIname = new System.Windows.Forms.TextBox();
+            this.txtKg = new System.Windows.Forms.TextBox();
+            this.btnAddIngredient = new System.Windows.Forms.Button();
+            this.dgvIngredient = new System.Windows.Forms.DataGridView();
+            this.IngredientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clKg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dgvProducts = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnShort = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btndelIn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnOpenFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIngredient)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPurchase
@@ -55,40 +61,40 @@
             this.txtPurchase.Location = new System.Drawing.Point(325, 191);
             this.txtPurchase.Name = "txtPurchase";
             this.txtPurchase.Size = new System.Drawing.Size(189, 22);
-            this.txtPurchase.TabIndex = 9;
+            this.txtPurchase.TabIndex = 5;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(325, 151);
+            this.txtPrice.Location = new System.Drawing.Point(325, 148);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(189, 22);
-            this.txtPrice.TabIndex = 10;
+            this.txtPrice.TabIndex = 4;
             // 
             // txtCategory
             // 
             this.txtCategory.Location = new System.Drawing.Point(325, 103);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(189, 22);
-            this.txtCategory.TabIndex = 11;
+            this.txtCategory.TabIndex = 3;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(325, 54);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(189, 22);
-            this.txtName.TabIndex = 12;
+            this.txtName.TabIndex = 2;
             // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(325, 12);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(98, 22);
-            this.txtID.TabIndex = 13;
+            this.txtID.TabIndex = 1;
             // 
             // lblModify
             // 
             this.lblModify.AutoSize = true;
-            this.lblModify.Location = new System.Drawing.Point(250, 194);
+            this.lblModify.Location = new System.Drawing.Point(244, 194);
             this.lblModify.Name = "lblModify";
             this.lblModify.Size = new System.Drawing.Size(64, 16);
             this.lblModify.TabIndex = 4;
@@ -97,7 +103,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(250, 157);
+            this.lblPrice.Location = new System.Drawing.Point(244, 151);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(67, 16);
             this.lblPrice.TabIndex = 5;
@@ -139,93 +145,152 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
-            // textBox1
+            // txtIname
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 258);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 22);
-            this.textBox1.TabIndex = 14;
+            this.txtIname.Location = new System.Drawing.Point(24, 269);
+            this.txtIname.Name = "txtIname";
+            this.txtIname.Size = new System.Drawing.Size(198, 22);
+            this.txtIname.TabIndex = 7;
             // 
-            // textBox2
+            // txtKg
             // 
-            this.textBox2.Location = new System.Drawing.Point(253, 258);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 22);
-            this.textBox2.TabIndex = 15;
+            this.txtKg.Location = new System.Drawing.Point(237, 269);
+            this.txtKg.Name = "txtKg";
+            this.txtKg.Size = new System.Drawing.Size(198, 22);
+            this.txtKg.TabIndex = 8;
+            // 
+            // btnAddIngredient
+            // 
+            this.btnAddIngredient.Location = new System.Drawing.Point(453, 268);
+            this.btnAddIngredient.Name = "btnAddIngredient";
+            this.btnAddIngredient.Size = new System.Drawing.Size(37, 24);
+            this.btnAddIngredient.TabIndex = 9;
+            this.btnAddIngredient.Text = "+";
+            this.btnAddIngredient.UseVisualStyleBackColor = true;
+            this.btnAddIngredient.Click += new System.EventHandler(this.btnAddIngredient_Click);
+            // 
+            // dgvIngredient
+            // 
+            this.dgvIngredient.AllowUserToAddRows = false;
+            this.dgvIngredient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvIngredient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvIngredient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIngredient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IngredientName,
+            this.clKg});
+            this.dgvIngredient.EnableHeadersVisualStyles = false;
+            this.dgvIngredient.Location = new System.Drawing.Point(-1, 306);
+            this.dgvIngredient.Name = "dgvIngredient";
+            this.dgvIngredient.RowHeadersVisible = false;
+            this.dgvIngredient.RowHeadersWidth = 51;
+            this.dgvIngredient.RowTemplate.Height = 24;
+            this.dgvIngredient.Size = new System.Drawing.Size(551, 346);
+            this.dgvIngredient.TabIndex = 17;
+            this.dgvIngredient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngredient_CellClick);
+            // 
+            // IngredientName
+            // 
+            this.IngredientName.DataPropertyName = "ingredientName";
+            this.IngredientName.HeaderText = "IngredientName";
+            this.IngredientName.MinimumWidth = 6;
+            this.IngredientName.Name = "IngredientName";
+            // 
+            // clKg
+            // 
+            this.clKg.DataPropertyName = "kg";
+            this.clKg.HeaderText = "Kg";
+            this.clKg.MinimumWidth = 6;
+            this.clKg.Name = "clKg";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(480, 258);
+            this.btnAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAdd.Location = new System.Drawing.Point(12, 669);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(34, 23);
-            this.btnAdd.TabIndex = 16;
-            this.btnAdd.Text = "+";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Size = new System.Drawing.Size(89, 29);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dgvProducts
+            // btnShort
             // 
-            this.dgvProducts.AllowUserToAddRows = false;
-            this.dgvProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.EnableHeadersVisualStyles = false;
-            this.dgvProducts.Location = new System.Drawing.Point(-1, 301);
-            this.dgvProducts.Name = "dgvProducts";
-            this.dgvProducts.RowHeadersVisible = false;
-            this.dgvProducts.RowHeadersWidth = 51;
-            this.dgvProducts.RowTemplate.Height = 24;
-            this.dgvProducts.Size = new System.Drawing.Size(551, 355);
-            this.dgvProducts.TabIndex = 17;
+            this.btnShort.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnShort.Location = new System.Drawing.Point(123, 669);
+            this.btnShort.Name = "btnShort";
+            this.btnShort.Size = new System.Drawing.Size(89, 29);
+            this.btnShort.TabIndex = 12;
+            this.btnShort.Text = "Short";
+            this.btnShort.UseVisualStyleBackColor = false;
+            this.btnShort.Click += new System.EventHandler(this.btnShort_Click);
             // 
-            // button1
+            // btnExit
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(12, 672);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 59);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnExit.Location = new System.Drawing.Point(447, 668);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(89, 29);
+            this.btnExit.TabIndex = 13;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // button2
+            // btndelIn
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.BackColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(136, 672);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 59);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "More";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btndelIn.Location = new System.Drawing.Point(502, 268);
+            this.btndelIn.Name = "btndelIn";
+            this.btndelIn.Size = new System.Drawing.Size(34, 23);
+            this.btndelIn.TabIndex = 10;
+            this.btndelIn.Text = "-";
+            this.btndelIn.UseVisualStyleBackColor = true;
+            this.btndelIn.Click += new System.EventHandler(this.btndelIn_Click);
             // 
-            // button3
+            // label1
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.BackColor = System.Drawing.Color.Gainsboro;
-            this.button3.Location = new System.Drawing.Point(432, 672);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 59);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 248);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Ingredient Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(237, 248);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Kg";
+            // 
+            // btnOpenFile
+            // 
+            this.btnOpenFile.Location = new System.Drawing.Point(24, 213);
+            this.btnOpenFile.Name = "btnOpenFile";
+            this.btnOpenFile.Size = new System.Drawing.Size(89, 29);
+            this.btnOpenFile.TabIndex = 6;
+            this.btnOpenFile.Text = "Open File";
+            this.btnOpenFile.UseVisualStyleBackColor = true;
+            this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
             // FrmMore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 750);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgvProducts);
+            this.ClientSize = new System.Drawing.Size(548, 709);
+            this.Controls.Add(this.btnOpenFile);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnShort);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvIngredient);
+            this.Controls.Add(this.btndelIn);
+            this.Controls.Add(this.btnAddIngredient);
+            this.Controls.Add(this.txtKg);
+            this.Controls.Add(this.txtIname);
             this.Controls.Add(this.txtPurchase);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtCategory);
@@ -239,9 +304,10 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMore";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIngredient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,12 +326,18 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblID;
         public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox txtIname;
+        public System.Windows.Forms.TextBox txtKg;
+        private System.Windows.Forms.Button btnAddIngredient;
+        public System.Windows.Forms.DataGridView dgvIngredient;
         private System.Windows.Forms.Button btnAdd;
-        public System.Windows.Forms.DataGridView dgvProducts;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnShort;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btndelIn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnOpenFile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IngredientName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clKg;
     }
 }

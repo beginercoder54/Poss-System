@@ -115,6 +115,21 @@ namespace Poss_System
 
             return 0; // No matching product ID found
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmMore frmMore = new FrmMore();
+           
+            frmMore.txtID.Text = txtID.Text;
+            frmMore.txtName.Text = txtName.Text;
+            frmMore.txtCategory.Text = txtCategory.Text;
+            frmMore.txtPrice.Text = txtPrice.Text;
+            frmMore.txtPurchase.Text = txtPurchase.Text;
+            frmMore.pictureBox1.Image = pictureBox1.Image;
+            this.Close();
+            frmMore.Show();
+
+        }
     }
 
 
