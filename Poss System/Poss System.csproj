@@ -107,6 +107,12 @@
     <Compile Include="FrmTW.Designer.cs">
       <DependentUpon>FrmTW.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUpdateMore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateMore.Designer.cs">
+      <DependentUpon>FrmUpdateMore.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUpdateProFile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTW.resx">
       <DependentUpon>FrmTW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateMore.resx">
+      <DependentUpon>FrmUpdateMore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUpdateProFile.resx">
       <DependentUpon>FrmUpdateProFile.cs</DependentUpon>

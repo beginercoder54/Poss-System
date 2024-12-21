@@ -94,7 +94,10 @@ namespace Poss_System
                 {
                     string id = dgvProducts.Rows[indexRow].Cells[0].Value.ToString();
                     connect.Open();
-                    SqlCommand cmd = new SqlCommand("delete Product where productID = @productID", connect);
+                    SqlCommand sqlCommand = new SqlCommand("delete from Ingredient where productID = @productID", connect);
+                    sqlCommand.Parameters.AddWithValue("productID", id);
+                    sqlCommand.ExecuteNonQuery();
+                    SqlCommand cmd = new SqlCommand("delete from Product where productID = @productID", connect);
                     cmd.Parameters.AddWithValue("productID", id);
                     cmd.ExecuteNonQuery();
                     connect.Close();

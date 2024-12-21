@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnMore = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtPurchase = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -51,6 +52,7 @@
             // 
             this.panel1.Controls.Add(this.btnOpenFile);
             this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnMore);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.txtPurchase);
             this.panel1.Controls.Add(this.txtPrice);
@@ -88,6 +90,16 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnMore
+            // 
+            this.btnMore.Location = new System.Drawing.Point(122, 271);
+            this.btnMore.Name = "btnMore";
+            this.btnMore.Size = new System.Drawing.Size(89, 29);
+            this.btnMore.TabIndex = 7;
+            this.btnMore.Text = "More";
+            this.btnMore.UseVisualStyleBackColor = true;
+            this.btnMore.Click += new System.EventHandler(this.btnMore_Click);
             // 
             // btnUpdate
             // 
@@ -224,5 +236,6 @@
         public System.Windows.Forms.TextBox txtCategory;
         public System.Windows.Forms.TextBox txtName;
         public System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnMore;
     }
 }

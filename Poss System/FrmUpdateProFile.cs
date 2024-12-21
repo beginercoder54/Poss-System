@@ -60,11 +60,21 @@ namespace Poss_System
                 cmd.Parameters.AddWithValue("imgProduct", data);
                 cmd.ExecuteNonQuery();
                 connect.Close();
-                this.Hide();
                 MessageBox.Show("Update new product success.", "Notification", MessageBoxButtons.OK);
             
         }
 
-        
+        private void btnMore_Click(object sender, EventArgs e)
+        {
+            FrmUpdateMore frmUpdateMore = new FrmUpdateMore();
+            frmUpdateMore.txtID.Text = txtID.Text;
+            frmUpdateMore.txtName.Text = txtName.Text;
+            frmUpdateMore.txtCategory.Text = txtCategory.Text;
+            frmUpdateMore.txtPrice.Text = txtPrice.Text;
+            frmUpdateMore.txtPurchase.Text = txtPurchase.Text;
+            frmUpdateMore.pictureBox1.Image = pictureBox1.Image;
+            this.Close();
+            frmUpdateMore.Show(); 
+        }
     }
 }
