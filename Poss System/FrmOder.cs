@@ -18,10 +18,12 @@ namespace Poss_System
     public partial class FrmOder : Form
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
-
-        public int TableId { get; set; }
-        public string TableName { get ; set; }
-
+        int tableID;
+        string fID;
+        int accountID;
+        string userName;
+        FrmLogin frmLogin = new FrmLogin();
+        int BillID = 1;
         public FrmOder()
         {
             InitializeComponent();
@@ -238,9 +240,49 @@ namespace Poss_System
 
         private void btnADD_Click(object sender, EventArgs e)
         {
-            
+            connect.Open();
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                SqlCommand sqlcmd = new SqlCommand("select productID from Product where productname = @productname", connect);
+                sqlcmd.Parameters.AddWithValue("@productname", row.Cells[0].Value.ToString());
+                fID = (string)sqlcmd.ExecuteScalar();
+                SqlCommand cmd = new SqlCommand("insert into Orders(BillID,username,InsertBill,tableID,fID,fName,Quantity,FoodPrice,TotalPrice,Status) values(@BillID,@username,@InsertBill,@tableID,@fID,@fName,@Quantity,@FoodPrice,@TotalPrice,@Status)", connect);
+                cmd.Parameters.AddWithValue("@BillID", BillID);
+                cmd.Parameters.AddWithValue("@username",frmLogin.txtUsername.Text);
+                cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
+                cmd.Parameters.AddWithValue("@tableID", tableID);
+                
+                cmd.Parameters.AddWithValue("@fID",fID);
+                cmd.Parameters.AddWithValue("@fName", row.Cells[0].Value.ToString());
+                cmd.Parameters.AddWithValue("@Quantity", row.Cells[1].Value.ToString());
+                cmd.Parameters.AddWithValue("@FoodPrice", row.Cells[2].Value.ToString());
+                cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(lblTotalPrice.Text.Replace("$","")));
+                cmd.Parameters.AddWithValue("@Status", 1);
+                cmd.ExecuteNonQuery();
+               
+            }
+            BillID += 1;
+           FrmMain frmMain = new FrmMain();
+            frmMain.Show();
+            connect.Close();
+
         }
 
+        public void getidtable(int table)
+        {
+            tableID = table;
+        }
+
+        public void getaccountID(int id)
+        {
+            accountID = id;
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
    

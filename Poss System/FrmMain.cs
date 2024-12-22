@@ -17,6 +17,7 @@ namespace Poss_System
 {
     public partial class FrmMain : Form
     {
+         int tableID;
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
         public FrmMain()
         {
@@ -40,8 +41,12 @@ namespace Poss_System
         private void btnTable1_Click(object sender, EventArgs e)
         {
             FrmOder frmOder = new FrmOder();
+            Button clickedButton = sender as Button;
+            tableID = Convert.ToInt32(clickedButton.Text);
+            frmOder.getidtable(tableID);
             this.Hide();
             frmOder.Show();
+            
         }
 
         private void pnlTableMenu_Click(object sender, EventArgs e)
@@ -89,30 +94,6 @@ namespace Poss_System
                 FrmRQSetting frmRQSetting = new FrmRQSetting();
                 frmRQSetting.Show();
             }
-        }
-
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-           
-            connect.Open();
-            SqlCommand cmd = new SqlCommand("select tableID from MyTable", connect);
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            for (int i=0;i<24;i++)
-            {
-                Button btn = new Button()
-                {
-                    Width = 330,
-                    Height = 180,
-                    BackgroundImage = Image.FromFile("C:\\Users\\hoang\\Source\\Repos\\Poss-System\\Poss System\\Resources\\Bàn.png"),
-                    BackgroundImageLayout = ImageLayout.Zoom,
-                    BackColor = Color.Gainsboro,
-                };
-                btn.Click += btnTable1_Click;
-                fpnlTable.Controls.Add(btn);
-            }
-            connect.Close();
         }
       
     }

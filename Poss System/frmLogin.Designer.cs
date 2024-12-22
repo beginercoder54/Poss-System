@@ -236,10 +236,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblAlert;
+        public System.Windows.Forms.TextBox txtUsername;
     }
 }
 

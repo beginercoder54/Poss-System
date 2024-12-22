@@ -29,9 +29,12 @@ namespace Poss_System
             {
                 try
                 {
+                    FrmOder frmOder = new FrmOder();
                     connect.Open();
                     string ck_Username = "SELECT * FROM Account WHERE uname= '" + txtUsername.Text + "' and upass= '"+txtPassword.Text+"'";
                     SqlCommand cmd = new SqlCommand(ck_Username,connect);
+                    int id = (int)cmd.ExecuteScalar();
+                    frmOder.getaccountID(id);
                     DataTable dt = new DataTable();
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.Fill(dt);
