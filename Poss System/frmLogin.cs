@@ -27,14 +27,12 @@ namespace Poss_System
         {
             if (connect.State!= ConnectionState.Open)
             {
-                try
-                {
-                    FrmOder frmOder = new FrmOder();
+                if (txtUsername.Text !="" && txtPassword.Text!= "") {
+
                     connect.Open();
-                    string ck_Username = "SELECT * FROM Account WHERE uname= '" + txtUsername.Text + "' and upass= '"+txtPassword.Text+"'";
-                    SqlCommand cmd = new SqlCommand(ck_Username,connect);
-                    int id = (int)cmd.ExecuteScalar();
-                    frmOder.getaccountID(id);
+
+                    string ck_Username = "SELECT * FROM Account WHERE uname= '" + txtUsername.Text + "' and upass= '" + txtPassword.Text + "'";
+                    SqlCommand cmd = new SqlCommand(ck_Username, connect);
                     DataTable dt = new DataTable();
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.Fill(dt);
@@ -42,7 +40,8 @@ namespace Poss_System
                     {
                         FrmMain frmMain = new FrmMain();
                         this.Hide();
-                        frmMain.ShowDialog();
+                        frmMain.Show();
+                        frmMain.getName(txtUsername.Text);
                     }
                     else
                     {
@@ -51,7 +50,13 @@ namespace Poss_System
                         }
                     }
                 }
-                catch (Exception ex) { MessageBox.Show("Loi ket noi database!!", "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                else
+                {
+                    {
+                        lblAlert.Text = "Username or Password is wrong";
+                    }
+                }
+
             }
         }
 
@@ -71,5 +76,7 @@ namespace Poss_System
             }
            
         }
+
+
     }
 }

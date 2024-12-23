@@ -12,12 +12,15 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Poss_System
 {
     public partial class FrmMain : Form
     {
-         int tableID;
+        int tableID;
+        string username;
+        static int id=1;
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
         public FrmMain()
         {
@@ -44,8 +47,11 @@ namespace Poss_System
             Button clickedButton = sender as Button;
             tableID = Convert.ToInt32(clickedButton.Text);
             frmOder.getidtable(tableID);
-            this.Hide();
+            frmOder.getbillID(id);
+            id += 1;
+            this.Close();
             frmOder.Show();
+            frmOder.getName(username);
             
         }
 
@@ -95,6 +101,11 @@ namespace Poss_System
                 frmRQSetting.Show();
             }
         }
-      
+        public void getName(string name)
+        {
+            username = name;
+        }
+
+
     }
 }
