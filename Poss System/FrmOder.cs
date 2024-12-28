@@ -123,8 +123,9 @@ namespace Poss_System
                 }
                 
                     dataGridView1.Rows.Add(new object[] { wdg.lblTitle.Text, 1, wdg.Cost });
-                
-                
+                btnADD.Enabled = true;
+                btnPay.Enabled = true;
+
                 CalculateTotal();
             };
         }
@@ -172,9 +173,11 @@ namespace Poss_System
                 if (checkBillValue() == 1)
                 {
                     loadBill();
-
+                    btnADD.Enabled = true;
+                    btnPay.Enabled = true;
                 }
-            }
+           
+        }
 
         private void txtSearch_Enter(object sender, EventArgs e)
         {
@@ -251,73 +254,75 @@ namespace Poss_System
 
         private void btnADD_Click(object sender, EventArgs e)
         {
-            connect.Open();
-            if (checkBillValue()==1)
-            {
-                SqlCommand dl = new SqlCommand("delete  from Orders where BillID=@BillID", connect);
-                dl.Parameters.AddWithValue("@BillID", BillID);
-                dl.ExecuteNonQuery();
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+           
+            
+                connect.Open();
+                if (checkBillValue() == 1)
                 {
-                    
-                    SqlCommand sqlcmd = new SqlCommand("select productID from Product where productname = @productname", connect);
-                    sqlcmd.Parameters.AddWithValue("@productname", row.Cells[0].Value.ToString());
-                    fID = (string)sqlcmd.ExecuteScalar();
-                    SqlCommand cmd = new SqlCommand("insert into Orders(BillID,username,InsertBill,tableID,fID,fName,Quantity,FoodPrice,TotalPrice,Status) values(@BillID,@username,@InsertBill,@tableID,@fID,@fName,@Quantity,@FoodPrice,@TotalPrice,@Status)", connect);
-                    cmd.Parameters.AddWithValue("@BillID", BillID);
-                    cmd.Parameters.AddWithValue("@username", userName);
-                    cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
-                    cmd.Parameters.AddWithValue("@tableID", tableID);
-                    cmd.Parameters.AddWithValue("@fID", fID);   
-                    cmd.Parameters.AddWithValue("@fName", row.Cells[0].Value.ToString());
-                    cmd.Parameters.AddWithValue("@Quantity", row.Cells[1].Value.ToString());
-                    cmd.Parameters.AddWithValue("@FoodPrice", Convert.ToDecimal(row.Cells[2].Value.ToString()));
-                    cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(lblTotalPrice.Text.Replace("$", "")));
-                    cmd.Parameters.AddWithValue("@Status", 0);
-                    cmd.ExecuteNonQuery();
+                    SqlCommand dl = new SqlCommand("delete  from Orders where BillID=@BillID", connect);
+                    dl.Parameters.AddWithValue("@BillID", BillID);
+                    dl.ExecuteNonQuery();
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+
+                        SqlCommand sqlcmd = new SqlCommand("select productID from Product where productname = @productname", connect);
+                        sqlcmd.Parameters.AddWithValue("@productname", row.Cells[0].Value.ToString());
+                        fID = (string)sqlcmd.ExecuteScalar();
+                        SqlCommand cmd = new SqlCommand("insert into Orders(BillID,username,InsertBill,tableID,fID,fName,Quantity,FoodPrice,TotalPrice,Status) values(@BillID,@username,@InsertBill,@tableID,@fID,@fName,@Quantity,@FoodPrice,@TotalPrice,@Status)", connect);
+                        cmd.Parameters.AddWithValue("@BillID", BillID);
+                        cmd.Parameters.AddWithValue("@username", userName);
+                        cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@tableID", tableID);
+                        cmd.Parameters.AddWithValue("@fID", fID);
+                        cmd.Parameters.AddWithValue("@fName", row.Cells[0].Value.ToString());
+                        cmd.Parameters.AddWithValue("@Quantity", row.Cells[1].Value.ToString());
+                        cmd.Parameters.AddWithValue("@FoodPrice", Convert.ToDecimal(row.Cells[2].Value.ToString()));
+                        cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(lblTotalPrice.Text.Replace("$", "")));
+                        cmd.Parameters.AddWithValue("@Status", 0);
+                        cmd.ExecuteNonQuery();
+
+                    }
+                    FrmMain frmMain = new FrmMain();
+                    frmMain.getName(userName);
+                    dataGridView1.Rows.Clear();
+                    this.Close();
+
+                    frmMain.Show();
+                }
+                else
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        SqlCommand sqlcmd = new SqlCommand("select productID from Product where productname = @productname", connect);
+                        sqlcmd.Parameters.AddWithValue("@productname", row.Cells[0].Value.ToString());
+                        fID = (string)sqlcmd.ExecuteScalar();
+                        SqlCommand cmd = new SqlCommand("insert into Orders(BillID,username,InsertBill,tableID,fID,fName,Quantity,FoodPrice,TotalPrice,Status) values(@BillID,@username,@InsertBill,@tableID,@fID,@fName,@Quantity,@FoodPrice,@TotalPrice,@Status)", connect);
+                        cmd.Parameters.AddWithValue("@BillID", BillID);
+                        cmd.Parameters.AddWithValue("@username", userName);
+                        cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@tableID", tableID);
+                        cmd.Parameters.AddWithValue("@fID", fID);
+                        cmd.Parameters.AddWithValue("@fName", row.Cells[0].Value.ToString());
+                        cmd.Parameters.AddWithValue("@Quantity", row.Cells[1].Value.ToString());
+                        cmd.Parameters.AddWithValue("@FoodPrice", Convert.ToDecimal(row.Cells[2].Value.ToString()));
+                        cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(lblTotalPrice.Text.Replace("$", "")));
+                        cmd.Parameters.AddWithValue("@Status", 0);
+                        cmd.ExecuteNonQuery();
+
+                    }
+                    SqlCommand sql = new SqlCommand("update MyTable set Status = 1 where tableID = @tableID", connect);
+                    sql.Parameters.AddWithValue("@tableID", tableID);
+                    sql.ExecuteNonQuery();
+
+                    dataGridView1.Rows.Clear();
+                    this.Close();
+                    FrmMain frmMain = new FrmMain();
+                    frmMain.getName(userName);
+                    frmMain.Show();
 
                 }
-                FrmMain frmMain = new FrmMain();
-                frmMain.getName(userName);
-                dataGridView1.Rows.Clear();
-                this.Close();
-                
-                frmMain.Show();
-            }
-            else
-            {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
-                {
-                    SqlCommand sqlcmd = new SqlCommand("select productID from Product where productname = @productname", connect);
-                    sqlcmd.Parameters.AddWithValue("@productname", row.Cells[0].Value.ToString());
-                    fID = (string)sqlcmd.ExecuteScalar();
-                    SqlCommand cmd = new SqlCommand("insert into Orders(BillID,username,InsertBill,tableID,fID,fName,Quantity,FoodPrice,TotalPrice,Status) values(@BillID,@username,@InsertBill,@tableID,@fID,@fName,@Quantity,@FoodPrice,@TotalPrice,@Status)", connect);
-                    cmd.Parameters.AddWithValue("@BillID", BillID);
-                    cmd.Parameters.AddWithValue("@username", userName);
-                    cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
-                    cmd.Parameters.AddWithValue("@tableID", tableID);
-                    cmd.Parameters.AddWithValue("@fID", fID);
-                    cmd.Parameters.AddWithValue("@fName", row.Cells[0].Value.ToString());
-                    cmd.Parameters.AddWithValue("@Quantity", row.Cells[1].Value.ToString());
-                    cmd.Parameters.AddWithValue("@FoodPrice", Convert.ToDecimal(row.Cells[2].Value.ToString()));
-                    cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(lblTotalPrice.Text.Replace("$", "")));
-                    cmd.Parameters.AddWithValue("@Status", 0);
-                    cmd.ExecuteNonQuery();
 
-                }
-                SqlCommand sql = new SqlCommand("update MyTable set Status = 1 where tableID = @tableID", connect);
-                sql.Parameters.AddWithValue("@tableID", tableID);
-                sql.ExecuteNonQuery();
-
-                dataGridView1.Rows.Clear();
-                this.Close();
-                FrmMain frmMain = new FrmMain();
-                frmMain.getName(userName);
-                frmMain.Show();
-
-            }
-
-            connect.Close();
+                connect.Close();
 
         }
 
@@ -337,7 +342,60 @@ namespace Poss_System
         }
         private void btnPay_Click(object sender, EventArgs e)
         {
-           
+            connect.Open();
+            if (checkBillValue() == 1)
+            {
+                SqlCommand cmd = new SqlCommand("update Orders set CheckOut=@CheckOut where tableID = @tableID", connect);
+                cmd.Parameters.AddWithValue("@CheckOut", DateTime.Now);
+                cmd.Parameters.AddWithValue("@tableID", tableID);
+                cmd.ExecuteNonQuery();
+                SqlCommand sql = new SqlCommand("update MyTable set Status = 0 where tableID = @tableID", connect);
+                sql.Parameters.AddWithValue("@tableID", tableID);
+                sql.ExecuteNonQuery();
+                SqlCommand sqlcmd = new SqlCommand("update Orders set Status = 1 where tableID = @tableID", connect);
+                sqlcmd.Parameters.AddWithValue("@tableID", tableID);
+                sqlcmd.ExecuteNonQuery();
+
+                dataGridView1.Rows.Clear();
+                this.Close();
+                FrmMain frmMain = new FrmMain();
+                frmMain.getName(userName);
+                frmMain.Show();
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    SqlCommand sqlcmd = new SqlCommand("select productID from Product where productname = @productname", connect);
+                    sqlcmd.Parameters.AddWithValue("@productname", row.Cells[0].Value.ToString());
+                    fID = (string)sqlcmd.ExecuteScalar();
+                    SqlCommand cmd = new SqlCommand("insert into Orders(BillID,username,InsertBill,CheckOut,tableID,fID,fName,Quantity,FoodPrice,TotalPrice,Status) values(@BillID,@username,@InsertBill,@CheckOut,@tableID,@fID,@fName,@Quantity,@FoodPrice,@TotalPrice,@Status)", connect);
+                    cmd.Parameters.AddWithValue("@BillID", BillID);
+                    cmd.Parameters.AddWithValue("@username", userName);
+                    cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@CheckOut", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@tableID", tableID);
+                    cmd.Parameters.AddWithValue("@fID", fID);
+                    cmd.Parameters.AddWithValue("@fName", row.Cells[0].Value.ToString());
+                    cmd.Parameters.AddWithValue("@Quantity", row.Cells[1].Value.ToString());
+                    cmd.Parameters.AddWithValue("@FoodPrice", Convert.ToDecimal(row.Cells[2].Value.ToString()));
+                    cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(lblTotalPrice.Text.Replace("$", "")));
+                    cmd.Parameters.AddWithValue("@Status", 1);
+                    cmd.ExecuteNonQuery();
+
+                }
+                SqlCommand sql = new SqlCommand("update MyTable set Status = 0 where tableID = @tableID", connect);
+                sql.Parameters.AddWithValue("@tableID", tableID);
+                sql.ExecuteNonQuery();
+
+                dataGridView1.Rows.Clear();
+                this.Close();
+                FrmMain frmMain = new FrmMain();
+                frmMain.getName(userName);
+                frmMain.Show();
+            }
+            connect.Close();
+
         }
 
         public int checkBillValue()

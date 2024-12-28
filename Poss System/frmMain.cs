@@ -5,18 +5,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Poss_System
 {
     public partial class FrmMain : Form
     {
+        int tableID;
+        string username;
+        int id;
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
         public FrmMain()
         {
@@ -39,9 +45,40 @@ namespace Poss_System
 
         private void btnTable1_Click(object sender, EventArgs e)
         {
-            FrmOder frmOder = new FrmOder();
-            this.Hide();
-            frmOder.Show();
+            Button clickedButton = sender as Button;
+            if (clickedButton.BackColor == Color.Green)
+            {
+                connect.Open();
+                FrmOder frmOder = new FrmOder();
+                tableID = Convert.ToInt32(clickedButton.Text);
+                frmOder.getidtable(tableID);
+                SqlCommand cmd = new SqlCommand("select BillID from Orders where tableID=@tableID",connect);
+                cmd.Parameters.AddWithValue("@tableID", tableID);
+                id = (int)cmd.ExecuteScalar();
+                frmOder.getbillID(id);
+                this.Close();
+                frmOder.Show();
+                frmOder.getName(username);
+                connect.Close();
+            }
+            else
+            {
+                connect.Open();
+                FrmOder frmOder = new FrmOder();
+                tableID = Convert.ToInt32(clickedButton.Text);
+                frmOder.getidtable(tableID);
+                SqlCommand cmd = new SqlCommand("select ISNULL(MAX(BillID), 0) from Orders where YEAR(InsertBill) = YEAR(@InsertBill) and MONTH(InsertBill)=MONTH(@InsertBill) and DAY(InsertBill)=DAY(@InsertBill)", connect);
+                cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
+                id = (int)cmd.ExecuteScalar();
+                id += 1;
+                frmOder.getbillID(id);
+                this.Close();
+                frmOder.Show();
+                frmOder.getName(username);
+                connect.Close();
+            }
+           
+            
         }
 
         private void pnlTableMenu_Click(object sender, EventArgs e)
@@ -90,30 +127,27 @@ namespace Poss_System
                 frmRQSetting.Show();
             }
         }
+        public void getName(string name)
+        {
+            username = name;
+        }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-           
-            connect.Open();
-            SqlCommand cmd = new SqlCommand("select tableID from MyTable", connect);
+            SqlCommand cmd = new SqlCommand("select * from MyTable",connect);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
-            for (int i=0;i<24;i++)
+            foreach (Button btn in fpnlTable.Controls)
             {
-                Button btn = new Button()
+                if (btn.Text == dt.Rows[Convert.ToInt32(btn.Text)-1]["tableID"].ToString()) 
                 {
-                    Width = 330,
-                    Height = 180,
-                    BackgroundImage = Image.FromFile("C:\\Users\\hoang\\Source\\Repos\\Poss-System\\Poss System\\Resources\\Bàn.png"),
-                    BackgroundImageLayout = ImageLayout.Zoom,
-                    BackColor = Color.Gainsboro,
-                };
-                btn.Click += btnTable1_Click;
-                fpnlTable.Controls.Add(btn);
+                    if (dt.Rows[Convert.ToInt32(btn.Text) - 1]["Status"].ToString()=="1")
+                    {
+                        btn.BackColor = Color.Green;
+                    }
+                }
             }
-            connect.Close();
         }
-      
     }
 }
