@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,7 +22,7 @@ namespace Poss_System
     {
         int tableID;
         string username;
-        static int id=1;
+        int id;
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
         public FrmMain()
         {
@@ -43,15 +45,39 @@ namespace Poss_System
 
         private void btnTable1_Click(object sender, EventArgs e)
         {
-            FrmOder frmOder = new FrmOder();
             Button clickedButton = sender as Button;
-            tableID = Convert.ToInt32(clickedButton.Text);
-            frmOder.getidtable(tableID);
-            frmOder.getbillID(id);
-            id += 1;
-            this.Close();
-            frmOder.Show();
-            frmOder.getName(username);
+            if (clickedButton.BackColor == Color.Green)
+            {
+                connect.Open();
+                FrmOder frmOder = new FrmOder();
+                tableID = Convert.ToInt32(clickedButton.Text);
+                frmOder.getidtable(tableID);
+                SqlCommand cmd = new SqlCommand("select BillID from Orders where tableID=@tableID",connect);
+                cmd.Parameters.AddWithValue("@tableID", tableID);
+                id = (int)cmd.ExecuteScalar();
+                frmOder.getbillID(id);
+                this.Close();
+                frmOder.Show();
+                frmOder.getName(username);
+                connect.Close();
+            }
+            else
+            {
+                connect.Open();
+                FrmOder frmOder = new FrmOder();
+                tableID = Convert.ToInt32(clickedButton.Text);
+                frmOder.getidtable(tableID);
+                SqlCommand cmd = new SqlCommand("select ISNULL(MAX(BillID), 0) from Orders where YEAR(InsertBill) = YEAR(@InsertBill) and MONTH(InsertBill)=MONTH(@InsertBill) and DAY(InsertBill)=DAY(@InsertBill)", connect);
+                cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
+                id = (int)cmd.ExecuteScalar();
+                id += 1;
+                frmOder.getbillID(id);
+                this.Close();
+                frmOder.Show();
+                frmOder.getName(username);
+                connect.Close();
+            }
+           
             
         }
 
@@ -106,6 +132,22 @@ namespace Poss_System
             username = name;
         }
 
-
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("select * from MyTable",connect);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (Button btn in fpnlTable.Controls)
+            {
+                if (btn.Text == dt.Rows[Convert.ToInt32(btn.Text)-1]["tableID"].ToString()) 
+                {
+                    if (dt.Rows[Convert.ToInt32(btn.Text) - 1]["Status"].ToString()=="1")
+                    {
+                        btn.BackColor = Color.Green;
+                    }
+                }
+            }
+        }
     }
 }

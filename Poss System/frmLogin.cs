@@ -25,11 +25,9 @@ namespace Poss_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (connect.State!= ConnectionState.Open)
-            {
                 if (txtUsername.Text !="" && txtPassword.Text!= "") {
 
-                    connect.Open();
+                    
 
                     string ck_Username = "SELECT * FROM Account WHERE uname= '" + txtUsername.Text + "' and upass= '" + txtPassword.Text + "'";
                     SqlCommand cmd = new SqlCommand(ck_Username, connect);
@@ -57,7 +55,7 @@ namespace Poss_System
                     }
                 }
 
-            }
+            
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
