@@ -103,6 +103,7 @@ namespace Poss_System
             else
             {
                 FrmTW frmTW = new FrmTW();
+                frmTW.getName(username);
                 this.Hide();
                 frmTW.Show();
             }

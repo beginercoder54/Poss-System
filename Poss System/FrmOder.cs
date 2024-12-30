@@ -44,16 +44,32 @@ namespace Poss_System
         }
         private void pnlTableMenu_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["FrmMain"] == Application.OpenForms[Application.OpenForms.Count - 1])
+            if (dataGridView1.Rows.Count > 0)
             {
-                pnlMenu.Visible = false;
+                DialogResult result = MessageBox.Show("Your order can be delete!!!", "Notiffication", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning); ;
+                if (result == DialogResult.OK)
+                {
+                    dataGridView1.Rows.Clear();
+                    FrmMain frmMain = new FrmMain();
+                    this.Hide();
+                    frmMain.ShowDialog();
+                }
             }
             else
             {
-                FrmMain frmMain = new FrmMain();
-                this.Hide();
-                frmMain.ShowDialog();
+                if (Application.OpenForms["FrmMain"] == Application.OpenForms[Application.OpenForms.Count - 1])
+                {
+                    pnlMenu.Visible = false;
+                }
+                else
+                {
+                    FrmMain frmMain = new FrmMain();
+                    this.Hide();
+                    frmMain.ShowDialog();
+                }
             }
+                
+           
         }
 
         private void pnlOrdersMenu_Click(object sender, EventArgs e)

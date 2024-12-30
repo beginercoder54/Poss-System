@@ -6,17 +6,25 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using hu;
 using Poss_System.Component;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static Poss_System.Component.Widget;
 
 namespace Poss_System
 {
     public partial class FrmTW : Form
     {
+
+        int tableID;
+        string fID;
+        int accountID;
+        string userName;
+        int BillID;
 
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
         public FrmTW()
@@ -37,15 +45,30 @@ namespace Poss_System
         }
         private void pnlTableMenu_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["FrmMain"] == Application.OpenForms[Application.OpenForms.Count - 1])
+          
+            if (dataGridView1.Rows.Count > 0)
             {
-                pnlMenu.Visible = false;
+                DialogResult result = MessageBox.Show("Your order can be delete!!!", "Notiffication", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning); ;
+                if (result == DialogResult.OK)
+                {
+                    dataGridView1.Rows.Clear();
+                    FrmMain frmMain = new FrmMain();
+                    this.Hide();
+                    frmMain.ShowDialog();
+                }
             }
             else
             {
-                FrmMain frmMain = new FrmMain();
-                this.Hide();
-                frmMain.ShowDialog();
+                if (Application.OpenForms["FrmMain"] == Application.OpenForms[Application.OpenForms.Count - 1])
+                {
+                    pnlMenu.Visible = false;
+                }
+                else
+                {
+                    FrmMain frmMain = new FrmMain();
+                    this.Hide();
+                    frmMain.ShowDialog();
+                }
             }
         }
 
@@ -233,6 +256,53 @@ namespace Poss_System
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            connect.Open();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                SqlCommand sqlcmd = new SqlCommand("select productID from Product where productname = @productname", connect);
+                sqlcmd.Parameters.AddWithValue("@productname", row.Cells[0].Value.ToString());
+                fID = (string)sqlcmd.ExecuteScalar();
+                SqlCommand cmd = new SqlCommand("insert into Orders(BillID,username,InsertBill,CheckOut,tableID,fID,fName,Quantity,FoodPrice,TotalPrice,Status) values(@BillID,@username,@InsertBill,@CheckOut,@tableID,@fID,@fName,@Quantity,@FoodPrice,@TotalPrice,@Status)", connect);
+                cmd.Parameters.AddWithValue("@BillID", BillID);
+                cmd.Parameters.AddWithValue("@username", userName);
+                cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
+                cmd.Parameters.AddWithValue("@CheckOut", DateTime.Now);
+                cmd.Parameters.AddWithValue("@tableID",0);
+                cmd.Parameters.AddWithValue("@fID", fID);
+                cmd.Parameters.AddWithValue("@fName", row.Cells[0].Value.ToString());
+                cmd.Parameters.AddWithValue("@Quantity", row.Cells[1].Value.ToString());
+                cmd.Parameters.AddWithValue("@FoodPrice", Convert.ToDecimal(row.Cells[2].Value.ToString()));
+                cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(lblTotalPrice.Text.Replace("$","")));
+                cmd.Parameters.AddWithValue("@Status", 1);
+                cmd.ExecuteNonQuery();
+
+            }
+           
+
+            dataGridView1.Rows.Clear();
+            this.Close();
+            FrmMain frmMain = new FrmMain();
+            frmMain.getName(userName);
+            frmMain.Show();
+            connect.Close();
+        }
+
+        public void getidtable(int table)
+        {
+            tableID = table;
+        }
+        public void getName(string name)
+        {
+            userName = name;
+        }
+
+        public void getbillID(int id)
+        {
+            BillID = id;
         }
     }
 }
