@@ -221,7 +221,7 @@
             // btnDel
             // 
             this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDel.Location = new System.Drawing.Point(31, 501);
+            this.btnDel.Location = new System.Drawing.Point(15, 501);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(104, 59);
             this.btnDel.TabIndex = 5;

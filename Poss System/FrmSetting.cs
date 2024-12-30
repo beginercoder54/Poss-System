@@ -62,7 +62,7 @@ namespace Poss_System
                 frmUpdateProFile.Show();
                 frmUpdateProFile.txtID.Text = dgvProducts.Rows[indexRow].Cells[0].Value.ToString();
                 frmUpdateProFile.txtName.Text = dgvProducts.Rows[indexRow].Cells[1].Value.ToString();
-                frmUpdateProFile.txtCategory.Text = dgvProducts.Rows[indexRow].Cells[2].Value.ToString();
+                frmUpdateProFile.cbbCategory.Text = dgvProducts.Rows[indexRow].Cells[2].Value.ToString();
                 frmUpdateProFile.txtPrice.Text = dgvProducts.Rows[indexRow].Cells[3].Value.ToString();
                 frmUpdateProFile.txtPurchase.Text = dgvProducts.Rows[indexRow].Cells[4].Value.ToString();
                 MemoryStream ms = new MemoryStream((byte[])dgvProducts.Rows[indexRow].Cells[5].Value);

@@ -30,7 +30,6 @@
         {
             this.txtPurchase = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblModify = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnOpenFile = new System.Windows.Forms.Button();
+            this.cbbCategory = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngredient)).BeginInit();
             this.SuspendLayout();
@@ -69,13 +69,6 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(189, 22);
             this.txtPrice.TabIndex = 4;
-            // 
-            // txtCategory
-            // 
-            this.txtCategory.Location = new System.Drawing.Point(325, 103);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(189, 22);
-            this.txtCategory.TabIndex = 3;
             // 
             // txtName
             // 
@@ -275,11 +268,25 @@
             this.btnOpenFile.UseVisualStyleBackColor = true;
             this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
+            // cbbCategory
+            // 
+            this.cbbCategory.FormattingEnabled = true;
+            this.cbbCategory.Items.AddRange(new object[] {
+            "Food",
+            "Drink",
+            "Dessert",
+            "Alcohol"});
+            this.cbbCategory.Location = new System.Drawing.Point(325, 100);
+            this.cbbCategory.Name = "cbbCategory";
+            this.cbbCategory.Size = new System.Drawing.Size(189, 24);
+            this.cbbCategory.TabIndex = 22;
+            // 
             // FrmMore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(548, 709);
+            this.Controls.Add(this.cbbCategory);
             this.Controls.Add(this.btnOpenFile);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -293,7 +300,6 @@
             this.Controls.Add(this.txtIname);
             this.Controls.Add(this.txtPurchase);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblModify);
@@ -317,7 +323,6 @@
 
         public System.Windows.Forms.TextBox txtPurchase;
         public System.Windows.Forms.TextBox txtPrice;
-        public System.Windows.Forms.TextBox txtCategory;
         public System.Windows.Forms.TextBox txtName;
         public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblModify;
@@ -339,5 +344,6 @@
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.DataGridViewTextBoxColumn IngredientName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clKg;
+        public System.Windows.Forms.ComboBox cbbCategory;
     }
 }

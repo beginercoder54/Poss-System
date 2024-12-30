@@ -54,7 +54,7 @@ namespace Poss_System
                 SqlCommand cmd = new SqlCommand("update  Product set  productID = @productID , productname = @productname ,category = @Category,sellPrice = @sellPricce,purchasePrice =@purchasePrice,imgProduct = @imgProduct where productID=@productID or productname= @productname", connect);
                 cmd.Parameters.AddWithValue("productID", txtID.Text);
                 cmd.Parameters.AddWithValue("productname", txtName.Text);
-                cmd.Parameters.AddWithValue("Category", txtCategory.Text);
+                cmd.Parameters.AddWithValue("Category", cbbCategory.Text);
                 cmd.Parameters.AddWithValue("sellPricce", sellPrice);
                 cmd.Parameters.AddWithValue("purchasePrice", purchasePrice);
                 cmd.Parameters.AddWithValue("imgProduct", data);
@@ -69,7 +69,7 @@ namespace Poss_System
             FrmUpdateMore frmUpdateMore = new FrmUpdateMore();
             frmUpdateMore.txtID.Text = txtID.Text;
             frmUpdateMore.txtName.Text = txtName.Text;
-            frmUpdateMore.txtCategory.Text = txtCategory.Text;
+            frmUpdateMore.cbbCategory.Text = cbbCategory.Text;
             frmUpdateMore.txtPrice.Text = txtPrice.Text;
             frmUpdateMore.txtPurchase.Text = txtPurchase.Text;
             frmUpdateMore.pictureBox1.Image = pictureBox1.Image;

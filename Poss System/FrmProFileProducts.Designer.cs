@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbCategory = new System.Windows.Forms.ComboBox();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMore = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtPurchase = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblModify = new System.Windows.Forms.Label();
@@ -50,13 +50,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbbCategory);
             this.panel1.Controls.Add(this.btnOpenFile);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnMore);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.txtPurchase);
             this.panel1.Controls.Add(this.txtPrice);
-            this.panel1.Controls.Add(this.txtCategory);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.lblModify);
@@ -70,6 +70,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 328);
             this.panel1.TabIndex = 0;
+            // 
+            // cbbCategory
+            // 
+            this.cbbCategory.FormattingEnabled = true;
+            this.cbbCategory.Items.AddRange(new object[] {
+            "Food",
+            "Drink",
+            "Dessert",
+            "Alcohol"});
+            this.cbbCategory.Location = new System.Drawing.Point(324, 109);
+            this.cbbCategory.Name = "cbbCategory";
+            this.cbbCategory.Size = new System.Drawing.Size(189, 24);
+            this.cbbCategory.TabIndex = 9;
             // 
             // btnOpenFile
             // 
@@ -124,13 +137,6 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(189, 22);
             this.txtPrice.TabIndex = 4;
-            // 
-            // txtCategory
-            // 
-            this.txtCategory.Location = new System.Drawing.Point(324, 109);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(189, 22);
-            this.txtCategory.TabIndex = 3;
             // 
             // txtName
             // 
@@ -233,9 +239,9 @@
         private System.Windows.Forms.Button btnMore;
         public System.Windows.Forms.TextBox txtPurchase;
         public System.Windows.Forms.TextBox txtPrice;
-        public System.Windows.Forms.TextBox txtCategory;
         public System.Windows.Forms.TextBox txtName;
         public System.Windows.Forms.TextBox txtID;
         public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.ComboBox cbbCategory;
     }
 }

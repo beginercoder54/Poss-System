@@ -33,7 +33,7 @@ namespace Poss_System
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtID.Text == ""|| txtName.Text == ""||txtPrice.Text == ""||txtPurchase.Text == ""||txtCategory.Text == ""||pictureBox1.Image == null)
+            if (txtID.Text == ""|| txtName.Text == ""||txtPrice.Text == ""||txtPurchase.Text == ""||cbbCategory.Text == ""||pictureBox1.Image == null)
             {
                 MessageBox.Show("Please enter the information.", "Notification", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
@@ -48,7 +48,7 @@ namespace Poss_System
                     SqlCommand cmd = new SqlCommand("insert into Product values (@productID,@productname,@Category,@sellPricce,@purchasePrice,@imgProduct)", connect);
                     cmd.Parameters.AddWithValue("@productID", txtID.Text);
                     cmd.Parameters.AddWithValue("@productname", txtName.Text);
-                    cmd.Parameters.AddWithValue("@Category", txtCategory.Text);
+                    cmd.Parameters.AddWithValue("@Category", cbbCategory.Text);
                     cmd.Parameters.AddWithValue("@sellPricce", sellPrice);
                     cmd.Parameters.AddWithValue("@purchasePrice", purchasePrice);
                     cmd.Parameters.AddWithValue("@imgProduct", data);
@@ -59,7 +59,7 @@ namespace Poss_System
                     txtName.Text = "";
                     txtPrice.Text = "";
                     txtPurchase.Text = "";
-                    txtCategory.Text = "";
+                    cbbCategory.Text = "";
                     pictureBox1.Image = null;
                 }
                 else
@@ -122,7 +122,7 @@ namespace Poss_System
            
             frmMore.txtID.Text = txtID.Text;
             frmMore.txtName.Text = txtName.Text;
-            frmMore.txtCategory.Text = txtCategory.Text;
+            frmMore.cbbCategory.Text = cbbCategory.Text;
             frmMore.txtPrice.Text = txtPrice.Text;
             frmMore.txtPurchase.Text = txtPurchase.Text;
             frmMore.pictureBox1.Image = pictureBox1.Image;

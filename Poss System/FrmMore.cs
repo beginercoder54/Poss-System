@@ -27,7 +27,7 @@ namespace Poss_System
 
             frmProFileProducts.txtID.Text = txtID.Text;
             frmProFileProducts.txtName.Text = txtName.Text;
-            frmProFileProducts.txtCategory.Text = txtCategory.Text;
+            frmProFileProducts.cbbCategory.Text = cbbCategory.Text;
             frmProFileProducts.txtPrice.Text = txtPrice.Text;
             frmProFileProducts.txtPurchase.Text = txtPurchase.Text;
             frmProFileProducts.pictureBox1.Image = pictureBox1.Image;
@@ -90,7 +90,7 @@ namespace Poss_System
                 SqlCommand cmd = new SqlCommand("insert into Product values (@productID,@productname,@Category,@sellPricce,@purchasePrice,@imgProduct)", connect);
                 cmd.Parameters.AddWithValue("@productID", txtID.Text);
                 cmd.Parameters.AddWithValue("@productname", txtName.Text);
-                cmd.Parameters.AddWithValue("@Category", txtCategory.Text);
+                cmd.Parameters.AddWithValue("@Category", cbbCategory.Text);
                 cmd.Parameters.AddWithValue("@sellPricce", sellPrice);
                 cmd.Parameters.AddWithValue("@purchasePrice", purchasePrice);
                 cmd.Parameters.AddWithValue("@imgProduct", data);
@@ -110,7 +110,7 @@ namespace Poss_System
                 txtName.Text = "";
                 txtPrice.Text = "";
                 txtPurchase.Text = "";
-                txtCategory.Text = "";
+                cbbCategory.Text = "";
                 pictureBox1.Image = null;
                 dgvIngredient.Rows.Clear();
                 txtIname.Text = txtKg.Text = "";

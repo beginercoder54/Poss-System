@@ -26,7 +26,7 @@ namespace Poss_System
             FrmUpdateProFile frmUpdateProFile = new FrmUpdateProFile();
             frmUpdateProFile.txtName.Text = txtName.Text;
             frmUpdateProFile.txtID.Text = txtID.Text;
-            frmUpdateProFile.txtCategory.Text = txtCategory.Text;
+            frmUpdateProFile.cbbCategory.Text = cbbCategory.Text;
             frmUpdateProFile.txtPrice.Text = txtPrice.Text;
             frmUpdateProFile.txtPurchase.Text = txtPurchase.Text;
             frmUpdateProFile.pictureBox1.Image = pictureBox1.Image;
@@ -96,7 +96,7 @@ namespace Poss_System
                 SqlCommand cmd = new SqlCommand("update  Product set  productID = @productID , productname = @productname ,category = @Category,sellPrice = @sellPricce,purchasePrice =@purchasePrice,imgProduct = @imgProduct where productID=@productID or productname= @productname", connect);
                 cmd.Parameters.AddWithValue("productID", txtID.Text);
                 cmd.Parameters.AddWithValue("productname", txtName.Text);
-                cmd.Parameters.AddWithValue("Category", txtCategory.Text);
+                cmd.Parameters.AddWithValue("Category", cbbCategory.Text);
                 cmd.Parameters.AddWithValue("sellPricce", sellPrice);
                 cmd.Parameters.AddWithValue("purchasePrice", purchasePrice);
                 cmd.Parameters.AddWithValue("imgProduct", data);
