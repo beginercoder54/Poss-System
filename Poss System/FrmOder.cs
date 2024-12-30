@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using hu;
 using Poss_System.Component;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static Poss_System.Component.Widget;
 
 namespace Poss_System
@@ -100,9 +101,17 @@ namespace Poss_System
             }
             else
             {
-                FrmRQSetting frmRQSetting = new FrmRQSetting();
-                frmRQSetting.Show();
-               
+                if (userName == "admin")
+                {
+                    FrmSetting frmSetting = new FrmSetting();
+                    frmSetting.Show();
+                }
+                else
+                {
+                    FrmRQSetting frmRQSetting = new FrmRQSetting();
+                    frmRQSetting.Show();
+                }
+
             }
         }
 

@@ -95,15 +95,32 @@ namespace Poss_System
         private void pnlSettingMenu_Click(object sender, EventArgs e)
         {
 
+            FrmLogin frm = new FrmLogin();
             if (Application.OpenForms["FrmSetting"] == Application.OpenForms[Application.OpenForms.Count - 1])
             {
                 pnlMenu.Visible = false;
             }
             else
             {
-                FrmRQSetting frmRQSetting = new FrmRQSetting();
-                frmRQSetting.Show();
-                
+                if (frm.txtUsername.Text == "admin")
+                {
+                    FrmSetting frmSetting = new FrmSetting();
+                    frmSetting.Show();
+                }
+                else
+                {
+                    if (userName == "admin")
+                    {
+                        FrmSetting frmSetting = new FrmSetting();
+                        frmSetting.Show();
+                    }
+                    else
+                    {
+                        FrmRQSetting frmRQSetting = new FrmRQSetting();
+                        frmRQSetting.Show();
+                    }
+
+                }
 
             }
         }

@@ -131,7 +131,7 @@ namespace Poss_System
             }
             else
             {
-                if (frm.txtUsername.Text=="admin")
+                if (username == "admin")
                 {
                     FrmSetting frmSetting = new FrmSetting();
                     frmSetting.Show();
@@ -166,5 +166,7 @@ namespace Poss_System
                 }
             }
         }
+
+
     }
 }
