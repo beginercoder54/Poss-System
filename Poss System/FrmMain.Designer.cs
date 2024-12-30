@@ -225,6 +225,7 @@
             this.label3.Size = new System.Drawing.Size(119, 34);
             this.label3.TabIndex = 0;
             this.label3.Text = "Statistics";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pnlOrdersMenu
             // 

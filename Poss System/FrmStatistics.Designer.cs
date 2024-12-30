@@ -42,12 +42,12 @@
             this.lblAccount = new System.Windows.Forms.Label();
             this.lblBill = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.dtBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.panel2.SuspendLayout();
@@ -216,28 +216,8 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1240, 352);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // btnDel
-            // 
-            this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDel.Location = new System.Drawing.Point(15, 501);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(104, 59);
-            this.btnDel.TabIndex = 5;
-            this.btnDel.Text = "Del";
-            this.btnDel.UseVisualStyleBackColor = true;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(1110, 501);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(104, 59);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // dtBill
             // 
@@ -266,6 +246,28 @@
             this.dtTotal.HeaderText = "Total Price";
             this.dtTotal.MinimumWidth = 6;
             this.dtTotal.Name = "dtTotal";
+            // 
+            // btnDel
+            // 
+            this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDel.Location = new System.Drawing.Point(15, 501);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(104, 59);
+            this.btnDel.TabIndex = 5;
+            this.btnDel.Text = "Del";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Location = new System.Drawing.Point(1110, 501);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(104, 59);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FrmStatistics
             // 
@@ -304,7 +306,6 @@
         private System.Windows.Forms.Label lblBill;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnRefresh;
@@ -315,5 +316,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtAccount;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtTotal;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

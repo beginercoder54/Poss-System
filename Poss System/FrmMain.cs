@@ -167,6 +167,10 @@ namespace Poss_System
             }
         }
 
-
+        private void label3_Click(object sender, EventArgs e)
+        {
+            FrmStatistics frmStatistics = new FrmStatistics();
+            frmStatistics.Show();
+        }
     }
 }

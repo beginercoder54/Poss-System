@@ -132,22 +132,22 @@ namespace Poss_System
                 var wdg = (Widget)ss;
                 foreach (DataGridViewRow item in dataGridView1.Rows)
                 {
-                   
-                    
-                        if (item.Cells[0].Value.ToString() == wdg.lblTitle.Text)
-                        {
-                            item.Cells[1].Value = int.Parse(item.Cells[1].Value.ToString()) + 1;
-                            item.Cells[2].Value = (int.Parse(item.Cells[1].Value.ToString()) * double.Parse(wdg.lblCost.Text));
+
+
+                    if (item.Cells[0].Value.ToString() == wdg.lblTitle.Text)
+                    {
+                        item.Cells[1].Value = int.Parse(item.Cells[1].Value.ToString()) + 1;
+                        item.Cells[2].Value = (int.Parse(item.Cells[1].Value.ToString()) * double.Parse(wdg.lblCost.Text));
                         CalculateTotal();
-                            return;
-                        }
+                        return;
+                    }
 
 
-                    
+
 
                 }
-                
-                    dataGridView1.Rows.Add(new object[] { wdg.lblTitle.Text, 1, wdg.Cost });
+
+                dataGridView1.Rows.Add(new object[] { wdg.lblTitle.Text, 1, wdg.Cost });
                 btnADD.Enabled = true;
                 btnPay.Enabled = true;
 
