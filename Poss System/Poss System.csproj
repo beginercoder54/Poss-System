@@ -65,6 +65,12 @@
     <Compile Include="FrmMore.Designer.cs">
       <DependentUpon>FrmMore.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReceipt.Designer.cs">
+      <DependentUpon>FrmReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRQSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMore.resx">
       <DependentUpon>FrmMore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReceipt.resx">
+      <DependentUpon>FrmReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRQSetting.resx">
       <DependentUpon>FrmRQSetting.cs</DependentUpon>

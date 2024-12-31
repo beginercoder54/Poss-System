@@ -145,5 +145,11 @@ namespace Poss_System
             FrmSales frmSales   = new FrmSales((DateTime)dtpDate.Value);
             frmSales.Show();
         }
+
+        private void btnShowBill_Click(object sender, EventArgs e)
+        {
+            FrmReceipt frmReceipt = new FrmReceipt();
+            frmReceipt.Show();
+        }
     }
 }
