@@ -102,9 +102,17 @@ namespace Poss_System
             }
             else
             {
+                connect.Open();
                 FrmTW frmTW = new FrmTW();
+                SqlCommand cmd = new SqlCommand("select ISNULL(MAX(BillID), 0) from Orders where YEAR(InsertBill) = YEAR(@InsertBill) and MONTH(InsertBill)=MONTH(@InsertBill) and DAY(InsertBill)=DAY(@InsertBill)", connect);
+                cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
+                id = (int)cmd.ExecuteScalar();
+                id += 1;
+                frmTW.getbillID(id);
+                frmTW.getName(username);
                 this.Hide();
                 frmTW.Show();
+                connect.Close();
             }
         }
 
@@ -116,15 +124,24 @@ namespace Poss_System
         }
         private void pnlSettingMenu_Click(object sender, EventArgs e)
         {
-
+            FrmLogin frm = new FrmLogin();
             if (Application.OpenForms["FrmSetting"] == Application.OpenForms[Application.OpenForms.Count - 1])
             {
                 pnlMenu.Visible = false;
             }
             else
             {
-                FrmRQSetting frmRQSetting = new FrmRQSetting();
-                frmRQSetting.Show();
+                if (username == "admin")
+                {
+                    FrmSetting frmSetting = new FrmSetting();
+                    frmSetting.Show();
+                }
+                else
+                {
+                    FrmRQSetting frmRQSetting = new FrmRQSetting();
+                    frmRQSetting.Show();
+                }
+               
             }
         }
         public void getName(string name)
@@ -148,6 +165,12 @@ namespace Poss_System
                     }
                 }
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            FrmStatistics frmStatistics = new FrmStatistics();
+            frmStatistics.Show();
         }
     }
 }

@@ -63,6 +63,9 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTotal = new System.Windows.Forms.Panel();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.btnPay = new System.Windows.Forms.Button();
@@ -85,9 +88,6 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titlebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
@@ -507,6 +507,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(396, 468);
             this.dataGridView1.TabIndex = 4;
             // 
+            // productname
+            // 
+            this.productname.DataPropertyName = "fName";
+            this.productname.HeaderText = "Name";
+            this.productname.MinimumWidth = 6;
+            this.productname.Name = "productname";
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            // 
+            // Cost
+            // 
+            this.Cost.DataPropertyName = "FoodPrice";
+            this.Cost.HeaderText = "Cost";
+            this.Cost.MinimumWidth = 6;
+            this.Cost.Name = "Cost";
+            // 
             // pnlTotal
             // 
             this.pnlTotal.Controls.Add(this.lblTotalPrice);
@@ -662,6 +683,7 @@
             this.pnlStatisticsMenu.Name = "pnlStatisticsMenu";
             this.pnlStatisticsMenu.Size = new System.Drawing.Size(273, 100);
             this.pnlStatisticsMenu.TabIndex = 2;
+            this.pnlStatisticsMenu.Click += new System.EventHandler(this.label13_Click);
             // 
             // label13
             // 
@@ -673,6 +695,7 @@
             this.label13.Size = new System.Drawing.Size(119, 34);
             this.label13.TabIndex = 0;
             this.label13.Text = "Statistics";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pnlOrdersMenu
             // 
@@ -755,27 +778,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // productname
-            // 
-            this.productname.DataPropertyName = "fName";
-            this.productname.HeaderText = "Name";
-            this.productname.MinimumWidth = 6;
-            this.productname.Name = "productname";
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            // 
-            // Cost
-            // 
-            this.Cost.DataPropertyName = "FoodPrice";
-            this.Cost.HeaderText = "Cost";
-            this.Cost.MinimumWidth = 6;
-            this.Cost.Name = "Cost";
             // 
             // FrmOder
             // 

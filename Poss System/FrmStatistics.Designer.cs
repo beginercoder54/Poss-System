@@ -48,6 +48,9 @@
             this.dtTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnShowBill = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.btnReveunue = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.panel2.SuspendLayout();
@@ -215,7 +218,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1240, 352);
+            this.dataGridView1.Size = new System.Drawing.Size(1240, 355);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -250,7 +253,7 @@
             // btnDel
             // 
             this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDel.Location = new System.Drawing.Point(15, 501);
+            this.btnDel.Location = new System.Drawing.Point(18, 501);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(104, 59);
             this.btnDel.TabIndex = 5;
@@ -261,7 +264,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(1110, 501);
+            this.btnExit.Location = new System.Drawing.Point(1127, 501);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(104, 59);
             this.btnExit.TabIndex = 6;
@@ -269,12 +272,46 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnShowBill
+            // 
+            this.btnShowBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnShowBill.Location = new System.Drawing.Point(128, 501);
+            this.btnShowBill.Name = "btnShowBill";
+            this.btnShowBill.Size = new System.Drawing.Size(104, 59);
+            this.btnShowBill.TabIndex = 5;
+            this.btnShowBill.Text = "Show";
+            this.btnShowBill.UseVisualStyleBackColor = true;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExcel.Location = new System.Drawing.Point(350, 501);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(104, 59);
+            this.btnExcel.TabIndex = 5;
+            this.btnExcel.Text = "Excel export";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            // 
+            // btnReveunue
+            // 
+            this.btnReveunue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnReveunue.Location = new System.Drawing.Point(238, 501);
+            this.btnReveunue.Name = "btnReveunue";
+            this.btnReveunue.Size = new System.Drawing.Size(104, 59);
+            this.btnReveunue.TabIndex = 5;
+            this.btnReveunue.Text = "Revenue";
+            this.btnReveunue.UseVisualStyleBackColor = true;
+            this.btnReveunue.Click += new System.EventHandler(this.btnReveunue_Click);
+            // 
             // FrmStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 572);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnExcel);
+            this.Controls.Add(this.btnReveunue);
+            this.Controls.Add(this.btnShowBill);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
@@ -317,5 +354,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtTotal;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnShowBill;
+        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Button btnReveunue;
     }
 }

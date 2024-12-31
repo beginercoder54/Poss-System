@@ -322,6 +322,12 @@ namespace Poss_System
         {
             BillID = id;
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            FrmStatistics frmStatistics = new FrmStatistics();
+            frmStatistics.Show();
+        }
     }
 }
    

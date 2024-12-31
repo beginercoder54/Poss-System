@@ -140,7 +140,10 @@ namespace Poss_System
             index= e.RowIndex;
         }
 
-
-       
+        private void btnReveunue_Click(object sender, EventArgs e)
+        {
+            FrmSales frmSales   = new FrmSales((DateTime)dtpDate.Value);
+            frmSales.Show();
+        }
     }
 }

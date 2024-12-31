@@ -450,6 +450,13 @@ namespace Poss_System
             
             CalculateTotal();
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+            FrmStatistics frmStatistics = new FrmStatistics();
+            frmStatistics.Show();
+        }
     }
 }
    
