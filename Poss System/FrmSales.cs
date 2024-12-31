@@ -29,7 +29,8 @@ namespace Poss_System
 
         private void FrmSales_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select fID ,fName,SUM(Quantity) AS Quantity from Orders where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null group by fID,fName", connect);
+            connect.Open();
+            SqlCommand cmd = new SqlCommand("select fID ,fName,SUM(Quantity) AS Quantity from Orders where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status =1 group by fID,fName", connect);
             cmd.Parameters.AddWithValue("@CheckOutday", date.Day);
             cmd.Parameters.AddWithValue("@CheckOutmonth", date.Month);
             cmd.Parameters.AddWithValue("@CheckOutyear", date.Year);
@@ -38,6 +39,47 @@ namespace Poss_System
             sqlDataAdapter.Fill(dt);
             dataGridView1.DataSource = dt;
 
+            SqlCommand cmd2 = new SqlCommand("select COUNT(distinct BillID) from Orders  where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status = 1 ", connect);
+            cmd2.Parameters.AddWithValue("@CheckOutday", date.Day);
+            cmd2.Parameters.AddWithValue("@CheckOutmonth", date.Month);
+            cmd2.Parameters.AddWithValue("@CheckOutyear", date.Year);
+            int numorders = (int)cmd2.ExecuteScalar();
+            lblTotalOrders.Text = numorders.ToString();
+
+            SqlCommand cmd3 = new SqlCommand("select sum(distinct TotalPrice) from Orders where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status =1", connect);
+            cmd3.Parameters.AddWithValue("@CheckOutday", date.Day);
+            cmd3.Parameters.AddWithValue("@CheckOutmonth", date.Month);
+            cmd3.Parameters.AddWithValue("@CheckOutyear", date.Year);
+            decimal totalrevenue = (decimal)cmd3.ExecuteScalar();
+            lblTotalRevenue.Text = totalrevenue.ToString();
+
+
+            SqlCommand cmd4 = new SqlCommand("select BillID,CheckOut,TotalPrice from Orders where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status=2 group by BillID,CheckOut,TotalPrice", connect);
+            cmd4.Parameters.AddWithValue("@CheckOutday", date.Day);
+            cmd4.Parameters.AddWithValue("@CheckOutmonth", date.Month);
+            cmd4.Parameters.AddWithValue("@CheckOutyear", date.Year);
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter sqldataadapter1 = new SqlDataAdapter(cmd4);
+            sqldataadapter1.Fill(dt2);
+            dataGridView2.DataSource = dt2;
+           
+
+
+            SqlCommand cmd5 = new SqlCommand("select COUNT(distinct BillID) from Orders  where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status = 2 ", connect);
+            cmd5.Parameters.AddWithValue("@CheckOutday", date.Day);
+            cmd5.Parameters.AddWithValue("@CheckOutmonth", date.Month);
+            cmd5.Parameters.AddWithValue("@CheckOutyear", date.Year);
+            int canceledorders = (int)cmd5.ExecuteScalar(); 
+            lblNcancel.Text= canceledorders.ToString();
+
+
+            SqlCommand cmd6 = new SqlCommand("select sum(distinct TotalPrice) from Orders where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status =2", connect);
+            cmd6.Parameters.AddWithValue("@CheckOutday", date.Day);
+            cmd6.Parameters.AddWithValue("@CheckOutmonth", date.Month);
+            cmd6.Parameters.AddWithValue("@CheckOutyear", date.Year);
+            decimal totalcancel = (decimal)cmd6.ExecuteScalar();
+           lblTCancel.Text = totalcancel.ToString();
+            connect.Close();
         }
 
         public FrmSales(DateTime datetime)

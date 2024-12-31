@@ -214,6 +214,7 @@
             this.pnlStatisticsMenu.Name = "pnlStatisticsMenu";
             this.pnlStatisticsMenu.Size = new System.Drawing.Size(273, 100);
             this.pnlStatisticsMenu.TabIndex = 2;
+            this.pnlStatisticsMenu.Click += new System.EventHandler(this.label3_Click);
             // 
             // label3
             // 
@@ -225,6 +226,7 @@
             this.label3.Size = new System.Drawing.Size(119, 34);
             this.label3.TabIndex = 0;
             this.label3.Text = "Statistics";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pnlOrdersMenu
             // 

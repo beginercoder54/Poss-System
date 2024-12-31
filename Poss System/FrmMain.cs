@@ -46,7 +46,7 @@ namespace Poss_System
         private void btnTable1_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
-            if (clickedButton.BackColor == Color.Green)
+            if (clickedButton.BackColor == Color.LimeGreen)
             {
                 connect.Open();
                 FrmOder frmOder = new FrmOder();
@@ -161,7 +161,7 @@ namespace Poss_System
                 {
                     if (dt.Rows[Convert.ToInt32(btn.Text) - 1]["Status"].ToString()=="1")
                     {
-                        btn.BackColor = Color.Green;
+                        btn.BackColor = Color.LimeGreen;
                     }
                 }
             }

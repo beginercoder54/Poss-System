@@ -166,10 +166,9 @@ namespace Poss_System
             double total = 0;
             foreach(DataGridViewRow item in dataGridView1.Rows)
             {
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                {
+                
                     total += double.Parse(item.Cells[2].Value.ToString());
-                }
+                
                     
             }
             lblTotalPrice.Text = "$ "+ total.ToString();

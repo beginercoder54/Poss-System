@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNameRes = new System.Windows.Forms.Label();
-            this.pictureIconBurger = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
@@ -51,10 +50,11 @@
             this.btnShowBill = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnReveunue = new System.Windows.Forms.Button();
+            this.pictureIconBurger = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,19 +80,6 @@
             this.lblNameRes.Size = new System.Drawing.Size(282, 34);
             this.lblNameRes.TabIndex = 7;
             this.lblNameRes.Text = "Tam Thai Tu Restaurant";
-            // 
-            // pictureIconBurger
-            // 
-            this.pictureIconBurger.BackColor = System.Drawing.Color.Transparent;
-            this.pictureIconBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureIconBurger.Image = global::Poss_System.Properties.Resources.burger;
-            this.pictureIconBurger.Location = new System.Drawing.Point(15, 16);
-            this.pictureIconBurger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureIconBurger.Name = "pictureIconBurger";
-            this.pictureIconBurger.Size = new System.Drawing.Size(63, 35);
-            this.pictureIconBurger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureIconBurger.TabIndex = 6;
-            this.pictureIconBurger.TabStop = false;
             // 
             // label1
             // 
@@ -204,6 +191,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -303,10 +291,24 @@
             this.btnReveunue.UseVisualStyleBackColor = true;
             this.btnReveunue.Click += new System.EventHandler(this.btnReveunue_Click);
             // 
+            // pictureIconBurger
+            // 
+            this.pictureIconBurger.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIconBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureIconBurger.Image = global::Poss_System.Properties.Resources.burger;
+            this.pictureIconBurger.Location = new System.Drawing.Point(15, 16);
+            this.pictureIconBurger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureIconBurger.Name = "pictureIconBurger";
+            this.pictureIconBurger.Size = new System.Drawing.Size(63, 35);
+            this.pictureIconBurger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIconBurger.TabIndex = 6;
+            this.pictureIconBurger.TabStop = false;
+            // 
             // FrmStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1240, 572);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnExcel);
@@ -324,10 +326,10 @@
             this.Load += new System.EventHandler(this.FrmStatistics_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIconBurger)).EndInit();
             this.ResumeLayout(false);
 
         }
