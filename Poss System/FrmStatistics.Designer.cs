@@ -293,6 +293,7 @@
             this.btnExcel.TabIndex = 5;
             this.btnExcel.Text = "Excel export";
             this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnReveunue
             // 

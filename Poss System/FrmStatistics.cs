@@ -172,5 +172,10 @@ namespace Poss_System
                 MessageBox.Show("Select order to see details","Notiffication",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
