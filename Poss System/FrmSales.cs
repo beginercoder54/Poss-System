@@ -39,14 +39,14 @@ namespace Poss_System
             sqlDataAdapter.Fill(dt);
             dataGridView1.DataSource = dt;
 
-            SqlCommand cmd2 = new SqlCommand("select COUNT(distinct BillID) from Orders  where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status = 1 ", connect);
+            SqlCommand cmd2 = new SqlCommand("select ISNULL(COUNT(distinct BillID),0) from Orders  where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status = 1 ", connect);
             cmd2.Parameters.AddWithValue("@CheckOutday", date.Day);
             cmd2.Parameters.AddWithValue("@CheckOutmonth", date.Month);
             cmd2.Parameters.AddWithValue("@CheckOutyear", date.Year);
             int numorders = (int)cmd2.ExecuteScalar();
             lblTotalOrders.Text = numorders.ToString();
 
-            SqlCommand cmd3 = new SqlCommand("select sum(distinct TotalPrice) from Orders where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status =1", connect);
+            SqlCommand cmd3 = new SqlCommand("select ISNULL(sum(distinct TotalPrice),0) from Orders where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status =1", connect);
             cmd3.Parameters.AddWithValue("@CheckOutday", date.Day);
             cmd3.Parameters.AddWithValue("@CheckOutmonth", date.Month);
             cmd3.Parameters.AddWithValue("@CheckOutyear", date.Year);
@@ -65,7 +65,7 @@ namespace Poss_System
            
 
 
-            SqlCommand cmd5 = new SqlCommand("select COUNT(distinct BillID) from Orders  where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status = 2 ", connect);
+            SqlCommand cmd5 = new SqlCommand("select ISNULL(COUNT(distinct BillID),0) from Orders  where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status = 2 ", connect);
             cmd5.Parameters.AddWithValue("@CheckOutday", date.Day);
             cmd5.Parameters.AddWithValue("@CheckOutmonth", date.Month);
             cmd5.Parameters.AddWithValue("@CheckOutyear", date.Year);
@@ -73,7 +73,7 @@ namespace Poss_System
             lblNcancel.Text= canceledorders.ToString();
 
 
-            SqlCommand cmd6 = new SqlCommand("select sum(distinct TotalPrice) from Orders where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status =2", connect);
+            SqlCommand cmd6 = new SqlCommand("select ISNULL(sum(distinct TotalPrice),0) from Orders where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status = 2", connect);
             cmd6.Parameters.AddWithValue("@CheckOutday", date.Day);
             cmd6.Parameters.AddWithValue("@CheckOutmonth", date.Month);
             cmd6.Parameters.AddWithValue("@CheckOutyear", date.Year);

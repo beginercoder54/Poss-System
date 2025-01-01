@@ -142,14 +142,35 @@ namespace Poss_System
 
         private void btnReveunue_Click(object sender, EventArgs e)
         {
-            FrmSales frmSales   = new FrmSales((DateTime)dtpDate.Value);
-            frmSales.Show();
+          
+                FrmSales frmSales = new FrmSales((DateTime)dtpDate.Value);
+                frmSales.Show();
+           
         }
 
         private void btnShowBill_Click(object sender, EventArgs e)
         {
-            FrmReceipt frmReceipt = new FrmReceipt();
-            frmReceipt.Show();
+            if (index >= 0)
+            {
+                DateTime dgvdate = (DateTime)dataGridView1.Rows[index].Cells[2].Value;
+                connect.Open();
+                SqlCommand cmd2 = new SqlCommand("select BillID,username,CheckOut,ISNULL(tableID, 0) as tableID from Orders where BillID=@BIllID and  day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null  group by BillID,username,CheckOut,ISNULL(tableID, 0) ", connect);
+                cmd2.Parameters.AddWithValue("@BillID", Convert.ToInt32(dataGridView1.Rows[index].Cells[0].Value.ToString()));
+                cmd2.Parameters.AddWithValue("@CheckOutday", dgvdate.Day);
+                cmd2.Parameters.AddWithValue("@CheckOutmonth", dgvdate.Month);
+                cmd2.Parameters.AddWithValue("@CheckOutyear", dgvdate.Year);
+                DataTable dt2 = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                da.Fill(dt2);
+                FrmReceipt frmReceipt = new FrmReceipt(dt2.Rows[0]["BillID"].ToString(), dt2.Rows[0]["username"].ToString(), dgvdate, dt2.Rows[0]["tableID"].ToString());
+                frmReceipt.Show();
+                connect.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Select order to see details","Notiffication",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

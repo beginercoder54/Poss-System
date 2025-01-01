@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component\InfoReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\InfoReceipt.Designer.cs">
+      <DependentUpon>InfoReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\Widget.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     <Compile Include="FrmSetting.Designer.cs">
       <DependentUpon>FrmSetting.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Component\InfoReceipt.resx">
+      <DependentUpon>InfoReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Component\Widget.resx">
       <DependentUpon>Widget.cs</DependentUpon>
     </EmbeddedResource>
