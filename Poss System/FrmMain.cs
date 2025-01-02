@@ -1,5 +1,6 @@
 ﻿using hu;
 using Poss_System.Component;
+using spoil;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -118,9 +119,8 @@ namespace Poss_System
 
         private void pnlExit_Click(object sender, EventArgs e)
         {
-            FrmLogin frmLogin = new FrmLogin();
-            this.Hide();
-            frmLogin.Show();
+            FrmDP frmDP = new FrmDP();
+            frmDP.ShowDialog();
         }
         private void pnlSettingMenu_Click(object sender, EventArgs e)
         {

@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using hu;
 using Poss_System.Component;
+using spoil;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static Poss_System.Component.Widget;
 
@@ -22,7 +23,7 @@ namespace Poss_System
 
         int tableID;
         string fID;
-        int accountID;
+        
         string userName;
         int BillID;
 
@@ -88,9 +89,9 @@ namespace Poss_System
 
         private void pnlExit_Click(object sender, EventArgs e)
         {
-            FrmLogin frmLogin = new FrmLogin();
-            this.Hide();
-            frmLogin.Show();
+
+            FrmDP frmDP = new FrmDP();
+            frmDP.ShowDialog();
         }
         private void pnlSettingMenu_Click(object sender, EventArgs e)
         {

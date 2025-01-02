@@ -15,7 +15,7 @@ namespace Poss_System
     public partial class FrmStatistics : Form
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=Pos_System;Integrated Security=True");
-        int index;
+        int index=-1;
         public FrmStatistics()
         {
             InitializeComponent();
