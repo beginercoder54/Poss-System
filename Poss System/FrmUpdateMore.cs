@@ -53,29 +53,46 @@ namespace Poss_System
 
         private void btnAddIngredient_Click(object sender, EventArgs e)
         {
-            connect.Open();
-            SqlCommand sqlCommand = new SqlCommand("update Ingredient set ingredientName = @ingredientName,kg=@kg where productID=@productID", connect);
-            sqlCommand.Parameters.AddWithValue("productID", txtID.Text);
-            sqlCommand.Parameters.AddWithValue("ingredientName", txtIname.Text);
-            sqlCommand.Parameters.AddWithValue("kg", txtKg.Text.Replace(",","."));
-            sqlCommand.ExecuteNonQuery();
-            connect.Close();
-            loadIngredient();
+
+            if (Checkingredient() == 0)
+            {
+                dgvIngredient.Rows.Add(txtIname.Text, txtKg.Text);
+                txtIname.Text = txtKg.Text = "";
+            }
+            else
+            {
+                dgvIngredient.Rows.RemoveAt(indexRow);
+                dgvIngredient.Rows.Add(txtIname.Text, txtKg.Text);
+            }
+
+            //{
+            //    connect.Open();
+            //    SqlCommand sqlCommand = new SqlCommand("update Ingredient set ingredientName = @ingredientName,kg=@kg where productID=@productID", connect);
+            //    sqlCommand.Parameters.AddWithValue("productID", txtID.Text);
+            //    sqlCommand.Parameters.AddWithValue("ingredientName", txtIname.Text);
+            //    sqlCommand.Parameters.AddWithValue("kg", txtKg.Text.Replace(",", "."));
+            //    sqlCommand.ExecuteNonQuery();
+            //    connect.Close();
+            //    txtIname.Text = txtKg.Text = "";
+            //    loadIngredient();
+            //}
         }
 
         private void btndelIn_Click(object sender, EventArgs e)
         {
-            if (indexRow >= 0)
+            try
             {
-                connect.Open();
-                SqlCommand sqlCommand = new SqlCommand("delete from Ingredient where productID=@productID", connect);
-                sqlCommand.Parameters.AddWithValue("productID", txtID.Text);
-                sqlCommand.ExecuteNonQuery ();
-                connect.Close();
-                loadIngredient ();
+                if (indexRow >= 0)
+                {
+                    dgvIngredient.Rows.RemoveAt(indexRow);
+                    txtIname.Text = txtKg.Text = "";
+                    MessageBox.Show("Delete success", "Notiffication", MessageBoxButtons.OK);
+                }
+                else
+                    MessageBox.Show("Select ingredient for delete", "Notiffication", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                MessageBox.Show("Select ingredient for delete","Notiffication",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            catch(Exception ex) { MessageBox.Show("Select ingredient again", "Notiffication", MessageBoxButtons.OK); }
+            
         }
 
         private void dgvIngredient_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -93,6 +110,32 @@ namespace Poss_System
                 connect.Open();
                 decimal sellPrice = decimal.Parse(txtPrice.Text);
                 decimal purchasePrice = decimal.Parse(txtPurchase.Text);
+                SqlCommand cmd = new SqlCommand("insert into Product values (@productID,@productname,@Category,@sellPricce,@purchasePrice,@imgProduct)", connect);
+                cmd.Parameters.AddWithValue("@productID", txtID.Text);
+                cmd.Parameters.AddWithValue("@productname", txtName.Text);
+                cmd.Parameters.AddWithValue("@Category", cbbCategory.Text);
+                cmd.Parameters.AddWithValue("@sellPricce", sellPrice);
+                cmd.Parameters.AddWithValue("@purchasePrice", purchasePrice);
+                cmd.Parameters.AddWithValue("@imgProduct", data);
+                cmd.ExecuteNonQuery();
+                foreach (DataGridViewRow item in dgvIngredient.Rows)
+                {
+                    SqlCommand cmd2 = new SqlCommand("insert into Ingredient values (@productID,@ingredientName,@kg)", connect);
+                    cmd2.Parameters.AddWithValue("@productID", txtID.Text);
+                    cmd2.Parameters.AddWithValue("@ingredientName", item.Cells[0].Value.ToString());
+                    cmd2.Parameters.AddWithValue("@kg", float.Parse(item.Cells[1].Value.ToString().Replace(".", ",")));
+                    cmd2.ExecuteNonQuery();
+                }
+
+                connect.Close();
+                MessageBox.Show("Add new product success.", "Notification", MessageBoxButtons.OK);
+            }
+            else
+            {
+                byte[] data = ImageToByteArray(pictureBox1.Image);
+                connect.Open();
+                decimal sellPrice = decimal.Parse(txtPrice.Text);
+                decimal purchasePrice = decimal.Parse(txtPurchase.Text);
                 SqlCommand cmd = new SqlCommand("update  Product set  productID = @productID , productname = @productname ,category = @Category,sellPrice = @sellPricce,purchasePrice =@purchasePrice,imgProduct = @imgProduct where productID=@productID or productname= @productname", connect);
                 cmd.Parameters.AddWithValue("productID", txtID.Text);
                 cmd.Parameters.AddWithValue("productname", txtName.Text);
@@ -101,11 +144,35 @@ namespace Poss_System
                 cmd.Parameters.AddWithValue("purchasePrice", purchasePrice);
                 cmd.Parameters.AddWithValue("imgProduct", data);
                 cmd.ExecuteNonQuery();
+                if (checkProductvalid(txtID.Text) == 0)
+                {
+                    foreach (DataGridViewRow item in dgvIngredient.Rows)
+                    {
+                        SqlCommand cmd2 = new SqlCommand("insert into Ingredient values (@productID,@ingredientName,@kg)", connect);
+                        cmd2.Parameters.AddWithValue("@productID", txtID.Text);
+                        cmd2.Parameters.AddWithValue("@ingredientName", item.Cells[0].Value.ToString());
+                        cmd2.Parameters.AddWithValue("@kg", float.Parse(item.Cells[1].Value.ToString().Replace(".",",")));
+                        cmd2.ExecuteNonQuery();
+                    }
+                }
+                else
+                {
+                    SqlCommand cmd3 = new SqlCommand("delete from Ingredient where productID = @productID", connect);
+                    cmd3.Parameters.AddWithValue("productID", txtID.Text);
+                    cmd3.ExecuteNonQuery();
+                    foreach (DataGridViewRow item in dgvIngredient.Rows)
+                    {
+                        SqlCommand cmd4 = new SqlCommand("insert into Ingredient values (@productID,@ingredientName,@kg)", connect);
+                        cmd4.Parameters.AddWithValue("@productID", txtID.Text);
+                        cmd4.Parameters.AddWithValue("@ingredientName", item.Cells[0].Value.ToString());
+                        cmd4.Parameters.AddWithValue("@kg", float.Parse(item.Cells[1].Value.ToString().Replace(".", ",")));
+                        cmd4.ExecuteNonQuery();
+                    }
+                }
                 connect.Close();
                 MessageBox.Show("Update new product success.", "Notification", MessageBoxButtons.OK);
             }
-            else
-                MessageBox.Show("Product is available", "Notiffication", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
         }
 
         public int Checkingredient()
@@ -173,18 +240,34 @@ namespace Poss_System
 
         private void FrmUpdateMore_Shown(object sender, EventArgs e)
         {
-            loadIngredient();
+            if (checkProductvalid(txtID.Text) == 1)  loadIngredient();
+
         }
         public void loadIngredient()
         {
-            connect.Open();
-            SqlCommand cmd = new SqlCommand("select ingredientName,kg from Ingredient where productID = @productID",connect);
-            cmd.Parameters.AddWithValue("productID", txtID.Text);
+            SqlCommand cmd = new SqlCommand("select ingredientName,ROUND(kg, 4) as kg from Ingredient where productID = @productID", connect);
+            cmd.Parameters.AddWithValue("@productID", txtID.Text);
             DataTable dt = new DataTable();
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
             dataAdapter.Fill(dt);
-            dgvIngredient.DataSource = dt;
-            connect.Close();
+            dgvIngredient.Rows.Clear();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                dgvIngredient.Rows.Add(dt.Rows[i]["ingredientName"].ToString(), dt.Rows[i]["kg"].ToString());
+            }
+            
         }
+
+        public int checkProductvalid(string ID)
+        {
+            SqlCommand cmd = new SqlCommand("select * from Ingredient where productID ='"+ID+"'",connect);
+            DataTable check = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+            sqlDataAdapter.Fill(check);
+
+            if (check.Rows.Count > 0) return 1;
+            return 0;
+        }
+
     }
 }

@@ -18,7 +18,7 @@ namespace Poss_System.Component
         }
 
         public string Quantity { get => lblQuantity.Text; set => lblQuantity.Text = value; }
-        public string Name { get => lblName.Text; set => lblName.Text = value; }
+        public string NameF { get => lblName.Text; set => lblName.Text = value; }
         public string Price { get => lblPrice.Text.Replace(",","."); set => lblPrice.Text = value.ToString(); }
     }
 }

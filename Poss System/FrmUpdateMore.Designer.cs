@@ -42,8 +42,6 @@
             this.txtKg = new System.Windows.Forms.TextBox();
             this.btnAddIngredient = new System.Windows.Forms.Button();
             this.dgvIngredient = new System.Windows.Forms.DataGridView();
-            this.IngredientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clKg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnShort = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -52,6 +50,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
+            this.IngredientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clKg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngredient)).BeginInit();
             this.SuspendLayout();
@@ -183,20 +183,6 @@
             this.dgvIngredient.TabIndex = 17;
             this.dgvIngredient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngredient_CellClick);
             // 
-            // IngredientName
-            // 
-            this.IngredientName.DataPropertyName = "ingredientName";
-            this.IngredientName.HeaderText = "IngredientName";
-            this.IngredientName.MinimumWidth = 6;
-            this.IngredientName.Name = "IngredientName";
-            // 
-            // clKg
-            // 
-            this.clKg.DataPropertyName = "kg";
-            this.clKg.HeaderText = "Kg";
-            this.clKg.MinimumWidth = 6;
-            this.clKg.Name = "clKg";
-            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Gainsboro;
@@ -281,6 +267,20 @@
             this.cbbCategory.Size = new System.Drawing.Size(189, 24);
             this.cbbCategory.TabIndex = 23;
             // 
+            // IngredientName
+            // 
+            this.IngredientName.DataPropertyName = "ingredientName";
+            this.IngredientName.HeaderText = "IngredientName";
+            this.IngredientName.MinimumWidth = 6;
+            this.IngredientName.Name = "IngredientName";
+            // 
+            // clKg
+            // 
+            this.clKg.DataPropertyName = "kg";
+            this.clKg.HeaderText = "Kg";
+            this.clKg.MinimumWidth = 6;
+            this.clKg.Name = "clKg";
+            // 
             // FrmUpdateMore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -344,8 +344,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnOpenFile;
+        public System.Windows.Forms.ComboBox cbbCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn IngredientName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clKg;
-        public System.Windows.Forms.ComboBox cbbCategory;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using hu;
+using spoil;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -175,7 +176,8 @@ namespace Poss_System
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-
+            FrmExport frmExport = new FrmExport();
+            frmExport.ShowDialog();
         }
     }
 }

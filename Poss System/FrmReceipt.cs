@@ -38,7 +38,7 @@ namespace Poss_System
         {
             lblBillID.Text = BillID;
             lblDate.Text = Checkout.ToString();
-            if(tableID == "0") { lblTable.Text = "Take awake"; } else lblTable.Text= tableID;
+            if(tableID == "0") { lblTable.Text = "Take away"; } else lblTable.Text= tableID;
             lblUserName.Text = username;
 
             SqlCommand cmd = new SqlCommand("select Quantity,fName,FoodPrice,TotalPrice from Orders where  BillID=@BIllID and  day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null", connect);
@@ -62,7 +62,7 @@ namespace Poss_System
             flowLayoutPanel1.Controls.Add(new InfoReceipt()
             {
                 Quantity = quantity,
-                Name = name,
+                NameF = name,
                 Price = price
             });
 

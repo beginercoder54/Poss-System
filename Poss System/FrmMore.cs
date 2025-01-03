@@ -68,7 +68,8 @@ namespace Poss_System
         {
             if (indexRow >= 0)
             {
-                dgvIngredient.Rows.RemoveAt(indexRow); ;
+                dgvIngredient.Rows.RemoveAt(indexRow);
+                MessageBox.Show("Delete success", "Notiffication", MessageBoxButtons.OK);
             }
             else
                 MessageBox.Show("Select ingredient for delete","Notiffication",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -100,7 +101,7 @@ namespace Poss_System
                     SqlCommand cmd2 = new SqlCommand("insert into Ingredient values (@productID,@ingredientName,@kg)", connect);
                     cmd2.Parameters.AddWithValue("@productID", txtID.Text);
                     cmd2.Parameters.AddWithValue("@ingredientName", item.Cells[0].Value.ToString());
-                    cmd2.Parameters.AddWithValue("@kg", Convert.ToDouble(item.Cells[1].Value.ToString()));
+                    cmd2.Parameters.AddWithValue("@kg", float.Parse(item.Cells[1].Value.ToString().Replace(".", ",")));
                     cmd2.ExecuteNonQuery();
                 }
                
