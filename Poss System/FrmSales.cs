@@ -39,7 +39,7 @@ namespace Poss_System
             sqlDataAdapter.Fill(dt);
             dataGridView1.DataSource = dt;
 
-            SqlCommand cmd2 = new SqlCommand("select ISNULL(COUNT(distinct BillID),0) from Orders  where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status = 1 ", connect);
+            SqlCommand cmd2 = new SqlCommand("select ISNULL(COUNT(distinct BillID),0) from Orders  where day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null and Status in (1,null) ", connect);
             cmd2.Parameters.AddWithValue("@CheckOutday", date.Day);
             cmd2.Parameters.AddWithValue("@CheckOutmonth", date.Month);
             cmd2.Parameters.AddWithValue("@CheckOutyear", date.Year);
@@ -80,6 +80,22 @@ namespace Poss_System
             decimal totalcancel = (decimal)cmd6.ExecuteScalar();
            lblTCancel.Text = totalcancel.ToString();
             connect.Close();
+
+            SqlCommand cmd7 = new SqlCommand("select o.Quantity*p.purchasePrice  from Orders o ,Product p where o.fID = p.productID and (Status in (1,null)) and day(CheckOut)=@CheckOutday and month(CheckOut)=@CheckOutmonth and year(CheckOut)=@CheckOutyear and CheckOut is not null group by o.fID,o.fName,o.Quantity*p.purchasePrice ", connect);
+            cmd7.Parameters.AddWithValue("@CheckOutday", date.Day);
+            cmd7.Parameters.AddWithValue("@CheckOutmonth", date.Month);
+            cmd7.Parameters.AddWithValue("@CheckOutyear", date.Year);
+            DataTable dt3 = new DataTable();
+            SqlDataAdapter da4 = new SqlDataAdapter(cmd7);
+            da4.Fill(dt3);
+            decimal profit = 0;
+            for (int i = 0; i < dt3.Rows.Count; i++)
+            {
+                profit += Convert.ToDecimal(dt3.Rows[i][0]);
+            }
+            decimal a = totalrevenue - profit;
+            lblTakeProgit.Text = a.ToString();
+
         }
 
         public FrmSales(DateTime datetime)

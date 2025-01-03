@@ -123,7 +123,7 @@ namespace Poss_System
                     SqlCommand cmd2 = new SqlCommand("insert into Ingredient values (@productID,@ingredientName,@kg)", connect);
                     cmd2.Parameters.AddWithValue("@productID", txtID.Text);
                     cmd2.Parameters.AddWithValue("@ingredientName", item.Cells[0].Value.ToString());
-                    cmd2.Parameters.AddWithValue("@kg", float.Parse(item.Cells[1].Value.ToString().Replace(".", ",")));
+                    cmd2.Parameters.AddWithValue("@kg", decimal.Parse(item.Cells[1].Value.ToString().Replace(".", ",")));
                     cmd2.ExecuteNonQuery();
                 }
 
@@ -151,7 +151,7 @@ namespace Poss_System
                         SqlCommand cmd2 = new SqlCommand("insert into Ingredient values (@productID,@ingredientName,@kg)", connect);
                         cmd2.Parameters.AddWithValue("@productID", txtID.Text);
                         cmd2.Parameters.AddWithValue("@ingredientName", item.Cells[0].Value.ToString());
-                        cmd2.Parameters.AddWithValue("@kg", float.Parse(item.Cells[1].Value.ToString().Replace(".",",")));
+                        cmd2.Parameters.AddWithValue("@kg", decimal.Parse(item.Cells[1].Value.ToString().Replace(".",",")));
                         cmd2.ExecuteNonQuery();
                     }
                 }
@@ -165,7 +165,7 @@ namespace Poss_System
                         SqlCommand cmd4 = new SqlCommand("insert into Ingredient values (@productID,@ingredientName,@kg)", connect);
                         cmd4.Parameters.AddWithValue("@productID", txtID.Text);
                         cmd4.Parameters.AddWithValue("@ingredientName", item.Cells[0].Value.ToString());
-                        cmd4.Parameters.AddWithValue("@kg", float.Parse(item.Cells[1].Value.ToString().Replace(".", ",")));
+                        cmd4.Parameters.AddWithValue("@kg", decimal.Parse(item.Cells[1].Value.ToString().Replace(".", ",")));
                         cmd4.ExecuteNonQuery();
                     }
                 }
