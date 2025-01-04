@@ -25,9 +25,12 @@ namespace Poss_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-                if (txtUsername.Text !="" && txtPassword.Text!= "") {
+            try
+            {
+                if (txtUsername.Text != "" && txtPassword.Text != "")
+                {
 
-                    
+
 
                     string ck_Username = "SELECT * FROM Account WHERE uname= '" + txtUsername.Text + "' and upass= '" + txtPassword.Text + "'";
                     SqlCommand cmd = new SqlCommand(ck_Username, connect);
@@ -54,6 +57,13 @@ namespace Poss_System
                         lblAlert.Text = "Username or Password is wrong";
                     }
                 }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Export fail !!\n" + ex.Message);
+            }
+           
 
             
         }

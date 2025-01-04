@@ -46,39 +46,47 @@ namespace Poss_System
 
         private void btnTable1_Click(object sender, EventArgs e)
         {
-            Button clickedButton = sender as Button;
-            if (clickedButton.BackColor == Color.LimeGreen)
+            try
             {
-                connect.Open();
-                FrmOder frmOder = new FrmOder();
-                tableID = Convert.ToInt32(clickedButton.Text);
-                frmOder.getidtable(tableID);
-                SqlCommand cmd = new SqlCommand("select BillID from Orders where tableID=@tableID",connect);
-                cmd.Parameters.AddWithValue("@tableID", tableID);
-                id = (int)cmd.ExecuteScalar();
-                frmOder.getbillID(id);
-                this.Close();
-                frmOder.Show();
-                frmOder.getName(username);
-                connect.Close();
+                Button clickedButton = sender as Button;
+                if (clickedButton.BackColor == Color.LimeGreen)
+                {
+                    connect.Open();
+                    FrmOder frmOder = new FrmOder();
+                    tableID = Convert.ToInt32(clickedButton.Text);
+                    frmOder.getidtable(tableID);
+                    SqlCommand cmd = new SqlCommand("select BillID from Orders where tableID=@tableID", connect);
+                    cmd.Parameters.AddWithValue("@tableID", tableID);
+                    id = (int)cmd.ExecuteScalar();
+                    frmOder.getbillID(id);
+                    this.Close();
+                    frmOder.Show();
+                    frmOder.getName(username);
+                    connect.Close();
+                }
+                else
+                {
+                    connect.Open();
+                    FrmOder frmOder = new FrmOder();
+                    tableID = Convert.ToInt32(clickedButton.Text);
+                    frmOder.getidtable(tableID);
+                    SqlCommand cmd = new SqlCommand("select ISNULL(MAX(BillID), 0) from Orders where YEAR(InsertBill) = YEAR(@InsertBill) and MONTH(InsertBill)=MONTH(@InsertBill) and DAY(InsertBill)=DAY(@InsertBill)", connect);
+                    cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
+                    id = (int)cmd.ExecuteScalar();
+                    id += 1;
+                    frmOder.getbillID(id);
+                    this.Close();
+                    frmOder.Show();
+                    frmOder.getName(username);
+                    connect.Close();
+                }
+
+
             }
-            else
+            catch (Exception ex)
             {
-                connect.Open();
-                FrmOder frmOder = new FrmOder();
-                tableID = Convert.ToInt32(clickedButton.Text);
-                frmOder.getidtable(tableID);
-                SqlCommand cmd = new SqlCommand("select ISNULL(MAX(BillID), 0) from Orders where YEAR(InsertBill) = YEAR(@InsertBill) and MONTH(InsertBill)=MONTH(@InsertBill) and DAY(InsertBill)=DAY(@InsertBill)", connect);
-                cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
-                id = (int)cmd.ExecuteScalar();
-                id += 1;
-                frmOder.getbillID(id);
-                this.Close();
-                frmOder.Show();
-                frmOder.getName(username);
-                connect.Close();
+                MessageBox.Show("Export fail !!\n" + ex.Message);
             }
-           
             
         }
 
