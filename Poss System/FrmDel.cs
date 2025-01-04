@@ -45,6 +45,7 @@ namespace hu
                 sqlcmd.Parameters.AddWithValue("@CheckOutmonth", ngaythang.Month);
                 sqlcmd.Parameters.AddWithValue("@CheckOutyear", ngaythang.Year);
                 sqlcmd.ExecuteNonQuery();
+                MessageBox.Show("Delete success!","Notiffication",MessageBoxButtons.OK);
                 this.Close();
             }
             else
