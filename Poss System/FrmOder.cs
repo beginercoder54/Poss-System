@@ -390,17 +390,19 @@ namespace Poss_System
             }
             else
             {
+                DateTime a = DateTime.Now;
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
+                    
                     SqlCommand sqlcmd = new SqlCommand("select productID from Product where productname = @productname", connect);
                     sqlcmd.Parameters.AddWithValue("@productname", row.Cells[0].Value.ToString());
                     fID = (string)sqlcmd.ExecuteScalar();
-                    SqlCommand cmd = new SqlCommand("insert into Orders(BillID,username,InsertBill,CheckOut,tableID,fID,fName,Quantity,FoodPrice,TotalPrice,Status) values(@BillID,@username,@InsertBill,@CheckOut,@tableID,@fID,@fName,@Quantity,@FoodPrice,@TotalPrice,@Status)", connect);
+                    SqlCommand cmd = new SqlCommand("insert into Orders(BillID,username,InsertBill,CheckOut,fID,fName,Quantity,FoodPrice,TotalPrice,Status) values(@BillID,@username,@InsertBill,@CheckOut,@fID,@fName,@Quantity,@FoodPrice,@TotalPrice,@Status)", connect);
                     cmd.Parameters.AddWithValue("@BillID", BillID);
                     cmd.Parameters.AddWithValue("@username", userName);
-                    cmd.Parameters.AddWithValue("@InsertBill", DateTime.Now);
-                    cmd.Parameters.AddWithValue("@CheckOut", DateTime.Now);
-                    cmd.Parameters.AddWithValue("@tableID", tableID);
+                    cmd.Parameters.AddWithValue("@InsertBill", a);
+                    cmd.Parameters.AddWithValue("@CheckOut", a);
+                    
                     cmd.Parameters.AddWithValue("@fID", fID);
                     cmd.Parameters.AddWithValue("@fName", row.Cells[0].Value.ToString());
                     cmd.Parameters.AddWithValue("@Quantity", row.Cells[1].Value.ToString());
@@ -410,9 +412,7 @@ namespace Poss_System
                     cmd.ExecuteNonQuery();
 
                 }
-                SqlCommand sql = new SqlCommand("update MyTable set Status = 0 where tableID = @tableID", connect);
-                sql.Parameters.AddWithValue("@tableID", tableID);
-                sql.ExecuteNonQuery();
+               
 
                 dataGridView1.Rows.Clear();
                 this.Close();
